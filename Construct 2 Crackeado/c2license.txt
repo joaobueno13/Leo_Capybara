@@ -1,0 +1,9 @@
+﻿License type: BUSINESS
+Product: Construct 2
+Licensed to: Varchasva
+Email: veclipsetv@gmail.com
+Comment: With best wishes from Figgler [mrfiggler@gmail.com]
+Timestamp: 1608133127
+Hash: EE135A8971F1B7CF83DA8BCC8B24245E9E988F09623524F
+
+This is PRIVATE license. Please TURN OFF "UPDATE CHECKING" in C2 preferences BEFORE USE!!!
