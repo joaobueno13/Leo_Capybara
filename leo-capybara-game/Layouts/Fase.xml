@@ -77,6 +77,9 @@
                     </properties>
                     <instance-variables>
                         <estado></estado>
+                        <noAr>false</noAr>
+                        <sombra>0</sombra>
+                        <noAr_dir></noAr_dir>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="8Direction">
@@ -95,12 +98,26 @@
                                 <bound-by>Edge</bound-by>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Platform">
+                            <properties>
+                                <max-speed>0</max-speed>
+                                <acceleration>0</acceleration>
+                                <deceleration>0</deceleration>
+                                <jump-strength>0</jump-strength>
+                                <gravity>500</gravity>
+                                <max-fall-speed>400</max-fall-speed>
+                                <double-jump>Disabled</double-jump>
+                                <jump-sustain>0</jump-sustain>
+                                <default-controls>No</default-controls>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>24.918388367</x>
-                        <y>150.095489502</y>
+                        <x>42.417243958</x>
+                        <y>132.596710205</y>
                         <z>0</z>
                         <width>32</width>
                         <height>32</height>

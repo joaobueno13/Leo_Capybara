@@ -10,104 +10,337 @@
                         <condition id="-1" name="Every tick" sid="876588479992762" type="System" />
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="521586530605676" type="Personagem">
+                        <action id="4" name="Set animation" sid="988304795003725" type="Personagem">
                             <param id="0" name="Animation">Personagem.estado</param>
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="885571701718137">
+                <event-block sid="144296543382217">
                     <conditions>
-                        <condition behavior="8Direction" id="0" name="Is moving" sid="531079169382103" type="Personagem" />
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="444120503443502" type="Personagem">
+                            <param id="0" name="Instance variable">noAr</param>
+                        </condition>
                     </conditions>
-                    <actions>
-                        <action id="-10" name="Set value" sid="731950964161770" type="Personagem">
-                            <param id="0" name="Instance variable">estado</param>
-                            <param id="1" name="Value">&quot;Walk&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="334008853216792">
-                    <conditions>
-                        <condition id="-22" name="Else" sid="627837083743324" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="-10" name="Set value" sid="626335194127058" type="Personagem">
-                            <param id="0" name="Instance variable">estado</param>
-                            <param id="1" name="Value">&quot;Idle&quot;</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="951975001682760">
+                            <conditions>
+                                <condition behavior="8Direction" id="0" name="Is moving" sid="421131501391217" type="Personagem" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="122234731524038" type="Personagem">
+                                    <param id="0" name="Instance variable">estado</param>
+                                    <param id="1" name="Value">&quot;Walk&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="334008853216792">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="627837083743324" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="441379318654349" type="Personagem">
+                                    <param id="0" name="Instance variable">estado</param>
+                                    <param id="1" name="Value">&quot;Idle&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="652117341681390" title="Input Keyboard and Gamepad">
             <sub-events>
-                <event-group description="" sid="637925866507980" title="Walk" />
-                <event-block sid="577963141166242">
-                    <conditions>
-                        <condition id="2" name="Key is down" sid="907434202795837" type="Keyboard">
-                            <param id="0" name="Key">39</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="8Direction" id="7" name="Simulate control" sid="474834410749195" type="Personagem">
-                            <param id="0" name="Control">1</param>
-                        </action>
-                        <action id="7" name="Set mirrored" sid="283734481761607" type="Personagem">
-                            <param id="0" name="State">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="613966506567412">
-                    <conditions>
-                        <condition id="2" name="Key is down" sid="494773186005642" type="Keyboard">
-                            <param id="0" name="Key">37</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="8Direction" id="7" name="Simulate control" sid="122557213269160" type="Personagem">
-                            <param id="0" name="Control">0</param>
-                        </action>
-                        <action id="7" name="Set mirrored" sid="179611003859947" type="Personagem">
-                            <param id="0" name="State">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="674116403422250">
-                    <conditions>
-                        <condition id="2" name="Key is down" sid="125673475657364" type="Keyboard">
-                            <param id="0" name="Key">38</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="8Direction" id="7" name="Simulate control" sid="957057605408878" type="Personagem">
-                            <param id="0" name="Control">2</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="642941668008798">
-                    <conditions>
-                        <condition id="2" name="Key is down" sid="240705565411340" type="Keyboard">
-                            <param id="0" name="Key">40</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="8Direction" id="7" name="Simulate control" sid="603133037759542" type="Personagem">
-                            <param id="0" name="Control">3</param>
-                        </action>
-                    </actions>
-                </event-block>
+                <event-group description="" sid="637925866507980" title="Walk">
+                    <sub-events>
+                        <event-block sid="747684282434538">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="798271075105208" type="Personagem">
+                                    <param id="0" name="Instance variable">noAr</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="577963141166242">
+                                    <conditions>
+                                        <condition id="2" name="Key is down" sid="907434202795837" type="Keyboard">
+                                            <param id="0" name="Key">39</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="8Direction" id="7" name="Simulate control" sid="708925593000013" type="Personagem">
+                                            <param id="0" name="Control">1</param>
+                                        </action>
+                                        <action id="7" name="Set mirrored" sid="577829212043499" type="Personagem">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="613966506567412">
+                                    <conditions>
+                                        <condition id="2" name="Key is down" sid="494773186005642" type="Keyboard">
+                                            <param id="0" name="Key">37</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="8Direction" id="7" name="Simulate control" sid="561548378547602" type="Personagem">
+                                            <param id="0" name="Control">0</param>
+                                        </action>
+                                        <action id="7" name="Set mirrored" sid="952177678983887" type="Personagem">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="674116403422250">
+                                    <conditions>
+                                        <condition id="2" name="Key is down" sid="125673475657364" type="Keyboard">
+                                            <param id="0" name="Key">38</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="8Direction" id="7" name="Simulate control" sid="931697274421266" type="Personagem">
+                                            <param id="0" name="Control">2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="642941668008798">
+                                    <conditions>
+                                        <condition id="2" name="Key is down" sid="240705565411340" type="Keyboard">
+                                            <param id="0" name="Key">40</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="8Direction" id="7" name="Simulate control" sid="847315752352223" type="Personagem">
+                                            <param id="0" name="Control">3</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="477858251444872" title="Jump">
+                    <sub-events>
+                        <event-block sid="790675716602311">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="286241328462571" type="Personagem">
+                                    <param id="0" name="Instance variable">noAr</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="606223685616703" type="Personagem">
+                                    <param id="0" name="Instance variable">sombra</param>
+                                    <param id="1" name="Value">Personagem.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="431115772124200">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="375777679782237" type="Keyboard">
+                                    <param id="0" name="Key">90</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="188208101249810">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="775995088578040" type="Personagem">
+                                            <param id="0" name="Instance variable">noAr</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="831762528517733" type="Personagem">
+                                            <param id="0" name="Instance variable">noAr</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="186720473582824">
+                                            <conditions>
+                                                <condition behavior="8Direction" id="0" inverted="1" name="Is moving" sid="442851981395467" type="Personagem" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="827265536575737" type="Function">
+                                                    <param id="0" name="Name">&quot;pulo_parado&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="385364475909585">
+                                            <conditions>
+                                                <condition id="2" name="Key is down" sid="993955662568113" type="Keyboard">
+                                                    <param id="0" name="Key">39</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="988574125582757" type="Function">
+                                                    <param id="0" name="Name">&quot;pulo_movendo&quot;</param>
+                                                    <param id="1" name="Parameter {n}">&quot;D&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="696585056517452">
+                                            <conditions>
+                                                <condition id="2" name="Key is down" sid="856511270380683" type="Keyboard">
+                                                    <param id="0" name="Key">37</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="419698219489132" type="Function">
+                                                    <param id="0" name="Name">&quot;pulo_movendo&quot;</param>
+                                                    <param id="1" name="Parameter {n}">&quot;E&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block any="1" sid="199617114486230">
+                                            <conditions>
+                                                <condition id="2" name="Key is down" sid="599015887853001" type="Keyboard">
+                                                    <param id="0" name="Key">38</param>
+                                                </condition>
+                                                <condition id="2" name="Key is down" sid="326158881396472" type="Keyboard">
+                                                    <param id="0" name="Key">40</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="175355660511742">
+                                                    <conditions>
+                                                        <condition id="2" inverted="1" name="Key is down" sid="582443772707828" type="Keyboard">
+                                                            <param id="0" name="Key">39</param>
+                                                        </condition>
+                                                        <condition id="2" inverted="1" name="Key is down" sid="505522698297119" type="Keyboard">
+                                                            <param id="0" name="Key">37</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="637274475990474" type="Function">
+                                                            <param id="0" name="Name">&quot;pulo_parado&quot;</param>
+                                                            <param id="1" name="Parameter {n}"></param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="152574171546097">
+                            <conditions>
+                                <condition id="0" name="On function" sid="260786243906205" type="Function">
+                                    <param id="0" name="Name">&quot;pulo_parado&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="148574953888247" type="Personagem">
+                                    <param id="0" name="Instance variable">estado</param>
+                                    <param id="1" name="Value">&quot;JumpIdle&quot;</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="270406647230495" type="Personagem">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="307017501495115" type="Personagem">
+                                    <param id="0" name="Vector Y">-200</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="658903136159604">
+                            <conditions>
+                                <condition id="0" name="On function" sid="313631844044124" type="Function">
+                                    <param id="0" name="Name">&quot;pulo_movendo&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="361484141541233" type="Personagem">
+                                    <param id="0" name="Instance variable">noAr_dir</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="348115221979115" type="Personagem">
+                                    <param id="0" name="Instance variable">estado</param>
+                                    <param id="1" name="Value">&quot;JumpWalk&quot;</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="260302179930601" type="Personagem">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="700907498847257" type="Personagem">
+                                    <param id="0" name="Vector Y">-200</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="516396034368233">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="890666360389395" type="Personagem">
+                                    <param id="0" name="Instance variable">noAr_dir</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;D&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="8Direction" id="7" name="Simulate control" sid="776247836749802" type="Personagem">
+                                    <param id="0" name="Control">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="391548454484959">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="393057944740259" type="Personagem">
+                                    <param id="0" name="Instance variable">noAr_dir</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;E&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="8Direction" id="7" name="Simulate control" sid="518310871312567" type="Personagem">
+                                    <param id="0" name="Control">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="761990275156977">
+                            <conditions>
+                                <condition id="-21" name="Is between values" sid="737833382178344" type="System">
+                                    <param id="0" name="Value">Personagem.Y</param>
+                                    <param id="1" name="Lower bound">Personagem.sombra - 2</param>
+                                    <param id="2" name="Upper bound">Personagem.sombra + 2</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="129536748875166" type="Personagem">
+                                    <param id="0" name="Instance variable">noAr</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="482790509406096" type="Personagem">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="602387199780867" type="Personagem">
+                                    <param id="0" name="Instance variable">estado</param>
+                                    <param id="1" name="Value">&quot;&quot;</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="987321236080522" type="Personagem">
+                                    <param id="0" name="Instance variable">noAr</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="228911374783676" type="Personagem">
+                                    <param id="0" name="Instance variable">noAr_dir</param>
+                                    <param id="1" name="Value">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
             </sub-events>
         </event-group>
-        <event-block sid="764584476215035">
+        <event-block sid="223515324096585">
             <conditions>
-                <condition id="-2" name="Compare Y" sid="813463024607333" type="Personagem">
+                <condition id="-2" name="Compare Y" sid="955788931200090" type="Personagem">
                     <param id="0" name="Comparison">2</param>
                     <param id="1" name="Y co-ordinate">130</param>
                 </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="708795586808079" type="Personagem">
+                    <param id="0" name="Instance variable">noAr</param>
+                </condition>
             </conditions>
             <actions>
-                <action id="-2" name="Set Y" sid="161447277083174" type="Personagem">
+                <action id="-2" name="Set Y" sid="597143711079587" type="Personagem">
                     <param id="0" name="Y">130</param>
                 </action>
             </actions>
