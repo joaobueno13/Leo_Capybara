@@ -70,6 +70,10 @@
                 <instance-variable name="noAr" sid="655185991756336" type="boolean" />
                 <instance-variable name="sombra" sid="981278282390517" type="number" />
                 <instance-variable name="noAr_dir" sid="510666335637555" type="string" />
+                <instance-variable name="atacando" sid="916987008811834" type="boolean" />
+                <instance-variable name="combo" sid="468527179445060" type="number" />
+                <instance-variable name="combo_max" sid="918828233247439" type="number" />
+                <instance-variable name="combo_timer" sid="920284074259635" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="8Direction" sid="514508737144386">
@@ -83,7 +87,7 @@
                 </behavior-type>
             </behaviors>
             <animation-folder>
-                <animation framecount="1" loop="0" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="186058701842213" speed="5">
+                <animation framecount="1" loop="0" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="186058701842213" speed="14">
                     <frame duration="1" hotspotX="0.5" hotspotY="1" />
                 </animation>
                 <animation framecount="1" loop="0" name="Walk" pingpong="0" repeatcount="1" repeatto="0" sid="958122197527766" speed="6">
@@ -95,6 +99,36 @@
                 <animation framecount="2" loop="0" name="JumpWalk" pingpong="0" repeatcount="1" repeatto="0" sid="420909708421826" speed="10">
                     <frame duration="1" hotspotX="0.5" hotspotY="1" />
                     <frame duration="200" hotspotX="0.5" hotspotY="1" />
+                </animation>
+                <animation framecount="3" loop="0" name="JumpAttack" pingpong="0" repeatcount="1" repeatto="0" sid="635605273205549" speed="15">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    <frame duration="999" hotspotX="0.5" hotspotY="1" />
+                </animation>
+                <animation framecount="4" loop="0" name="Attack1" pingpong="0" repeatcount="1" repeatto="0" sid="973609501333619" speed="5">
+                    <frame duration="1" hotspotX="0.21875" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.21875" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.21875" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.21875" hotspotY="1" />
+                </animation>
+                <animation framecount="4" loop="0" name="Attack2" pingpong="0" repeatcount="1" repeatto="0" sid="205517863296439" speed="14">
+                    <frame duration="1" hotspotX="0.21875" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.21875" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.21875" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.21875" hotspotY="1" />
+                </animation>
+                <animation framecount="4" loop="0" name="Attack3" pingpong="0" repeatcount="1" repeatto="0" sid="750360987006023" speed="16">
+                    <frame duration="1" hotspotX="0.21875" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.21875" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.21875" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.21875" hotspotY="1" />
+                </animation>
+                <animation framecount="5" loop="0" name="Attack4" pingpong="0" repeatcount="1" repeatto="0" sid="787120041713813" speed="10">
+                    <frame duration="2" hotspotX="0.21875" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.21875" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.1875" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.15625" hotspotY="1" />
+                    <frame duration="3" hotspotX="0.15625" hotspotY="1" />
                 </animation>
             </animation-folder>
         </object-type>

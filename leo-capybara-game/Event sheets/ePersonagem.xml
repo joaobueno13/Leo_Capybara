@@ -21,6 +21,9 @@
                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="444120503443502" type="Personagem">
                             <param id="0" name="Instance variable">noAr</param>
                         </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="670873680424748" type="Personagem">
+                            <param id="0" name="Instance variable">atacando</param>
+                        </condition>
                     </conditions>
                     <actions />
                     <sub-events>
@@ -52,12 +55,158 @@
         </event-group>
         <event-group description="" sid="652117341681390" title="Input Keyboard and Gamepad">
             <sub-events>
+                <event-group description="" sid="883161632216439" title="Attacks">
+                    <sub-events>
+                        <event-block sid="941854460949199">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="103446060927431" type="Keyboard">
+                                    <param id="0" name="Key">88</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="899008401794747">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="728506877436289" type="Personagem">
+                                            <param id="0" name="Instance variable">atacando</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="794136116272429">
+                                            <conditions>
+                                                <condition id="-8" name="Is boolean instance variable set" sid="726596002406108" type="Personagem">
+                                                    <param id="0" name="Instance variable">noAr</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-13" name="Set boolean" sid="377203454285584" type="Personagem">
+                                                    <param id="0" name="Instance variable">atacando</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="107800932242252" type="Personagem">
+                                                    <param id="0" name="Instance variable">estado</param>
+                                                    <param id="1" name="Value">&quot;JumpAttack&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="277102280291603">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="721139870456538" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-13" name="Set boolean" sid="199485628492725" type="Personagem">
+                                                    <param id="0" name="Instance variable">atacando</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="395400165370496" type="Personagem">
+                                                    <param id="0" name="Instance variable">estado</param>
+                                                    <param id="1" name="Value">&quot;Attack&quot; &amp; Personagem.combo</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="871092375917041" type="Personagem">
+                                                    <param id="0" name="Instance variable">combo_timer</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="318969342880104">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="304061531722267" type="Personagem">
+                                                            <param id="0" name="Instance variable">combo</param>
+                                                            <param id="1" name="Comparison">5</param>
+                                                            <param id="2" name="Value">Personagem.combo_max</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-10" name="Set value" sid="402168846917270" type="Personagem">
+                                                            <param id="0" name="Instance variable">combo</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="402732450263010">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="866021319225022" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-11" name="Add to" sid="354410095926214" type="Personagem">
+                                                            <param id="0" name="Instance variable">combo</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="805972292181142">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="422796222445638" type="Personagem">
+                                    <param id="0" name="Instance variable">atacando</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="929933332513208">
+                                    <conditions>
+                                        <condition id="5" name="On any finished" sid="593527912339967" type="Personagem" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="261804628665103" type="Personagem">
+                                            <param id="0" name="Instance variable">atacando</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="907543394366632">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="864022394211834" type="Personagem">
+                                    <param id="0" name="Instance variable">combo_timer</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Subtract from" sid="545575894084668" type="Personagem">
+                                    <param id="0" name="Instance variable">combo_timer</param>
+                                    <param id="1" name="Value">dt</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="147987684552430">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="619615357171201" type="Personagem">
+                                    <param id="0" name="Instance variable">combo_timer</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="766946153985503" type="Personagem">
+                                    <param id="0" name="Instance variable">combo_timer</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="498520782886474" type="Personagem">
+                                    <param id="0" name="Instance variable">combo</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
                 <event-group description="" sid="637925866507980" title="Walk">
                     <sub-events>
                         <event-block sid="747684282434538">
                             <conditions>
                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="798271075105208" type="Personagem">
                                     <param id="0" name="Instance variable">noAr</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="454693876336645" type="Personagem">
+                                    <param id="0" name="Instance variable">atacando</param>
                                 </condition>
                             </conditions>
                             <actions />
@@ -147,6 +296,9 @@
                                     <conditions>
                                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="775995088578040" type="Personagem">
                                             <param id="0" name="Instance variable">noAr</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="664584713608550" type="Personagem">
+                                            <param id="0" name="Instance variable">atacando</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -322,6 +474,10 @@
                                 <action id="-10" name="Set value" sid="228911374783676" type="Personagem">
                                     <param id="0" name="Instance variable">noAr_dir</param>
                                     <param id="1" name="Value">&quot;&quot;</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="814696475026707" type="Personagem">
+                                    <param id="0" name="Instance variable">atacando</param>
+                                    <param id="1" name="Value">0</param>
                                 </action>
                             </actions>
                         </event-block>

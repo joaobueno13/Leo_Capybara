@@ -80,6 +80,10 @@
                         <noAr>false</noAr>
                         <sombra>0</sombra>
                         <noAr_dir></noAr_dir>
+                        <atacando>false</atacando>
+                        <combo>1</combo>
+                        <combo_max>4</combo_max>
+                        <combo_timer>0</combo_timer>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="8Direction">
