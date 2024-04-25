@@ -29,7 +29,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Background" uid="0">
+                <instance type="TrainBackground" uid="0">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -52,7 +52,7 @@
             </instances>
             <effects />
         </layer>
-        <layer name="Game" sid="453187254701041">
+        <layer name="Game" sid="263490822893741">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -82,7 +82,7 @@
                         <noAr_dir></noAr_dir>
                         <atacando>false</atacando>
                         <combo>1</combo>
-                        <combo_max>4</combo_max>
+                        <combo_max>2</combo_max>
                         <combo_timer>0</combo_timer>
                     </instance-variables>
                     <behavior-instances>
@@ -120,11 +120,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>42.417243958</x>
-                        <y>132.596710205</y>
+                        <x>33.378005981</x>
+                        <y>131.416992188</y>
                         <z>0</z>
-                        <width>32</width>
-                        <height>32</height>
+                        <width>64</width>
+                        <height>64</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>1</hotspotY>
