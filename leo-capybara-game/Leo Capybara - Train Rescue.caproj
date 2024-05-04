@@ -98,9 +98,31 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Ruan\Documents\Leo_Train_Rescue\leo-capybara-game\assets\Animations\Andando\Andando3.png" />
                     <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Ruan\Documents\Leo_Train_Rescue\leo-capybara-game\assets\Animations\Andando\Andando4.png" />
                 </animation>
-                <animation framecount="2" loop="0" name="JumpAttack" pingpong="0" repeatcount="1" repeatto="0" sid="154514728728437" speed="15">
-                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                    <frame duration="999" hotspotX="0.5" hotspotY="1" />
+                <animation framecount="2" loop="0" name="JumpAttack" pingpong="0" repeatcount="1" repeatto="0" sid="154514728728437" speed="1">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Pulando\0.png">
+                        <collision-poly>
+                            <point x="0.333648" y="0.250355" />
+                            <point x="0.530246" y="0.0234043" />
+                            <point x="0.908318" y="0.114184" />
+                            <point x="0.81758" y="0.45461" />
+                            <point x="0.787335" y="0.704255" />
+                            <point x="0.530246" y="0.840426" />
+                            <point x="0.273157" y="0.704255" />
+                            <point x="0.121928" y="0.45461" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Pulando\1.png">
+                        <collision-poly>
+                            <point x="0.369811" y="0.377705" />
+                            <point x="0.490566" y="0.0419672" />
+                            <point x="0.879665" y="0.167869" />
+                            <point x="0.960168" y="0.52459" />
+                            <point x="0.85283" y="0.860328" />
+                            <point x="0.490566" y="0.797377" />
+                            <point x="0.0746331" y="0.902295" />
+                            <point x="0.0209644" y="0.52459" />
+                        </collision-poly>
+                    </frame>
                 </animation>
                 <animation framecount="4" loop="0" name="Attack1" pingpong="0" repeatcount="1" repeatto="0" sid="734312500234158" speed="10">
                     <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Ruan\Documents\Leo_Train_Rescue\leo-capybara-game\assets\Animations\Socos\Socos0.png" />
