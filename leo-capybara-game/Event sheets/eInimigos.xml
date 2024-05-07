@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>eInimigos</name>
+    <events>
+        <event-block sid="342505921130687">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="597792068042095" type="Tyler">
+                    <param id="0" name="Object">Personagem_Hitbox</param>
+                </condition>
+                <condition id="-21" name="Is between values" sid="961016965006648" type="System">
+                    <param id="0" name="Value">tyler.Y</param>
+                    <param id="1" name="Lower bound">Personagem.sombra - 3</param>
+                    <param id="2" name="Upper bound">Personagem.sombra + 3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Sine" id="0" name="Set active" sid="814430446204262" type="Tyler">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="549792832820983" type="Personagem">
+                    <param id="0" name="Instance variable">combo_timer</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-11" name="Add to" sid="365099843180658" type="Personagem">
+                    <param id="0" name="Instance variable">acerto</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

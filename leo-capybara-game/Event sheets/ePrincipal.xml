@@ -4,5 +4,6 @@
     <name>ePrincipal</name>
     <events>
         <include>ePersonagem</include>
+        <include>eInimigos</include>
     </events>
 </c2eventsheet>
