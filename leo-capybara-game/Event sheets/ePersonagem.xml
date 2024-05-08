@@ -3,6 +3,16 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>ePersonagem</name>
     <events>
+        <event-block sid="719195173969401">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="917485728804637" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Sort all Objects in layer by Y" sid="334712488583381" type="ZSorter">
+                    <param id="0" name="Layer">&quot;Game&quot;</param>
+                </action>
+            </actions>
+        </event-block>
         <event-block sid="221634688551537">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="867000267454952" type="System" />
@@ -190,9 +200,6 @@
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="-15" name="Set visible" sid="353917573055113" type="Personagem_Hitbox">
-                                                    <param id="0" name="Visibility">1</param>
-                                                </action>
                                                 <action id="11" name="Set collisions enabled" sid="371415175788435" type="Personagem_Hitbox">
                                                     <param id="0" name="Collisions">1</param>
                                                 </action>
@@ -223,9 +230,6 @@
                                                 <condition id="-4" name="Trigger once while true" sid="267170870433898" type="System" />
                                             </conditions>
                                             <actions>
-                                                <action id="-15" name="Set visible" sid="876898696940284" type="Personagem">
-                                                    <param id="0" name="Visibility">1</param>
-                                                </action>
                                                 <action id="11" name="Set collisions enabled" sid="528024417341695" type="Personagem">
                                                     <param id="0" name="Collisions">1</param>
                                                 </action>

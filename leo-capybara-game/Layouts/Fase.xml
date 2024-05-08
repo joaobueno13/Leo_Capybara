@@ -205,6 +205,24 @@
             </instances>
             <effects />
         </layer>
+        <layer name="HUD" sid="195464191220654">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>1</x>
+                <y>1</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances />
+            <effects />
+        </layer>
     </layers>
     <nonworld-instances>
         <instance type="AtaquesPersonagem" uid="8">
@@ -212,6 +230,12 @@
                 <width>10</width>
                 <height>1</height>
                 <depth>1</depth>
+            </properties>
+        </instance>
+        <instance type="ZSorter" uid="10">
+            <properties>
+                <y-order>Increasing</y-order>
+                <x-order>Increasing</x-order>
             </properties>
         </instance>
     </nonworld-instances>
