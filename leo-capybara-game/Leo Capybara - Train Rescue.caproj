@@ -74,6 +74,7 @@
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="estado" sid="872664514516569" type="string" />
+                <instance-variable name="estado_transformacao" sid="497593087261522" type="string" />
                 <instance-variable name="noAr" sid="185434133457468" type="boolean" />
                 <instance-variable name="sombra" sid="593710462044530" type="number" />
                 <instance-variable name="noAr_dir" sid="702001621889620" type="string" />
@@ -113,82 +114,130 @@
                     <frame duration="1" hotspotX="0.511111" hotspotY="1" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Leo Pulando\2.png" />
                     <frame duration="999" hotspotX="0.511111" hotspotY="1" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Leo Pulando\3.png" />
                 </animation>
-                <animation framecount="4" loop="0" name="Attack1" pingpong="0" repeatcount="1" repeatto="0" sid="734312500234158" speed="5">
+                <animation framecount="5" loop="0" name="Attack1" pingpong="0" repeatcount="1" repeatto="0" sid="734312500234158" speed="5">
                     <frame duration="1" hotspotX="0.311111" hotspotY="1" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Leo Socos\0.png" />
                     <frame duration="1" hotspotX="0.311111" hotspotY="1" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Leo Socos\1.png" />
                     <frame duration="1" hotspotX="0.311111" hotspotY="1" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Leo Socos\2.png" />
-                    <frame duration="1" hotspotX="0.311111" hotspotY="1" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Leo Socos\3.png" />
+                    <frame duration="1" hotspotX="0.311111" hotspotY="1" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Leo Socos\3.png">
+                        <collision-poly>
+                            <point x="0.155556" y="0.155556" />
+                            <point x="0.488889" y="0.0444444" />
+                            <point x="0.644444" y="0.355556" />
+                            <point x="0.688889" y="0.488889" />
+                            <point x="0.6" y="0.6" />
+                            <point x="0.488889" y="0.977778" />
+                            <point x="0.0222222" y="0.977778" />
+                            <point x="0.0888889" y="0.488889" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.311111" hotspotY="1" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Leo Socos\0.png">
+                        <collision-poly>
+                            <point x="0.155556" y="0.155556" />
+                            <point x="0.488889" y="0.0444444" />
+                            <point x="0.577778" y="0.422222" />
+                            <point x="0.666667" y="0.488889" />
+                            <point x="0.6" y="0.6" />
+                            <point x="0.488889" y="0.977778" />
+                            <point x="0.0222222" y="0.977778" />
+                            <point x="0.0888889" y="0.488889" />
+                        </collision-poly>
+                    </frame>
                 </animation>
-                <animation framecount="4" loop="0" name="Attack2" pingpong="0" repeatcount="1" repeatto="0" sid="319524939609567" speed="5">
+                <animation framecount="5" loop="0" name="Attack2" pingpong="0" repeatcount="1" repeatto="0" sid="319524939609567" speed="5">
                     <frame duration="1" hotspotX="0.311111" hotspotY="1" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Leo Socos\0.png" />
                     <frame duration="1" hotspotX="0.311111" hotspotY="1" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Leo Socos\4.png" />
                     <frame duration="1" hotspotX="0.311111" hotspotY="1" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Leo Socos\5.png" />
+                    <frame duration="1" hotspotX="0.311111" hotspotY="1" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Leo Socos\7.png">
+                        <collision-poly>
+                            <point x="0.155556" y="0.155556" />
+                            <point x="0.488889" y="0.0666667" />
+                            <point x="0.6" y="0.4" />
+                            <point x="0.644444" y="0.488889" />
+                            <point x="0.6" y="0.6" />
+                            <point x="0.488889" y="0.977778" />
+                            <point x="0.0444444" y="0.955556" />
+                        </collision-poly>
+                    </frame>
                     <frame duration="1" hotspotX="0.311111" hotspotY="1" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Leo Socos\3.png" />
+                </animation>
+                <animation framecount="13" loop="0" name="Transform" pingpong="0" repeatcount="1" repeatto="0" sid="172811293533572" speed="5">
+                    <frame duration="1" hotspotX="0.511111" hotspotY="1" original-source="C:\Users\Joao\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Leo Defeat\3.png" />
+                    <frame duration="1" hotspotX="0.511111" hotspotY="1" original-source="C:\Users\Joao\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Leo Defeat\4.png" />
+                    <frame duration="1" hotspotX="0.511111" hotspotY="1" original-source="C:\Users\Joao\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Leo Defeat\5.png" />
+                    <frame duration="1" hotspotX="0.511111" hotspotY="1" original-source="C:\Users\Joao\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Leo Defeat\6.png" />
+                    <frame duration="1" hotspotX="0.511111" hotspotY="1" original-source="C:\Users\Joao\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Leo Defeat\7.png" />
+                    <frame duration="1" hotspotX="0.511111" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.511111" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.511111" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.511111" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.511111" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.511111" hotspotY="1" original-source="C:\Users\Joao\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Leo Defeat\2.png">
+                        <collision-poly>
+                            <point x="0.2" y="0.2" />
+                            <point x="0.488889" y="0.0222222" />
+                            <point x="0.866667" y="0.133333" />
+                            <point x="0.688889" y="0.488889" />
+                            <point x="0.755556" y="0.755556" />
+                            <point x="0.488889" y="0.822222" />
+                            <point x="0.266667" y="0.733333" />
+                            <point x="0.2" y="0.488889" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.511111" hotspotY="1" original-source="C:\Users\Joao\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Leo Defeat\1.png">
+                        <collision-poly>
+                            <point x="0.2" y="0.2" />
+                            <point x="0.488889" y="0.0222222" />
+                            <point x="0.866667" y="0.133333" />
+                            <point x="0.688889" y="0.488889" />
+                            <point x="0.755556" y="0.755556" />
+                            <point x="0.488889" y="0.822222" />
+                            <point x="0.266667" y="0.733333" />
+                            <point x="0.2" y="0.488889" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.511111" hotspotY="1" original-source="C:\Users\Joao\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Leo Defeat\0.png">
+                        <collision-poly>
+                            <point x="0.2" y="0.2" />
+                            <point x="0.488889" y="0.0222222" />
+                            <point x="0.866667" y="0.133333" />
+                            <point x="0.688889" y="0.488889" />
+                            <point x="0.755556" y="0.755556" />
+                            <point x="0.488889" y="0.822222" />
+                            <point x="0.266667" y="0.733333" />
+                            <point x="0.2" y="0.488889" />
+                        </collision-poly>
+                    </frame>
                 </animation>
                 <animation framecount="2" loop="0" name="T_idle" pingpong="0" repeatcount="1" repeatto="0" sid="134650642256807" speed="5">
                     <frame duration="1" hotspotX="0.511111" hotspotY="1" />
                     <frame duration="1" hotspotX="0.511111" hotspotY="1" />
                 </animation>
-                <animation framecount="4" loop="0" name="T_attack" pingpong="0" repeatcount="1" repeatto="0" sid="736371335056095" speed="5">
+                <animation framecount="4" loop="0" name="T_walk" pingpong="0" repeatcount="1" repeatto="0" sid="263775007042775" speed="5">
+                    <frame duration="1" hotspotX="0.511111" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.511111" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.511111" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.511111" hotspotY="1" />
+                </animation>
+                <animation framecount="5" loop="0" name="T_attack1" pingpong="0" repeatcount="1" repeatto="0" sid="736371335056095" speed="5">
                     <frame duration="1" hotspotX="0.311111" hotspotY="1" />
                     <frame duration="1" hotspotX="0.311111" hotspotY="1" />
                     <frame duration="1" hotspotX="0.311111" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.311111" hotspotY="1" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Leo Socos\3.png" />
                     <frame duration="1" hotspotX="0.311111" hotspotY="1" />
                 </animation>
-                <animation framecount="13" loop="0" name="Transform" pingpong="0" repeatcount="1" repeatto="0" sid="172811293533572" speed="5">
-                    <frame duration="1" hotspotX="0.511111" hotspotY="0.511111" original-source="C:\Users\Joao\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Leo Defeat\3.png" />
-                    <frame duration="1" hotspotX="0.511111" hotspotY="0.511111" original-source="C:\Users\Joao\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Leo Defeat\4.png" />
-                    <frame duration="1" hotspotX="0.511111" hotspotY="0.511111" original-source="C:\Users\Joao\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Leo Defeat\5.png" />
-                    <frame duration="1" hotspotX="0.511111" hotspotY="0.511111" original-source="C:\Users\Joao\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Leo Defeat\6.png" />
-                    <frame duration="1" hotspotX="0.511111" hotspotY="0.511111" original-source="C:\Users\Joao\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Leo Defeat\7.png" />
+                <animation framecount="5" loop="0" name="T_attack2" pingpong="0" repeatcount="1" repeatto="0" sid="821526509761388" speed="5">
+                    <frame duration="1" hotspotX="0.511111" hotspotY="0.511111" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Leo Socos\4.png" />
                     <frame duration="1" hotspotX="0.511111" hotspotY="0.511111" />
-                    <frame duration="1" hotspotX="0.511111" hotspotY="0.511111" />
-                    <frame duration="1" hotspotX="0.511111" hotspotY="0.511111" />
-                    <frame duration="1" hotspotX="0.511111" hotspotY="0.511111" />
-                    <frame duration="1" hotspotX="0.511111" hotspotY="0.511111" />
-                    <frame duration="1" hotspotX="0.511111" hotspotY="0.511111" original-source="C:\Users\Joao\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Leo Defeat\2.png">
-                        <collision-poly>
-                            <point x="0.2" y="0.2" />
-                            <point x="0.488889" y="0.0222222" />
-                            <point x="0.866667" y="0.133333" />
-                            <point x="0.688889" y="0.488889" />
-                            <point x="0.755556" y="0.755556" />
-                            <point x="0.488889" y="0.822222" />
-                            <point x="0.266667" y="0.733333" />
-                            <point x="0.2" y="0.488889" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.511111" hotspotY="0.511111" original-source="C:\Users\Joao\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Leo Defeat\1.png">
-                        <collision-poly>
-                            <point x="0.2" y="0.2" />
-                            <point x="0.488889" y="0.0222222" />
-                            <point x="0.866667" y="0.133333" />
-                            <point x="0.688889" y="0.488889" />
-                            <point x="0.755556" y="0.755556" />
-                            <point x="0.488889" y="0.822222" />
-                            <point x="0.266667" y="0.733333" />
-                            <point x="0.2" y="0.488889" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.511111" hotspotY="0.511111" original-source="C:\Users\Joao\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Leo Defeat\0.png">
-                        <collision-poly>
-                            <point x="0.2" y="0.2" />
-                            <point x="0.488889" y="0.0222222" />
-                            <point x="0.866667" y="0.133333" />
-                            <point x="0.688889" y="0.488889" />
-                            <point x="0.755556" y="0.755556" />
-                            <point x="0.488889" y="0.822222" />
-                            <point x="0.266667" y="0.733333" />
-                            <point x="0.2" y="0.488889" />
-                        </collision-poly>
-                    </frame>
+                    <frame duration="1" hotspotX="0.511111" hotspotY="0.511111" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Leo Socos\5.png" />
+                    <frame duration="1" hotspotX="0.511111" hotspotY="0.511111" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Leo Socos\6.png" />
+                    <frame duration="1" hotspotX="0.511111" hotspotY="0.511111" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Leo Socos\7.png" />
                 </animation>
             </animation-folder>
         </object-type>
         <object-type name="Function" sid="196496795203572">
             <plugin id="Function" />
         </object-type>
-        <object-type name="Personagem_Hitbox" sid="176064179517186">
+        <object-type name="Leo_Hitbox" sid="176064179517186">
             <plugin id="Sprite" />
             <behaviors>
                 <behavior-type name="Pin" sid="575117921988861">
@@ -286,6 +335,14 @@
                             <point x="0.634722" y="0.488888" />
                         </collision-poly>
                     </frame>
+                    <frame duration="1" hotspotX="0.311111" hotspotY="1">
+                        <collision-poly>
+                            <point x="0.633334" y="0.311111" />
+                            <point x="0.823611" y="0.309722" />
+                            <point x="0.825" y="0.490277" />
+                            <point x="0.634722" y="0.488888" />
+                        </collision-poly>
+                    </frame>
                     <frame duration="1" hotspotX="0.311111" hotspotY="1" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Leo Socos\0.png">
                         <collision-poly>
                             <point x="0.633334" y="0.311111" />
@@ -302,7 +359,7 @@
                             <point x="0.634722" y="0.488888" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.311111" hotspotY="1">
+                    <frame duration="1" hotspotX="0.311111" hotspotY="1" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Leo Socos\3.png">
                         <collision-poly>
                             <point x="0.633334" y="0.311111" />
                             <point x="0.823611" y="0.309722" />
@@ -310,12 +367,88 @@
                             <point x="0.634722" y="0.488888" />
                         </collision-poly>
                     </frame>
+                </animation>
+                <animation framecount="5" loop="0" name="T_Attack1" pingpong="0" repeatcount="1" repeatto="0" sid="704386929572014" speed="7">
+                    <frame duration="1" hotspotX="0.311111" hotspotY="1" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Leo Socos\0.png">
+                        <collision-poly>
+                            <point x="0.611112" y="0.344445" />
+                            <point x="0.788888" y="0.344445" />
+                            <point x="0.788889" y="0.56111" />
+                            <point x="0.605556" y="0.56111" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.311111" hotspotY="1" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Leo Socos\1.png">
+                        <collision-poly>
+                            <point x="0.611112" y="0.344445" />
+                            <point x="0.788888" y="0.344445" />
+                            <point x="0.788889" y="0.56111" />
+                            <point x="0.605556" y="0.56111" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.311111" hotspotY="1" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Leo Socos\2.png">
+                        <collision-poly>
+                            <point x="0.611112" y="0.344445" />
+                            <point x="0.788888" y="0.344445" />
+                            <point x="0.788889" y="0.56111" />
+                            <point x="0.605556" y="0.56111" />
+                        </collision-poly>
+                    </frame>
                     <frame duration="1" hotspotX="0.311111" hotspotY="1" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Leo Socos\3.png">
                         <collision-poly>
-                            <point x="0.633334" y="0.311111" />
-                            <point x="0.823611" y="0.309722" />
-                            <point x="0.825" y="0.490277" />
-                            <point x="0.634722" y="0.488888" />
+                            <point x="0.611112" y="0.344445" />
+                            <point x="0.788888" y="0.344445" />
+                            <point x="0.788889" y="0.56111" />
+                            <point x="0.605556" y="0.56111" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.311111" hotspotY="1">
+                        <collision-poly>
+                            <point x="0.611112" y="0.344445" />
+                            <point x="0.788888" y="0.344445" />
+                            <point x="0.788889" y="0.56111" />
+                            <point x="0.605556" y="0.56111" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="5" loop="0" name="T_Attack2" pingpong="0" repeatcount="1" repeatto="0" sid="823800396383770" speed="7">
+                    <frame duration="1" hotspotX="0.311111" hotspotY="1" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Leo Socos\5.png">
+                        <collision-poly>
+                            <point x="0.647223" y="0.294444" />
+                            <point x="0.827777" y="0.294445" />
+                            <point x="0.827777" y="0.497222" />
+                            <point x="0.647222" y="0.497222" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.311111" hotspotY="1" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Leo Socos\4.png">
+                        <collision-poly>
+                            <point x="0.647223" y="0.294444" />
+                            <point x="0.827777" y="0.294445" />
+                            <point x="0.827777" y="0.497222" />
+                            <point x="0.647222" y="0.497222" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.311111" hotspotY="1" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Leo Socos\7.png">
+                        <collision-poly>
+                            <point x="0.647223" y="0.294444" />
+                            <point x="0.827777" y="0.294445" />
+                            <point x="0.827777" y="0.497222" />
+                            <point x="0.647222" y="0.497222" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.311111" hotspotY="1" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Leo Socos\6.png">
+                        <collision-poly>
+                            <point x="0.647223" y="0.294444" />
+                            <point x="0.827777" y="0.294445" />
+                            <point x="0.827777" y="0.497222" />
+                            <point x="0.647222" y="0.497222" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.311111" hotspotY="1">
+                        <collision-poly>
+                            <point x="0.647223" y="0.294444" />
+                            <point x="0.827777" y="0.294445" />
+                            <point x="0.827777" y="0.497222" />
+                            <point x="0.647222" y="0.497222" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -384,7 +517,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Preenchimento_Barra_Vida" sid="625182815207166">
+        <object-type name="Vida_atras" sid="625182815207166">
             <plugin id="TiledBg" />
             <behaviors>
                 <behavior-type name="Anchor" sid="912629561985208">
@@ -393,13 +526,18 @@
             </behaviors>
             <texture original-source="C:\Users\Joao\Documents\GitHub\Leo_Train_Rescue\Artes\HUD\0.png" />
         </object-type>
-        <object-type name="Preenchimento_Barra_Poder" sid="820491197646249">
+        <object-type name="Poder_atras" sid="820491197646249">
             <plugin id="TiledBg" />
             <behaviors>
                 <behavior-type name="Anchor" sid="696922340624920">
                     <behavior id="Anchor" />
                 </behavior-type>
             </behaviors>
+            <effects>
+                <effect-type name="Brightness">
+                    <effect id="brightness" />
+                </effect-type>
+            </effects>
             <texture original-source="C:\Users\Joao\Documents\GitHub\Leo_Train_Rescue\Artes\HUD\1.png" />
         </object-type>
     </object-folder>

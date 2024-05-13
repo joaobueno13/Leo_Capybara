@@ -77,6 +77,7 @@
                     </properties>
                     <instance-variables>
                         <estado></estado>
+                        <estado_transformacao></estado_transformacao>
                         <noAr>false</noAr>
                         <sombra>0</sombra>
                         <noAr_dir></noAr_dir>
@@ -135,7 +136,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Personagem_Hitbox" uid="5">
+                <instance type="Leo_Hitbox" uid="5">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -223,7 +224,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Preenchimento_Barra_Vida" uid="13">
+                <instance type="Vida_atras" uid="13">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -287,7 +288,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Preenchimento_Barra_Poder" uid="14">
+                <instance type="Poder_atras" uid="14">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -303,6 +304,13 @@
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
+                    <effect-instances>
+                        <effect-instance type="Brightness">
+                            <parameters>
+                                <brightness>1</brightness>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -318,7 +326,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Preenchimento_Barra_Poder" uid="15">
+                <instance type="Poder_atras" uid="15">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -334,6 +342,13 @@
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
+                    <effect-instances>
+                        <effect-instance type="Brightness">
+                            <parameters>
+                                <brightness>1</brightness>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>

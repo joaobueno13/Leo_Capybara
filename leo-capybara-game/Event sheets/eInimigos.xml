@@ -6,7 +6,7 @@
         <event-block sid="342505921130687">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="597792068042095" type="Tyler">
-                    <param id="0" name="Object">Personagem_Hitbox</param>
+                    <param id="0" name="Object">Leo_Hitbox</param>
                 </condition>
                 <condition id="-21" name="Is between values" sid="961016965006648" type="System">
                     <param id="0" name="Value">tyler.Y</param>
