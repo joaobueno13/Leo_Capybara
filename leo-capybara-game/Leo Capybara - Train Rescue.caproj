@@ -25,6 +25,7 @@
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Rex.Rainbow" id="Rex_MoveTo" version="1">MoveTo</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
     </used-behaviors>
@@ -457,17 +458,42 @@
         <object-type global="1" name="AtaquesPersonagem" sid="515695383449147">
             <plugin id="Arr" />
         </object-type>
-        <object-type name="Tyler" sid="888578742327130">
+        <object-type name="Mini_tyler" sid="888578742327130">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="ativo" sid="976641619567353" type="boolean" />
+                <instance-variable name="decisao" sid="388429853276561" type="number" />
+                <instance-variable name="decisao_atual" sid="816875589383798" type="number" />
+                <instance-variable name="decisao_timer" sid="987241544032448" type="number" />
+            </instance-variables>
             <behaviors>
                 <behavior-type name="Sine" sid="215048069988895">
                     <behavior id="Sin" />
                 </behavior-type>
+                <behavior-type name="MoveTo" sid="714809585183686">
+                    <behavior id="Rex_MoveTo" />
+                </behavior-type>
+                <behavior-type name="BoundToLayout" sid="554848087647727">
+                    <behavior id="bound" />
+                </behavior-type>
             </behaviors>
             <animation-folder>
-                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="116639281531196" speed="5">
-                    <frame duration="1" hotspotX="0.466667" hotspotY="0.492308" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Tiler\Tiller o tigre (1)\0.png" />
-                    <frame duration="1" hotspotX="0.47541" hotspotY="0.5" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Tiler\Tiller o tigre (1)\1.png" />
+                <animation framecount="2" loop="0" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="116639281531196" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Tiler\Tiller o tigre (1)\0.png" />
+                    <frame duration="1" hotspotX="0.508197" hotspotY="1" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Tiler\Tiller o tigre (1)\1.png" />
+                </animation>
+                <animation framecount="6" loop="0" name="Walk" pingpong="0" repeatcount="1" repeatto="0" sid="445257112414641" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Tiler\Tiller Andando\0.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Tiler\Tiller Andando\1.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Tiler\Tiller Andando\2.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Tiler\Tiller Andando\3.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Tiler\Tiller Andando\4.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Tiler\Tiller Andando\5.png" />
+                </animation>
+                <animation framecount="3" loop="0" name="Defeat" pingpong="0" repeatcount="1" repeatto="0" sid="286870299282118" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Tiler\Tiller_Defeat\00.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Tiler\Tiller_Defeat\01.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Tiler\Tiller_Defeat\02.png" />
                 </animation>
             </animation-folder>
         </object-type>

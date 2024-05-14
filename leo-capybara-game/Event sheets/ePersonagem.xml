@@ -1010,7 +1010,7 @@
         <event-block sid="172359210772184">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="987924451103936" type="Leo">
-                    <param id="0" name="Object">Tyler</param>
+                    <param id="0" name="Object">Mini_tyler</param>
                 </condition>
             </conditions>
             <actions>
