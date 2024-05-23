@@ -210,28 +210,25 @@
                     </frame>
                 </animation>
                 <animation framecount="2" loop="0" name="T_idle" pingpong="0" repeatcount="1" repeatto="0" sid="134650642256807" speed="5">
-                    <frame duration="1" hotspotX="0.511111" hotspotY="1" />
-                    <frame duration="1" hotspotX="0.511111" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.511111" hotspotY="1" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Animações Power\Parado\0.png" />
+                    <frame duration="1" hotspotX="0.511111" hotspotY="1" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Animações Power\Parado\1.png" />
                 </animation>
-                <animation framecount="4" loop="0" name="T_walk" pingpong="0" repeatcount="1" repeatto="0" sid="263775007042775" speed="5">
-                    <frame duration="1" hotspotX="0.511111" hotspotY="1" />
-                    <frame duration="1" hotspotX="0.511111" hotspotY="1" />
-                    <frame duration="1" hotspotX="0.511111" hotspotY="1" />
-                    <frame duration="1" hotspotX="0.511111" hotspotY="1" />
+                <animation framecount="5" loop="0" name="T_walk" pingpong="0" repeatcount="1" repeatto="0" sid="263775007042775" speed="5">
+                    <frame duration="1" hotspotX="0.511111" hotspotY="1" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Animações Power\Andando\sprite_0.png" />
+                    <frame duration="1" hotspotX="0.511111" hotspotY="1" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Animações Power\Andando\sprite_1.png" />
+                    <frame duration="1" hotspotX="0.511111" hotspotY="1" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Animações Power\Andando\sprite_2.png" />
+                    <frame duration="1" hotspotX="0.511111" hotspotY="1" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Animações Power\Andando\sprite_3.png" />
+                    <frame duration="1" hotspotX="0.511111" hotspotY="1" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Animações Power\Andando\sprite_4.png" />
                 </animation>
-                <animation framecount="5" loop="0" name="T_attack1" pingpong="0" repeatcount="1" repeatto="0" sid="736371335056095" speed="5">
-                    <frame duration="1" hotspotX="0.311111" hotspotY="1" />
-                    <frame duration="1" hotspotX="0.311111" hotspotY="1" />
-                    <frame duration="1" hotspotX="0.311111" hotspotY="1" />
-                    <frame duration="1" hotspotX="0.311111" hotspotY="1" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Leo Socos\3.png" />
-                    <frame duration="1" hotspotX="0.311111" hotspotY="1" />
+                <animation framecount="3" loop="0" name="T_attack1" pingpong="0" repeatcount="1" repeatto="0" sid="736371335056095" speed="5">
+                    <frame duration="1" hotspotX="0.311111" hotspotY="1" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Animações Power\Socos\sprite_0.png" />
+                    <frame duration="1" hotspotX="0.311111" hotspotY="1" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Animações Power\Socos\sprite_1.png" />
+                    <frame duration="1" hotspotX="0.311111" hotspotY="1" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Animações Power\Socos\sprite_2.png" />
                 </animation>
-                <animation framecount="5" loop="0" name="T_attack2" pingpong="0" repeatcount="1" repeatto="0" sid="821526509761388" speed="5">
-                    <frame duration="1" hotspotX="0.511111" hotspotY="0.511111" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Leo Socos\4.png" />
-                    <frame duration="1" hotspotX="0.511111" hotspotY="0.511111" />
-                    <frame duration="1" hotspotX="0.511111" hotspotY="0.511111" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Leo Socos\5.png" />
-                    <frame duration="1" hotspotX="0.511111" hotspotY="0.511111" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Leo Socos\6.png" />
-                    <frame duration="1" hotspotX="0.511111" hotspotY="0.511111" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Leo Socos\7.png" />
+                <animation framecount="3" loop="0" name="T_attack2" pingpong="0" repeatcount="1" repeatto="0" sid="821526509761388" speed="5">
+                    <frame duration="1" hotspotX="0.311111" hotspotY="1" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Animações Power\Socos\sprite_3.png" />
+                    <frame duration="1" hotspotX="0.311111" hotspotY="1" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Animações Power\Socos\sprite_4.png" />
+                    <frame duration="1" hotspotX="0.311111" hotspotY="1" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Animações Power\Socos\sprite_5.png" />
                 </animation>
             </animation-folder>
         </object-type>
