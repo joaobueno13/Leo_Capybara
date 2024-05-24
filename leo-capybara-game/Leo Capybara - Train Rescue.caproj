@@ -15,6 +15,7 @@
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Juan Pablo Tarquino" id="Rex_ZSorter" version="1">Z Sorter</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
@@ -402,15 +403,305 @@
             </behaviors>
             <texture original-source="C:\Users\Joao\Documents\GitHub\Leo_Train_Rescue\Artes\HUD\1.png" />
         </object-type>
+        <object-type name="LeoBG" sid="156497717661444">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="estado" sid="989850873147374" type="string" />
+                <instance-variable name="noAr" sid="791225496014890" type="boolean" />
+                <instance-variable name="sombra" sid="659714188482426" type="number" />
+                <instance-variable name="noAr_dir" sid="197839227636319" type="string" />
+                <instance-variable name="atacando" sid="836835752982335" type="boolean" />
+                <instance-variable name="combo" sid="691021781887140" type="number" />
+                <instance-variable name="combo_max" sid="325162810214313" type="number" />
+                <instance-variable name="combo_timer" sid="364123328444973" type="number" />
+                <instance-variable name="acerto" sid="190466310440402" type="number" />
+                <instance-variable name="vida" sid="313268939659636" type="number" />
+                <instance-variable name="poder" sid="154496036622456" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="684051666529183" speed="5">
+                    <frame duration="1" hotspotX="0.511111" hotspotY="1" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Leo_v2\0.png" />
+                    <frame duration="1" hotspotX="0.511111" hotspotY="1" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Leo_v2\1.png" />
+                </animation>
+                <animation framecount="4" loop="0" name="Walk" pingpong="0" repeatcount="1" repeatto="0" sid="115222176237915" speed="5">
+                    <frame duration="1" hotspotX="0.511111" hotspotY="1" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Leo Andando\1.png" />
+                    <frame duration="1" hotspotX="0.511111" hotspotY="1" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Leo Andando\2.png" />
+                    <frame duration="1" hotspotX="0.511111" hotspotY="1" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Leo Andando\3.png" />
+                    <frame duration="1" hotspotX="0.511111" hotspotY="1" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Leo Andando\4.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="JumpAttack" pingpong="0" repeatcount="1" repeatto="0" sid="247723674374982" speed="7">
+                    <frame duration="1" hotspotX="0.511111" hotspotY="1" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Leo Pulando\2.png" />
+                </animation>
+                <animation framecount="4" loop="0" name="Attack1" pingpong="0" repeatcount="1" repeatto="0" sid="454733185633733" speed="5">
+                    <frame duration="1" hotspotX="0.311111" hotspotY="1" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Leo Socos\0.png" />
+                    <frame duration="1" hotspotX="0.311111" hotspotY="1" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Leo Socos\1.png" />
+                    <frame duration="1" hotspotX="0.311111" hotspotY="1" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Leo Socos\2.png" />
+                    <frame duration="1" hotspotX="0.311111" hotspotY="1" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Leo Socos\3.png" />
+                </animation>
+                <animation framecount="4" loop="0" name="Attack2" pingpong="0" repeatcount="1" repeatto="0" sid="469240125269174" speed="5">
+                    <frame duration="1" hotspotX="0.311111" hotspotY="1" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Leo Socos\0.png" />
+                    <frame duration="1" hotspotX="0.311111" hotspotY="1" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Leo Socos\4.png" />
+                    <frame duration="1" hotspotX="0.311111" hotspotY="1" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Leo Socos\5.png" />
+                    <frame duration="1" hotspotX="0.311111" hotspotY="1" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Leo Socos\3.png" />
+                </animation>
+                <animation framecount="2" loop="0" name="T_idle" pingpong="0" repeatcount="1" repeatto="0" sid="591141273625571" speed="5">
+                    <frame duration="1" hotspotX="0.511111" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.511111" hotspotY="1" />
+                </animation>
+                <animation framecount="4" loop="0" name="T_attack" pingpong="0" repeatcount="1" repeatto="0" sid="273599963654369" speed="5">
+                    <frame duration="1" hotspotX="0.311111" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.311111" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.311111" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.311111" hotspotY="1" />
+                </animation>
+                <animation framecount="13" loop="0" name="Transform" pingpong="0" repeatcount="1" repeatto="0" sid="906826102183040" speed="5">
+                    <frame duration="1" hotspotX="0.511111" hotspotY="0.511111" original-source="C:\Users\Joao\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Leo Defeat\3.png" />
+                    <frame duration="1" hotspotX="0.511111" hotspotY="0.511111" original-source="C:\Users\Joao\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Leo Defeat\4.png" />
+                    <frame duration="1" hotspotX="0.511111" hotspotY="0.511111" original-source="C:\Users\Joao\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Leo Defeat\5.png" />
+                    <frame duration="1" hotspotX="0.511111" hotspotY="0.511111" original-source="C:\Users\Joao\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Leo Defeat\6.png" />
+                    <frame duration="1" hotspotX="0.511111" hotspotY="0.511111" original-source="C:\Users\Joao\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Leo Defeat\7.png" />
+                    <frame duration="1" hotspotX="0.511111" hotspotY="0.511111" />
+                    <frame duration="1" hotspotX="0.511111" hotspotY="0.511111" />
+                    <frame duration="1" hotspotX="0.511111" hotspotY="0.511111" />
+                    <frame duration="1" hotspotX="0.511111" hotspotY="0.511111" />
+                    <frame duration="1" hotspotX="0.511111" hotspotY="0.511111" />
+                    <frame duration="1" hotspotX="0.511111" hotspotY="0.511111" original-source="C:\Users\Joao\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Leo Defeat\2.png">
+                        <collision-poly>
+                            <point x="0.2" y="0.2" />
+                            <point x="0.488889" y="0.0222222" />
+                            <point x="0.866667" y="0.133333" />
+                            <point x="0.688889" y="0.488889" />
+                            <point x="0.755556" y="0.755556" />
+                            <point x="0.488889" y="0.822222" />
+                            <point x="0.266667" y="0.733333" />
+                            <point x="0.2" y="0.488889" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.511111" hotspotY="0.511111" original-source="C:\Users\Joao\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Leo Defeat\1.png">
+                        <collision-poly>
+                            <point x="0.2" y="0.2" />
+                            <point x="0.488889" y="0.0222222" />
+                            <point x="0.866667" y="0.133333" />
+                            <point x="0.688889" y="0.488889" />
+                            <point x="0.755556" y="0.755556" />
+                            <point x="0.488889" y="0.822222" />
+                            <point x="0.266667" y="0.733333" />
+                            <point x="0.2" y="0.488889" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.511111" hotspotY="0.511111" original-source="C:\Users\Joao\Documents\GitHub\Leo_Train_Rescue\Artes\Leo\Leo Defeat\0.png">
+                        <collision-poly>
+                            <point x="0.2" y="0.2" />
+                            <point x="0.488889" y="0.0222222" />
+                            <point x="0.866667" y="0.133333" />
+                            <point x="0.688889" y="0.488889" />
+                            <point x="0.755556" y="0.755556" />
+                            <point x="0.488889" y="0.822222" />
+                            <point x="0.266667" y="0.733333" />
+                            <point x="0.2" y="0.488889" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TylerBG" sid="344529750966193">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="304041379693577" speed="5">
+                    <frame duration="1" hotspotX="0.466667" hotspotY="0.492308" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Tiler\Tiller o tigre (1)\0.png" />
+                    <frame duration="1" hotspotX="0.47541" hotspotY="0.5" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Tiler\Tiller o tigre (1)\1.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TrainOpacityBG" sid="473948062148592">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="LeoMenuLogo" sid="407771552390902">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="431191713076777">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="408340269950204" speed="5">
+                    <frame duration="1" hotspotX="0.517693" hotspotY="0.531915" original-source="C:\Users\Ruan\Downloads\Leo Capybara (2) (1).png">
+                        <collision-poly>
+                            <point x="0.134993" y="0.204927" />
+                            <point x="0.517693" y="0.0347144" />
+                            <point x="0.882045" y="0.220605" />
+                            <point x="0.916121" y="0.87234" />
+                            <point x="0.517693" y="0.976484" />
+                            <point x="0.145478" y="0.849944" />
+                            <point x="0.107471" y="0.531915" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="MenuInicial" sid="841638813348890">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="estado" sid="140025147856243" type="string" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="372263269822274" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Ruan\Downloads\menu-1\menu\Iniciar\00.png">
+                        <collision-poly>
+                            <point x="0.0571429" y="0.0571429" />
+                            <point x="0.5" y="0.0428571" />
+                            <point x="0.942857" y="0.0571429" />
+                            <point x="0.985714" y="0.5" />
+                            <point x="0.942857" y="0.942857" />
+                            <point x="0.5" y="0.971429" />
+                            <point x="0.0571429" y="0.942857" />
+                            <point x="0.0142857" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="4" loop="1" name="Iniciar" pingpong="1" repeatcount="1" repeatto="0" sid="984416394435273" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Ruan\Downloads\menu-1\menu\Iniciar\01.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Ruan\Downloads\menu-1\menu\Iniciar\02.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Ruan\Downloads\menu-1\menu\Iniciar\03.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Ruan\Downloads\menu-1\menu\Iniciar\04.png" />
+                </animation>
+                <animation framecount="4" loop="1" name="Salvo" pingpong="1" repeatcount="1" repeatto="0" sid="374947427921922" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Ruan\Downloads\menu-1\menu\Salvo\01.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Ruan\Downloads\menu-1\menu\Salvo\02.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Ruan\Downloads\menu-1\menu\Salvo\03.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Ruan\Downloads\menu-1\menu\Salvo\04.png" />
+                </animation>
+                <animation framecount="4" loop="1" name="Opcoes" pingpong="1" repeatcount="1" repeatto="0" sid="875601675017121" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Ruan\Downloads\menu-1\menu\Opções\01.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Ruan\Downloads\menu-1\menu\Opções\02.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Ruan\Downloads\menu-1\menu\Opções\03.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Ruan\Downloads\menu-1\menu\Opções\04.png" />
+                </animation>
+                <animation framecount="4" loop="1" name="Sair" pingpong="1" repeatcount="1" repeatto="0" sid="337764699481111" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Ruan\Downloads\menu-1\menu\Sair\01.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Ruan\Downloads\menu-1\menu\Sair\02.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Ruan\Downloads\menu-1\menu\Sair\03.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Ruan\Downloads\menu-1\menu\Sair\04.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Cursor" sid="689668060422620">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="opcaoSelecionada" sid="281190137829888" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="934834038824937" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="OpcaoMenu" sid="354241797188255">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="opcao" sid="649028465735453" type="number" />
+                <instance-variable name="acao" sid="116160462521159" type="string" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="165923670825823" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="MenuOpcoes" sid="949534938153185">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="estado" sid="948731640741020" type="string" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="799970509790827" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Ruan\Downloads\TelaSom_e_Musica-1\TelaSom e Musica\sprite_0.png">
+                        <collision-poly>
+                            <point x="0.0571429" y="0.0571429" />
+                            <point x="0.5" y="0.0428571" />
+                            <point x="0.942857" y="0.0571429" />
+                            <point x="0.985714" y="0.5" />
+                            <point x="0.942857" y="0.942857" />
+                            <point x="0.5" y="0.971429" />
+                            <point x="0.0571429" y="0.942857" />
+                            <point x="0.0142857" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="4" loop="1" name="Voltar" pingpong="1" repeatcount="1" repeatto="0" sid="562150603771887" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Ruan\Downloads\TelaSom_e_Musica-1\TelaSom e Musica\sprite_1.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Ruan\Downloads\TelaSom_e_Musica-1\TelaSom e Musica\sprite_2.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Ruan\Downloads\TelaSom_e_Musica-1\TelaSom e Musica\sprite_3.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Ruan\Downloads\TelaSom_e_Musica-1\TelaSom e Musica\sprite_4.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="PlusSoundButton" sid="426530142900044">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="121972246376058" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Ruan\Downloads\TelaSom_e_Musica-1\TelaSom e Musica\button+.png">
+                        <collision-poly>
+                            <point x="0.0714286" y="0.357143" />
+                            <point x="0.5" y="0.0714286" />
+                            <point x="0.928571" y="0.357143" />
+                            <point x="0.928571" y="0.642857" />
+                            <point x="0.5" y="0.928571" />
+                            <point x="0.0714286" y="0.642857" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SoundBar" sid="990823031483993">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="153155363495113" speed="5">
+                    <frame duration="1" hotspotX="0.521277" hotspotY="0.5" original-source="C:\Users\Ruan\Downloads\TelaSom_e_Musica-1\TelaSom e Musica\barrasSom.png">
+                        <collision-poly>
+                            <point x="0.0106383" y="0.0714286" />
+                            <point x="0.521277" y="0.0714286" />
+                            <point x="0.989362" y="0.357143" />
+                            <point x="0.989362" y="0.642857" />
+                            <point x="0.521277" y="0.928571" />
+                            <point x="0.0106383" y="0.928571" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="MinusSoundButton" sid="684517152352619">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="863819210517063" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Ruan\Downloads\TelaSom_e_Musica-1\TelaSom e Musica\button-.png">
+                        <collision-poly>
+                            <point x="0.0714286" y="0.166667" />
+                            <point x="0.928571" y="0.166667" />
+                            <point x="0.928571" y="0.833333" />
+                            <point x="0.0714286" y="0.833333" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Mouse" sid="479567449457001">
+            <plugin id="Mouse" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
         <layout>Fase.xml</layout>
+        <layout>MenuInicial.xml</layout>
+        <layout>MenuOpcoes.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>ePrincipal.xml</event-sheet>
         <event-sheet>ePersonagem.xml</event-sheet>
         <event-sheet>eInimigos.xml</event-sheet>
+        <event-sheet>eMenuInicial.xml</event-sheet>
+        <event-sheet>eMenuOpcoes.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Gamepad" uid="2">
@@ -435,6 +726,7 @@
         </global-instance>
         <global-instance type="Browser" uid="7" />
         <global-instance type="Function" uid="4" />
+        <global-instance type="Mouse" uid="36" />
     </global-instances>
     <sounds-folder />
     <music-folder />
