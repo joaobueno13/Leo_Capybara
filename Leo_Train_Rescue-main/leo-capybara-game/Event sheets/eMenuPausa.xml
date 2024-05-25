@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>eMenuPausa</name>
+    <events>
+        <event-block sid="178791215134619">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="330469447340595" type="System">
+                    <param id="0" name="Interval (seconds)">15</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-36" name="Save" sid="669305641019587" type="System">
+                    <param id="0" name="Slot">&quot;mysave&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="752016925128235">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="134364606350774" type="System" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="279214481947709" type="PauseButton">
+                    <param id="0" name="Animation">PauseButton.estado</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="728128428941616">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="795861574763625" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">PauseButton</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="878487705141491">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="465720311212945" type="System">
+                            <param id="0" name="Variable">paused</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set time scale" sid="411390160416901" type="System">
+                            <param id="0" name="Time scale">1.0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="455637916426770" type="System">
+                            <param id="0" name="Variable">paused</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="399980062086808" type="PauseButton">
+                            <param id="0" name="Instance variable">estado</param>
+                            <param id="1" name="Value">&quot;Default&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="261231287526047" type="MenuPausa">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="569773309463484">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="699909207065989" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set time scale" sid="504074323812612" type="System">
+                            <param id="0" name="Time scale">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="116189086091661" type="System">
+                            <param id="0" name="Variable">paused</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="691576134079853" type="PauseButton">
+                            <param id="0" name="Instance variable">estado</param>
+                            <param id="1" name="Value">&quot;Pausar&quot;</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="211681410098982" type="MenuPausa">
+                            <param id="0" name="Opacity">100</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="605419325496528" type="MenuPausa">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="100709849342649" type="PauseHomeButton">
+                            <param id="0" name="Opacity">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="912479487227744" type="PauseHomeButton">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="932226096533305" type="PauseSaveButton">
+                            <param id="0" name="Opacity">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="180588123933658" type="PauseSaveButton">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="191249126421764">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="355670211655638" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">PauseHomeButton</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="288037492248013" type="System">
+                    <param id="0" name="Layout">MenuInicial</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="473464031688325">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="918811906168121" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">PauseSaveButton</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-36" name="Save" sid="916847960173346" type="System">
+                    <param id="0" name="Slot">&quot;mysave&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

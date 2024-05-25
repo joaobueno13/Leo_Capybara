@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>eMenuOpcoes</name>
+    <events>
+        <event-block sid="760430137834899">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="108657743237692" type="System" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="535788706887721" type="MenuOpcoes">
+                    <param id="0" name="Animation">MenuOpcoes.estado</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="260286906136341">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="345911262955782" type="Keyboard">
+                    <param id="0" name="Key">40</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="372591505367379">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="691564959317528" type="Cursor">
+                            <param id="0" name="Instance variable">opcaoSelecionada</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Add to" sid="842975608494008" type="Cursor">
+                            <param id="0" name="Instance variable">opcaoSelecionada</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="556618305750137">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="770413648294169" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="500114389722085" type="Cursor">
+                            <param id="0" name="Instance variable">opcaoSelecionada</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="606076942314337">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="134709771279524" type="Keyboard">
+                    <param id="0" name="Key">38</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="681761767059248">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="576606149087468" type="Cursor">
+                            <param id="0" name="Instance variable">opcaoSelecionada</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="195386360606135" type="Cursor">
+                            <param id="0" name="Instance variable">opcaoSelecionada</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="436348192065877">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="898778636267522" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="977912005248743" type="Cursor">
+                            <param id="0" name="Instance variable">opcaoSelecionada</param>
+                            <param id="1" name="Value">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="908139007595901">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="765166563769191" type="Keyboard">
+                    <param id="0" name="Key">13</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="151713471490810">
+                    <conditions>
+                        <condition id="-33" name="Pick by comparison" sid="109464253586433" type="System">
+                            <param id="0" name="Object">OpcaoMenu</param>
+                            <param id="1" name="Expression">OpcaoMenu.opcao</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">Cursor.opcaoSelecionada</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="607519722694105">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="802513093136800" type="OpcaoMenu">
+                                    <param id="0" name="Instance variable">acao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Voltar&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="615696431001343" type="System">
+                                    <param id="0" name="Layout">MenuInicial</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="122027962763602">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="176411251529895" type="System" />
+                <condition id="-33" name="Pick by comparison" sid="227270117982121" type="System">
+                    <param id="0" name="Object">OpcaoMenu</param>
+                    <param id="1" name="Expression">OpcaoMenu.opcao</param>
+                    <param id="2" name="Comparison">0</param>
+                    <param id="3" name="Value">Cursor.opcaoSelecionada</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Set Y" sid="673971111291916" type="Cursor">
+                    <param id="0" name="Y">OpcaoMenu.Y</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="456569793700842">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="803597916403092" type="System">
+                            <param id="0" name="First value">Cursor.opcaoSelecionada</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="831420252154150" type="MenuOpcoes">
+                            <param id="0" name="Instance variable">estado</param>
+                            <param id="1" name="Value">&quot;Default&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block any="1" sid="407827732693124">
+                            <conditions>
+                                <condition id="6" name="On object clicked" sid="297959495090705" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                    <param id="2" name="Object clicked">PlusSoundButton</param>
+                                </condition>
+                                <condition id="0" name="On key pressed" sid="164094414574895" type="Keyboard">
+                                    <param id="0" name="Key">39</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="778274731276344">
+                                    <conditions>
+                                        <condition id="-33" name="Pick by comparison" sid="167598892017133" type="System">
+                                            <param id="0" name="Object">PlusSoundButton</param>
+                                            <param id="1" name="Expression">PlusSoundButton.id</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Sine" id="0" name="Set active" sid="838040068808730" type="PlusSoundButton">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="966520449650528" type="System">
+                                            <param id="0" name="Seconds">1.0</param>
+                                        </action>
+                                        <action behavior="Sine" id="0" name="Set active" sid="842566624177989" type="PlusSoundButton">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="501376463365935">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="527721112629422" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Sine" id="0" name="Set active" sid="434642026305041" type="PlusSoundButton">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block any="1" sid="422796241504614">
+                            <conditions>
+                                <condition id="6" name="On object clicked" sid="866290012291899" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                    <param id="2" name="Object clicked">MinusSoundButton</param>
+                                </condition>
+                                <condition id="0" name="On key pressed" sid="935444878154585" type="Keyboard">
+                                    <param id="0" name="Key">37</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="627582072330165">
+                                    <conditions>
+                                        <condition id="-33" name="Pick by comparison" sid="153376554621009" type="System">
+                                            <param id="0" name="Object">MinusSoundButton</param>
+                                            <param id="1" name="Expression">MinusSoundButton.id</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Sine" id="0" name="Set active" sid="308014587073945" type="MinusSoundButton">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="209004145826723" type="System">
+                                            <param id="0" name="Seconds">1.0</param>
+                                        </action>
+                                        <action behavior="Sine" id="0" name="Set active" sid="802953808251176" type="MinusSoundButton">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="130708142097776">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="429668937874813" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Sine" id="0" name="Set active" sid="208667645814642" type="MinusSoundButton">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="345522977567738">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="734176036211897" type="System">
+                    <param id="0" name="First value">Cursor.opcaoSelecionada</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="214594639450533" type="MenuOpcoes">
+                    <param id="0" name="Instance variable">estado</param>
+                    <param id="1" name="Value">&quot;Default&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="883950111840214">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="367431057996038" type="System">
+                    <param id="0" name="First value">Cursor.opcaoSelecionada</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="147847286174209" type="MenuOpcoes">
+                    <param id="0" name="Instance variable">estado</param>
+                    <param id="1" name="Value">&quot;Voltar&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
