@@ -52,7 +52,7 @@
         <prop name="Fullscreen scaling quality">Low</prop>
         <prop name="Hide address bar">No</prop>
         <prop name="Loader style">Progress bar &amp; logo</prop>
-        <prop name="Preview browser">Chrome</prop>
+        <prop name="Preview browser">(default)</prop>
         <prop name="Sampling">Point</prop>
         <prop name="Use iOS retina display">All devices</prop>
     </configuration-settings>
@@ -662,6 +662,14 @@
         </object-type>
         <object-type name="PlusSoundButton" sid="426530142900044">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="id" sid="528231428857766" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Sine" sid="469720426029996">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="121972246376058" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Ruan\Downloads\TelaSom_e_Musica-1\TelaSom e Musica\button+.png">
@@ -696,6 +704,14 @@
         </object-type>
         <object-type name="MinusSoundButton" sid="684517152352619">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="id" sid="106333469047468" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Sine" sid="217498171032558">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="863819210517063" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Ruan\Downloads\TelaSom_e_Musica-1\TelaSom e Musica\button-.png">
@@ -729,6 +745,51 @@
                 </behavior-type>
             </behaviors>
             <texture original-source="C:\Users\João\Documents\GitHub\Leo_Train_Rescue\Artes\HUD\1.png" />
+        </object-type>
+        <object-type name="MenuPausa" sid="366707505763976">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="727688312357194" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Ruan\Downloads\Menu_Durante_o_jogo\Menu Durante o jogo\MenuJogo.png">
+                        <collision-poly>
+                            <point x="0.0384615" y="0.0384615" />
+                            <point x="0.5" y="0" />
+                            <point x="0.961538" y="0.0384615" />
+                            <point x="1" y="0.5" />
+                            <point x="0.942308" y="0.942308" />
+                            <point x="0.5" y="0.980769" />
+                            <point x="0.0576923" y="0.942308" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="PauseButton" sid="373151766649732">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="estado" sid="743820837239048" type="string" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="458155467438365" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Ruan\Downloads\Menu_Durante_o_jogo\Menu Durante o jogo\0.png">
+                        <collision-poly>
+                            <point x="0.125" y="0.125" />
+                            <point x="0.5" y="0.0625" />
+                            <point x="0.875" y="0.125" />
+                            <point x="0.9375" y="0.5" />
+                            <point x="0.875" y="0.875" />
+                            <point x="0.5" y="0.9375" />
+                            <point x="0.125" y="0.875" />
+                            <point x="0.0625" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="Pausar" pingpong="0" repeatcount="1" repeatto="0" sid="278200313166976" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Ruan\Downloads\Menu_Durante_o_jogo\Menu Durante o jogo\0.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Ruan\Downloads\Menu_Durante_o_jogo\Menu Durante o jogo\1.png" />
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families />

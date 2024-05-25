@@ -177,6 +177,39 @@
                                 </condition>
                             </conditions>
                             <actions />
+                            <sub-events>
+                                <event-block sid="778274731276344">
+                                    <conditions>
+                                        <condition id="-33" name="Pick by comparison" sid="167598892017133" type="System">
+                                            <param id="0" name="Object">PlusSoundButton</param>
+                                            <param id="1" name="Expression">PlusSoundButton.id</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Sine" id="0" name="Set active" sid="838040068808730" type="PlusSoundButton">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="966520449650528" type="System">
+                                            <param id="0" name="Seconds">1.0</param>
+                                        </action>
+                                        <action behavior="Sine" id="0" name="Set active" sid="842566624177989" type="PlusSoundButton">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="501376463365935">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="527721112629422" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Sine" id="0" name="Set active" sid="434642026305041" type="PlusSoundButton">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block any="1" sid="422796241504614">
                             <conditions>
@@ -190,6 +223,39 @@
                                 </condition>
                             </conditions>
                             <actions />
+                            <sub-events>
+                                <event-block sid="627582072330165">
+                                    <conditions>
+                                        <condition id="-33" name="Pick by comparison" sid="153376554621009" type="System">
+                                            <param id="0" name="Object">MinusSoundButton</param>
+                                            <param id="1" name="Expression">MinusSoundButton.id</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Sine" id="0" name="Set active" sid="308014587073945" type="MinusSoundButton">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="209004145826723" type="System">
+                                            <param id="0" name="Seconds">1.0</param>
+                                        </action>
+                                        <action behavior="Sine" id="0" name="Set active" sid="802953808251176" type="MinusSoundButton">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="130708142097776">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="429668937874813" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Sine" id="0" name="Set active" sid="208667645814642" type="MinusSoundButton">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>

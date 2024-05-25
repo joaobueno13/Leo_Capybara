@@ -360,228 +360,145 @@
         </event-group>
         <event-group description="" sid="606964491771863" title="Input Teclado e Gamepad">
             <sub-events>
-                <event-group description="" sid="435878704151275" title="Transformação">
+                <event-block sid="394137051221948">
+                    <conditions>
+                        <condition id="-14" inverted="1" name="Compare variable" sid="293504563765336" type="System">
+                            <param id="0" name="Variable">paused</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
                     <sub-events>
-                        <event-block sid="924080756043302">
-                            <conditions>
-                                <condition id="0" name="On key pressed" sid="420520743678364" type="Keyboard">
-                                    <param id="0" name="Key">67</param>
-                                </condition>
-                            </conditions>
-                            <actions />
+                        <event-group description="" sid="435878704151275" title="Transformação">
                             <sub-events>
-                                <event-block sid="169698463721147">
+                                <event-block sid="924080756043302">
                                     <conditions>
-                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="421412993486983" type="Leo">
-                                            <param id="0" name="Instance variable">noAr</param>
-                                        </condition>
-                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="123189880979851" type="Leo">
-                                            <param id="0" name="Instance variable">atacando</param>
-                                        </condition>
-                                        <condition id="-7" name="Compare instance variable" sid="863695941772891" type="Leo">
-                                            <param id="0" name="Instance variable">estado</param>
-                                            <param id="1" name="Comparison">1</param>
-                                            <param id="2" name="Value">&quot;Transform&quot;</param>
-                                        </condition>
-                                        <condition id="-7" name="Compare instance variable" sid="692558294498693" type="Leo">
-                                            <param id="0" name="Instance variable">estado_transformacao</param>
-                                            <param id="1" name="Comparison">1</param>
-                                            <param id="2" name="Value">&quot;T_&quot;</param>
+                                        <condition id="0" name="On key pressed" sid="420520743678364" type="Keyboard">
+                                            <param id="0" name="Key">67</param>
                                         </condition>
                                     </conditions>
                                     <actions />
                                     <sub-events>
-                                        <event-block sid="823554396913649">
+                                        <event-block sid="169698463721147">
                                             <conditions>
-                                                <condition id="-7" name="Compare instance variable" sid="668609128669587" type="Leo">
-                                                    <param id="0" name="Instance variable">poder</param>
-                                                    <param id="1" name="Comparison">5</param>
-                                                    <param id="2" name="Value">40</param>
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="421412993486983" type="Leo">
+                                                    <param id="0" name="Instance variable">noAr</param>
+                                                </condition>
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="123189880979851" type="Leo">
+                                                    <param id="0" name="Instance variable">atacando</param>
+                                                </condition>
+                                                <condition id="-7" name="Compare instance variable" sid="863695941772891" type="Leo">
+                                                    <param id="0" name="Instance variable">estado</param>
+                                                    <param id="1" name="Comparison">1</param>
+                                                    <param id="2" name="Value">&quot;Transform&quot;</param>
+                                                </condition>
+                                                <condition id="-7" name="Compare instance variable" sid="692558294498693" type="Leo">
+                                                    <param id="0" name="Instance variable">estado_transformacao</param>
+                                                    <param id="1" name="Comparison">1</param>
+                                                    <param id="2" name="Value">&quot;T_&quot;</param>
                                                 </condition>
                                             </conditions>
-                                            <actions>
-                                                <action id="-10" name="Set value" sid="316462238573658" type="Leo">
-                                                    <param id="0" name="Instance variable">estado</param>
-                                                    <param id="1" name="Value">&quot;Transform&quot;</param>
-                                                </action>
-                                            </actions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="823554396913649">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="668609128669587" type="Leo">
+                                                            <param id="0" name="Instance variable">poder</param>
+                                                            <param id="1" name="Comparison">5</param>
+                                                            <param id="2" name="Value">40</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-10" name="Set value" sid="316462238573658" type="Leo">
+                                                            <param id="0" name="Instance variable">estado</param>
+                                                            <param id="1" name="Value">&quot;Transform&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
                                         </event-block>
                                     </sub-events>
                                 </event-block>
-                            </sub-events>
-                        </event-block>
-                        <event-block sid="161821693327225">
-                            <conditions>
-                                <condition id="4" name="On finished" sid="611235495378926" type="Leo">
-                                    <param id="0" name="Animation">&quot;Transform&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-10" name="Set value" sid="280437643318594" type="Leo">
-                                    <param id="0" name="Instance variable">estado_transformacao</param>
-                                    <param id="1" name="Value">&quot;T_&quot;</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="425946111122732" type="Leo">
-                                    <param id="0" name="Instance variable">estado</param>
-                                    <param id="1" name="Value">&quot;&quot;</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="123746145900220" type="Leo">
-                                    <param id="0" name="Instance variable">combo</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="621289032169245" type="Leo">
-                                    <param id="0" name="Instance variable">combo_max</param>
-                                    <param id="1" name="Value">2</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="670776787579573">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="176189552577777" type="Leo">
-                                    <param id="0" name="Instance variable">estado_transformacao</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;T_&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-12" name="Subtract from" sid="922246079000256" type="Leo">
-                                    <param id="0" name="Instance variable">poder</param>
-                                    <param id="1" name="Value">4 * dt</param>
-                                </action>
-                                <action id="-5" name="Set width" sid="329647861968603" type="Barra_Poder_Conteudo">
-                                    <param id="0" name="Width">Leo.poder</param>
-                                </action>
-                            </actions>
-                            <sub-events>
-                                <event-block sid="789847848937081">
+                                <event-block sid="161821693327225">
                                     <conditions>
-                                        <condition id="-10" name="Compare opacity" sid="407233938726730" type="Barra_Poder_Atras">
-                                            <param id="0" name="Comparison">3</param>
-                                            <param id="1" name="Opacity">0</param>
+                                        <condition id="4" name="On finished" sid="611235495378926" type="Leo">
+                                            <param id="0" name="Animation">&quot;Transform&quot;</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-10" name="Set value" sid="553235596626513" type="Leo">
+                                        <action id="-10" name="Set value" sid="280437643318594" type="Leo">
                                             <param id="0" name="Instance variable">estado_transformacao</param>
+                                            <param id="1" name="Value">&quot;T_&quot;</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="425946111122732" type="Leo">
+                                            <param id="0" name="Instance variable">estado</param>
                                             <param id="1" name="Value">&quot;&quot;</param>
                                         </action>
-                                        <action id="-10" name="Set value" sid="881072536247598" type="Leo">
-                                            <param id="0" name="Instance variable">poder</param>
-                                            <param id="1" name="Value">0</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="724327482120212" type="Leo">
+                                        <action id="-10" name="Set value" sid="123746145900220" type="Leo">
                                             <param id="0" name="Instance variable">combo</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
-                                        <action id="-10" name="Set value" sid="206994582172214" type="Leo">
+                                        <action id="-10" name="Set value" sid="621289032169245" type="Leo">
                                             <param id="0" name="Instance variable">combo_max</param>
-                                            <param id="1" name="Value">4</param>
+                                            <param id="1" name="Value">2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="670776787579573">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="176189552577777" type="Leo">
+                                            <param id="0" name="Instance variable">estado_transformacao</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;T_&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-12" name="Subtract from" sid="922246079000256" type="Leo">
+                                            <param id="0" name="Instance variable">poder</param>
+                                            <param id="1" name="Value">4 * dt</param>
+                                        </action>
+                                        <action id="-5" name="Set width" sid="329647861968603" type="Barra_Poder_Conteudo">
+                                            <param id="0" name="Width">Leo.poder</param>
                                         </action>
                                     </actions>
                                     <sub-events>
-                                        <event-block sid="959128595326435">
+                                        <event-block sid="789847848937081">
                                             <conditions>
-                                                <condition id="-5" name="Compare width" sid="669113919876886" type="Barra_Poder_Conteudo">
-                                                    <param id="0" name="Comparison">5</param>
-                                                    <param id="1" name="Width">0</param>
+                                                <condition id="-10" name="Compare opacity" sid="407233938726730" type="Barra_Poder_Atras">
+                                                    <param id="0" name="Comparison">3</param>
+                                                    <param id="1" name="Opacity">0</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="-5" name="Set width" sid="634853470255453" type="Barra_Poder_Conteudo">
-                                                    <param id="0" name="Width">Leo.poder</param>
+                                                <action id="-10" name="Set value" sid="553235596626513" type="Leo">
+                                                    <param id="0" name="Instance variable">estado_transformacao</param>
+                                                    <param id="1" name="Value">&quot;&quot;</param>
                                                 </action>
-                                            </actions>
-                                        </event-block>
-                                    </sub-events>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                    </sub-events>
-                </event-group>
-                <event-group description="" sid="729603381216015" title="Ataques">
-                    <sub-events>
-                        <event-block sid="322247116770463">
-                            <conditions>
-                                <condition id="0" name="On key pressed" sid="722561206452336" type="Keyboard">
-                                    <param id="0" name="Key">90</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="541059752522257">
-                                    <conditions>
-                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="579925490693978" type="Leo">
-                                            <param id="0" name="Instance variable">atacando</param>
-                                        </condition>
-                                        <condition id="-7" name="Compare instance variable" sid="245211548602753" type="Leo">
-                                            <param id="0" name="Instance variable">estado</param>
-                                            <param id="1" name="Comparison">1</param>
-                                            <param id="2" name="Value">&quot;Transform&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions />
-                                    <sub-events>
-                                        <event-block sid="314305622475218">
-                                            <conditions>
-                                                <condition id="-8" name="Is boolean instance variable set" sid="831789221671828" type="Leo">
-                                                    <param id="0" name="Instance variable">noAr</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-13" name="Set boolean" sid="759489079320789" type="Leo">
-                                                    <param id="0" name="Instance variable">atacando</param>
+                                                <action id="-10" name="Set value" sid="881072536247598" type="Leo">
+                                                    <param id="0" name="Instance variable">poder</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="724327482120212" type="Leo">
+                                                    <param id="0" name="Instance variable">combo</param>
                                                     <param id="1" name="Value">1</param>
                                                 </action>
-                                                <action id="-10" name="Set value" sid="712612744007130" type="Leo">
-                                                    <param id="0" name="Instance variable">estado</param>
-                                                    <param id="1" name="Value">&quot;JumpAttack&quot;</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="625875105003183">
-                                            <conditions>
-                                                <condition id="-22" name="Else" sid="475103277703724" type="System" />
-                                            </conditions>
-                                            <actions>
-                                                <action id="-13" name="Set boolean" sid="681951160819659" type="Leo">
-                                                    <param id="0" name="Instance variable">atacando</param>
-                                                    <param id="1" name="Value">1</param>
-                                                </action>
-                                                <action id="-10" name="Set value" sid="687844827685235" type="Leo">
-                                                    <param id="0" name="Instance variable">estado</param>
-                                                    <param id="1" name="Value">&quot;Attack&quot; &amp; Leo.combo</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="351622433341015">
-                                            <conditions />
-                                            <actions>
-                                                <action id="-3" name="Create object" sid="266929283601558" type="System">
-                                                    <param id="0" name="Object to create">Personagem_Hitbox</param>
-                                                    <param id="1" name="Layer">Leo.LayerName</param>
-                                                    <param id="2" name="X">Leo.X</param>
-                                                    <param id="3" name="Y">Leo.Y</param>
-                                                </action>
-                                                <action behavior="Pin" id="0" name="Pin to object" sid="947624843586491" type="Personagem_Hitbox">
-                                                    <param id="0" name="Pin to">Leo</param>
-                                                    <param id="1" name="Mode">0</param>
-                                                </action>
-                                                <action id="-16" name="Wait" sid="552349808264283" type="System">
-                                                    <param id="0" name="Seconds">0</param>
-                                                </action>
-                                                <action id="4" name="Set animation" sid="999167322890878" type="Personagem_Hitbox">
-                                                    <param id="0" name="Animation">Leo.estado &amp; Leo.estado_transformacao</param>
-                                                    <param id="1" name="From">1</param>
+                                                <action id="-10" name="Set value" sid="206994582172214" type="Leo">
+                                                    <param id="0" name="Instance variable">combo_max</param>
+                                                    <param id="1" name="Value">4</param>
                                                 </action>
                                             </actions>
                                             <sub-events>
-                                                <event-block sid="308928732877616">
+                                                <event-block sid="959128595326435">
                                                     <conditions>
-                                                        <condition id="7" name="Is mirrored" sid="905995697840696" type="Leo" />
+                                                        <condition id="-5" name="Compare width" sid="669113919876886" type="Barra_Poder_Conteudo">
+                                                            <param id="0" name="Comparison">5</param>
+                                                            <param id="1" name="Width">0</param>
+                                                        </condition>
                                                     </conditions>
                                                     <actions>
-                                                        <action id="7" name="Set mirrored" sid="325613874732854" type="Personagem_Hitbox">
-                                                            <param id="0" name="State">0</param>
+                                                        <action id="-5" name="Set width" sid="634853470255453" type="Barra_Poder_Conteudo">
+                                                            <param id="0" name="Width">Leo.poder</param>
                                                         </action>
                                                     </actions>
                                                 </event-block>
@@ -590,486 +507,581 @@
                                     </sub-events>
                                 </event-block>
                             </sub-events>
-                        </event-block>
-                        <event-block sid="179399119220664">
-                            <conditions>
-                                <condition id="-8" name="Is boolean instance variable set" sid="343715077514314" type="Leo">
-                                    <param id="0" name="Instance variable">atacando</param>
-                                </condition>
-                            </conditions>
-                            <actions />
+                        </event-group>
+                        <event-group description="" sid="729603381216015" title="Ataques">
                             <sub-events>
-                                <event-block sid="400109505506175">
+                                <event-block sid="322247116770463">
                                     <conditions>
-                                        <condition id="-8" name="Is boolean instance variable set" sid="570931781212634" type="Leo">
-                                            <param id="0" name="Instance variable">noAr</param>
+                                        <condition id="0" name="On key pressed" sid="722561206452336" type="Keyboard">
+                                            <param id="0" name="Key">90</param>
                                         </condition>
                                     </conditions>
                                     <actions />
                                     <sub-events>
-                                        <event-block sid="305527380664204">
+                                        <event-block sid="541059752522257">
                                             <conditions>
-                                                <condition id="3" name="Compare frame" sid="180650192421682" type="Personagem_Hitbox">
-                                                    <param id="0" name="Comparison">0</param>
-                                                    <param id="1" name="Number">2</param>
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="579925490693978" type="Leo">
+                                                    <param id="0" name="Instance variable">atacando</param>
+                                                </condition>
+                                                <condition id="-7" name="Compare instance variable" sid="245211548602753" type="Leo">
+                                                    <param id="0" name="Instance variable">estado</param>
+                                                    <param id="1" name="Comparison">1</param>
+                                                    <param id="2" name="Value">&quot;Transform&quot;</param>
                                                 </condition>
                                             </conditions>
-                                            <actions>
-                                                <action id="11" name="Set collisions enabled" sid="371415175788435" type="Personagem_Hitbox">
-                                                    <param id="0" name="Collisions">1</param>
-                                                </action>
-                                            </actions>
+                                            <actions />
                                             <sub-events>
-                                                <event-block sid="754462729884586">
+                                                <event-block sid="314305622475218">
                                                     <conditions>
-                                                        <condition id="-4" name="Trigger once while true" sid="579307238314343" type="System" />
+                                                        <condition id="-8" name="Is boolean instance variable set" sid="831789221671828" type="Leo">
+                                                            <param id="0" name="Instance variable">noAr</param>
+                                                        </condition>
                                                     </conditions>
-                                                    <actions />
+                                                    <actions>
+                                                        <action id="-13" name="Set boolean" sid="759489079320789" type="Leo">
+                                                            <param id="0" name="Instance variable">atacando</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="712612744007130" type="Leo">
+                                                            <param id="0" name="Instance variable">estado</param>
+                                                            <param id="1" name="Value">&quot;JumpAttack&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="625875105003183">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="475103277703724" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-13" name="Set boolean" sid="681951160819659" type="Leo">
+                                                            <param id="0" name="Instance variable">atacando</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="687844827685235" type="Leo">
+                                                            <param id="0" name="Instance variable">estado</param>
+                                                            <param id="1" name="Value">&quot;Attack&quot; &amp; Leo.combo</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="351622433341015">
+                                                    <conditions />
+                                                    <actions>
+                                                        <action id="-3" name="Create object" sid="266929283601558" type="System">
+                                                            <param id="0" name="Object to create">Personagem_Hitbox</param>
+                                                            <param id="1" name="Layer">Leo.LayerName</param>
+                                                            <param id="2" name="X">Leo.X</param>
+                                                            <param id="3" name="Y">Leo.Y</param>
+                                                        </action>
+                                                        <action behavior="Pin" id="0" name="Pin to object" sid="947624843586491" type="Personagem_Hitbox">
+                                                            <param id="0" name="Pin to">Leo</param>
+                                                            <param id="1" name="Mode">0</param>
+                                                        </action>
+                                                        <action id="-16" name="Wait" sid="552349808264283" type="System">
+                                                            <param id="0" name="Seconds">0</param>
+                                                        </action>
+                                                        <action id="4" name="Set animation" sid="999167322890878" type="Personagem_Hitbox">
+                                                            <param id="0" name="Animation">Leo.estado &amp; Leo.estado_transformacao</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                    </actions>
+                                                    <sub-events>
+                                                        <event-block sid="308928732877616">
+                                                            <conditions>
+                                                                <condition id="7" name="Is mirrored" sid="905995697840696" type="Leo" />
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="7" name="Set mirrored" sid="325613874732854" type="Personagem_Hitbox">
+                                                                    <param id="0" name="State">0</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
                                                 </event-block>
                                             </sub-events>
                                         </event-block>
                                     </sub-events>
                                 </event-block>
-                                <event-block sid="468922671890193">
+                                <event-block sid="179399119220664">
                                     <conditions>
-                                        <condition id="-22" name="Else" sid="617463609866126" type="System" />
+                                        <condition id="-8" name="Is boolean instance variable set" sid="343715077514314" type="Leo">
+                                            <param id="0" name="Instance variable">atacando</param>
+                                        </condition>
                                     </conditions>
                                     <actions />
                                     <sub-events>
-                                        <event-block sid="801239069204451">
+                                        <event-block sid="400109505506175">
                                             <conditions>
-                                                <condition id="3" name="Compare frame" sid="976959945349281" type="Personagem_Hitbox">
-                                                    <param id="0" name="Comparison">0</param>
-                                                    <param id="1" name="Number">AtaquesPersonagem.At(int(right(Personagem_Hitbox.AnimationName,1)))</param>
+                                                <condition id="-8" name="Is boolean instance variable set" sid="570931781212634" type="Leo">
+                                                    <param id="0" name="Instance variable">noAr</param>
                                                 </condition>
-                                                <condition id="-4" name="Trigger once while true" sid="267170870433898" type="System" />
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="305527380664204">
+                                                    <conditions>
+                                                        <condition id="3" name="Compare frame" sid="180650192421682" type="Personagem_Hitbox">
+                                                            <param id="0" name="Comparison">0</param>
+                                                            <param id="1" name="Number">2</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="11" name="Set collisions enabled" sid="371415175788435" type="Personagem_Hitbox">
+                                                            <param id="0" name="Collisions">1</param>
+                                                        </action>
+                                                    </actions>
+                                                    <sub-events>
+                                                        <event-block sid="754462729884586">
+                                                            <conditions>
+                                                                <condition id="-4" name="Trigger once while true" sid="579307238314343" type="System" />
+                                                            </conditions>
+                                                            <actions />
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="468922671890193">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="617463609866126" type="System" />
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="801239069204451">
+                                                    <conditions>
+                                                        <condition id="3" name="Compare frame" sid="976959945349281" type="Personagem_Hitbox">
+                                                            <param id="0" name="Comparison">0</param>
+                                                            <param id="1" name="Number">AtaquesPersonagem.At(int(right(Personagem_Hitbox.AnimationName,1)))</param>
+                                                        </condition>
+                                                        <condition id="-4" name="Trigger once while true" sid="267170870433898" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="11" name="Set collisions enabled" sid="528024417341695" type="Leo">
+                                                            <param id="0" name="Collisions">1</param>
+                                                        </action>
+                                                        <action id="-16" name="Wait" sid="214079555991661" type="System">
+                                                            <param id="0" name="Seconds">0.3</param>
+                                                        </action>
+                                                        <action id="11" name="Set collisions enabled" sid="619228351444569" type="Leo">
+                                                            <param id="0" name="Collisions">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="182111886250260">
+                                            <conditions>
+                                                <condition id="5" name="On any finished" sid="534987935691237" type="Leo" />
                                             </conditions>
                                             <actions>
-                                                <action id="11" name="Set collisions enabled" sid="528024417341695" type="Leo">
-                                                    <param id="0" name="Collisions">1</param>
-                                                </action>
-                                                <action id="-16" name="Wait" sid="214079555991661" type="System">
-                                                    <param id="0" name="Seconds">0.3</param>
-                                                </action>
-                                                <action id="11" name="Set collisions enabled" sid="619228351444569" type="Leo">
-                                                    <param id="0" name="Collisions">0</param>
+                                                <action id="-13" name="Set boolean" sid="980378801198292" type="Leo">
+                                                    <param id="0" name="Instance variable">atacando</param>
+                                                    <param id="1" name="Value">0</param>
                                                 </action>
                                             </actions>
                                         </event-block>
                                     </sub-events>
                                 </event-block>
-                                <event-block sid="182111886250260">
+                                <event-block sid="410029994458520">
                                     <conditions>
-                                        <condition id="5" name="On any finished" sid="534987935691237" type="Leo" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="-13" name="Set boolean" sid="980378801198292" type="Leo">
-                                            <param id="0" name="Instance variable">atacando</param>
-                                            <param id="1" name="Value">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <event-block sid="410029994458520">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="844878010805323" type="Leo">
-                                    <param id="0" name="Instance variable">combo_timer</param>
-                                    <param id="1" name="Comparison">4</param>
-                                    <param id="2" name="Value">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-12" name="Subtract from" sid="547054266250072" type="Leo">
-                                    <param id="0" name="Instance variable">combo_timer</param>
-                                    <param id="1" name="Value">dt</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="963354723735429">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="244800839900915" type="Leo">
-                                    <param id="0" name="Instance variable">combo_timer</param>
-                                    <param id="1" name="Comparison">2</param>
-                                    <param id="2" name="Value">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-10" name="Set value" sid="962790975732428" type="Leo">
-                                    <param id="0" name="Instance variable">combo_timer</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="962351680985156" type="Leo">
-                                    <param id="0" name="Instance variable">combo</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="661052166113724">
-                            <conditions>
-                                <condition id="5" name="On any finished" sid="152513561966550" type="Personagem_Hitbox" />
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Destroy" sid="745362309433296" type="Personagem_Hitbox" />
-                            </actions>
-                            <sub-events>
-                                <event-block sid="617825954121413">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="762229655297453" type="Leo">
-                                            <param id="0" name="Instance variable">acerto</param>
+                                        <condition id="-7" name="Compare instance variable" sid="844878010805323" type="Leo">
+                                            <param id="0" name="Instance variable">combo_timer</param>
                                             <param id="1" name="Comparison">4</param>
                                             <param id="2" name="Value">0</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-10" name="Set value" sid="499120240027926" type="Leo">
-                                            <param id="0" name="Instance variable">acerto</param>
-                                            <param id="1" name="Value">0</param>
+                                        <action id="-12" name="Subtract from" sid="547054266250072" type="Leo">
+                                            <param id="0" name="Instance variable">combo_timer</param>
+                                            <param id="1" name="Value">dt</param>
                                         </action>
                                     </actions>
+                                </event-block>
+                                <event-block sid="963354723735429">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="244800839900915" type="Leo">
+                                            <param id="0" name="Instance variable">combo_timer</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="962790975732428" type="Leo">
+                                            <param id="0" name="Instance variable">combo_timer</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="962351680985156" type="Leo">
+                                            <param id="0" name="Instance variable">combo</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="661052166113724">
+                                    <conditions>
+                                        <condition id="5" name="On any finished" sid="152513561966550" type="Personagem_Hitbox" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="745362309433296" type="Personagem_Hitbox" />
+                                    </actions>
                                     <sub-events>
-                                        <event-block sid="283520592221704">
+                                        <event-block sid="617825954121413">
                                             <conditions>
-                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="636551941893711" type="Leo">
-                                                    <param id="0" name="Instance variable">noAr</param>
+                                                <condition id="-7" name="Compare instance variable" sid="762229655297453" type="Leo">
+                                                    <param id="0" name="Instance variable">acerto</param>
+                                                    <param id="1" name="Comparison">4</param>
+                                                    <param id="2" name="Value">0</param>
                                                 </condition>
                                             </conditions>
-                                            <actions />
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="499120240027926" type="Leo">
+                                                    <param id="0" name="Instance variable">acerto</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                            </actions>
                                             <sub-events>
-                                                <event-block sid="504827690857921">
+                                                <event-block sid="283520592221704">
                                                     <conditions>
-                                                        <condition id="-7" name="Compare instance variable" sid="209677828652106" type="Leo">
-                                                            <param id="0" name="Instance variable">combo</param>
-                                                            <param id="1" name="Comparison">5</param>
-                                                            <param id="2" name="Value">Leo.combo_max</param>
+                                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="636551941893711" type="Leo">
+                                                            <param id="0" name="Instance variable">noAr</param>
                                                         </condition>
                                                     </conditions>
-                                                    <actions>
-                                                        <action id="-10" name="Set value" sid="470359191784101" type="Leo">
-                                                            <param id="0" name="Instance variable">combo</param>
-                                                            <param id="1" name="Value">1</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                                <event-block sid="238544353670678">
-                                                    <conditions>
-                                                        <condition id="-22" name="Else" sid="714414097341689" type="System" />
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="-11" name="Add to" sid="680136390557460" type="Leo">
-                                                            <param id="0" name="Instance variable">combo</param>
-                                                            <param id="1" name="Value">1</param>
-                                                        </action>
-                                                    </actions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="504827690857921">
+                                                            <conditions>
+                                                                <condition id="-7" name="Compare instance variable" sid="209677828652106" type="Leo">
+                                                                    <param id="0" name="Instance variable">combo</param>
+                                                                    <param id="1" name="Comparison">5</param>
+                                                                    <param id="2" name="Value">Leo.combo_max</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-10" name="Set value" sid="470359191784101" type="Leo">
+                                                                    <param id="0" name="Instance variable">combo</param>
+                                                                    <param id="1" name="Value">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="238544353670678">
+                                                            <conditions>
+                                                                <condition id="-22" name="Else" sid="714414097341689" type="System" />
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-11" name="Add to" sid="680136390557460" type="Leo">
+                                                                    <param id="0" name="Instance variable">combo</param>
+                                                                    <param id="1" name="Value">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
                                                 </event-block>
                                             </sub-events>
                                         </event-block>
                                     </sub-events>
                                 </event-block>
                             </sub-events>
-                        </event-block>
-                    </sub-events>
-                </event-group>
-                <event-group description="" sid="475839642138446" title="Caminhar">
-                    <sub-events>
-                        <event-block sid="526700304651984">
-                            <conditions>
-                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="829269339696961" type="Leo">
-                                    <param id="0" name="Instance variable">noAr</param>
-                                </condition>
-                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="906432463978391" type="Leo">
-                                    <param id="0" name="Instance variable">atacando</param>
-                                </condition>
-                                <condition id="-7" name="Compare instance variable" sid="368522897769407" type="Leo">
-                                    <param id="0" name="Instance variable">estado</param>
-                                    <param id="1" name="Comparison">1</param>
-                                    <param id="2" name="Value">&quot;Transform&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions />
+                        </event-group>
+                        <event-group description="" sid="475839642138446" title="Caminhar">
                             <sub-events>
-                                <event-block sid="702262333008359">
+                                <event-block sid="526700304651984">
                                     <conditions>
-                                        <condition id="2" name="Key is down" sid="978303296991782" type="Keyboard">
-                                            <param id="0" name="Key">39</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="8Direction" id="7" name="Simulate control" sid="932659636871579" type="Leo">
-                                            <param id="0" name="Control">1</param>
-                                        </action>
-                                        <action id="7" name="Set mirrored" sid="607029982631277" type="Leo">
-                                            <param id="0" name="State">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="901784645930032">
-                                    <conditions>
-                                        <condition id="2" name="Key is down" sid="650824297810724" type="Keyboard">
-                                            <param id="0" name="Key">37</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="8Direction" id="7" name="Simulate control" sid="438508219644682" type="Leo">
-                                            <param id="0" name="Control">0</param>
-                                        </action>
-                                        <action id="7" name="Set mirrored" sid="164291196144301" type="Leo">
-                                            <param id="0" name="State">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="704793803182568">
-                                    <conditions>
-                                        <condition id="2" name="Key is down" sid="696917066244532" type="Keyboard">
-                                            <param id="0" name="Key">38</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="8Direction" id="7" name="Simulate control" sid="868770812308550" type="Leo">
-                                            <param id="0" name="Control">2</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="713191396976386">
-                                    <conditions>
-                                        <condition id="2" name="Key is down" sid="640329501793107" type="Keyboard">
-                                            <param id="0" name="Key">40</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="8Direction" id="7" name="Simulate control" sid="958361677963462" type="Leo">
-                                            <param id="0" name="Control">3</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                    </sub-events>
-                </event-group>
-                <event-group description="" sid="690182722634324" title="Pular">
-                    <sub-events>
-                        <event-block sid="742853774534985">
-                            <conditions>
-                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="535615483913883" type="Leo">
-                                    <param id="0" name="Instance variable">noAr</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-10" name="Set value" sid="216751980859348" type="Leo">
-                                    <param id="0" name="Instance variable">sombra</param>
-                                    <param id="1" name="Value">Leo.Y</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="993773867604749">
-                            <conditions>
-                                <condition id="0" name="On key pressed" sid="768790476966405" type="Keyboard">
-                                    <param id="0" name="Key">88</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="665182292276223">
-                                    <conditions>
-                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="881512136462686" type="Leo">
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="829269339696961" type="Leo">
                                             <param id="0" name="Instance variable">noAr</param>
                                         </condition>
-                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="985264968869685" type="Leo">
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="906432463978391" type="Leo">
                                             <param id="0" name="Instance variable">atacando</param>
                                         </condition>
-                                        <condition id="-7" name="Compare instance variable" sid="362426598051650" type="Leo">
+                                        <condition id="-7" name="Compare instance variable" sid="368522897769407" type="Leo">
                                             <param id="0" name="Instance variable">estado</param>
                                             <param id="1" name="Comparison">1</param>
                                             <param id="2" name="Value">&quot;Transform&quot;</param>
                                         </condition>
                                     </conditions>
-                                    <actions>
-                                        <action id="-13" name="Set boolean" sid="987034661149120" type="Leo">
-                                            <param id="0" name="Instance variable">noAr</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
-                                        <action id="-13" name="Set boolean" sid="926068084103042" type="Leo">
-                                            <param id="0" name="Instance variable">atacando</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
-                                    </actions>
+                                    <actions />
                                     <sub-events>
-                                        <event-block sid="212183776258759">
+                                        <event-block sid="702262333008359">
                                             <conditions>
-                                                <condition behavior="8Direction" id="0" inverted="1" name="Is moving" sid="305955585999959" type="Leo" />
-                                            </conditions>
-                                            <actions>
-                                                <action id="0" name="Call function" sid="439024804569802" type="Function">
-                                                    <param id="0" name="Name">&quot;pulo_parado_atacando&quot;</param>
-                                                    <param id="1" name="Parameter {n}"></param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="301337196854033">
-                                            <conditions>
-                                                <condition id="2" name="Key is down" sid="740004519984425" type="Keyboard">
+                                                <condition id="2" name="Key is down" sid="978303296991782" type="Keyboard">
                                                     <param id="0" name="Key">39</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="0" name="Call function" sid="426314778213822" type="Function">
-                                                    <param id="0" name="Name">&quot;pulo_movendo_atacando&quot;</param>
-                                                    <param id="1" name="Parameter {n}">&quot;D&quot;</param>
+                                                <action behavior="8Direction" id="7" name="Simulate control" sid="932659636871579" type="Leo">
+                                                    <param id="0" name="Control">1</param>
+                                                </action>
+                                                <action id="7" name="Set mirrored" sid="607029982631277" type="Leo">
+                                                    <param id="0" name="State">1</param>
                                                 </action>
                                             </actions>
                                         </event-block>
-                                        <event-block sid="414085739919716">
+                                        <event-block sid="901784645930032">
                                             <conditions>
-                                                <condition id="2" name="Key is down" sid="107960003563768" type="Keyboard">
+                                                <condition id="2" name="Key is down" sid="650824297810724" type="Keyboard">
                                                     <param id="0" name="Key">37</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="0" name="Call function" sid="726019940908079" type="Function">
-                                                    <param id="0" name="Name">&quot;pulo_movendo_atacando&quot;</param>
-                                                    <param id="1" name="Parameter {n}">&quot;E&quot;</param>
+                                                <action behavior="8Direction" id="7" name="Simulate control" sid="438508219644682" type="Leo">
+                                                    <param id="0" name="Control">0</param>
+                                                </action>
+                                                <action id="7" name="Set mirrored" sid="164291196144301" type="Leo">
+                                                    <param id="0" name="State">0</param>
                                                 </action>
                                             </actions>
                                         </event-block>
-                                        <event-block any="1" sid="973651910147064">
+                                        <event-block sid="704793803182568">
                                             <conditions>
-                                                <condition id="2" name="Key is down" sid="482626815291857" type="Keyboard">
+                                                <condition id="2" name="Key is down" sid="696917066244532" type="Keyboard">
                                                     <param id="0" name="Key">38</param>
                                                 </condition>
-                                                <condition id="2" name="Key is down" sid="979662976664758" type="Keyboard">
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="8Direction" id="7" name="Simulate control" sid="868770812308550" type="Leo">
+                                                    <param id="0" name="Control">2</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="713191396976386">
+                                            <conditions>
+                                                <condition id="2" name="Key is down" sid="640329501793107" type="Keyboard">
                                                     <param id="0" name="Key">40</param>
                                                 </condition>
                                             </conditions>
-                                            <actions />
+                                            <actions>
+                                                <action behavior="8Direction" id="7" name="Simulate control" sid="958361677963462" type="Leo">
+                                                    <param id="0" name="Control">3</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-group description="" sid="690182722634324" title="Pular">
+                            <sub-events>
+                                <event-block sid="742853774534985">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="535615483913883" type="Leo">
+                                            <param id="0" name="Instance variable">noAr</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="216751980859348" type="Leo">
+                                            <param id="0" name="Instance variable">sombra</param>
+                                            <param id="1" name="Value">Leo.Y</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="993773867604749">
+                                    <conditions>
+                                        <condition id="0" name="On key pressed" sid="768790476966405" type="Keyboard">
+                                            <param id="0" name="Key">88</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="665182292276223">
+                                            <conditions>
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="881512136462686" type="Leo">
+                                                    <param id="0" name="Instance variable">noAr</param>
+                                                </condition>
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="985264968869685" type="Leo">
+                                                    <param id="0" name="Instance variable">atacando</param>
+                                                </condition>
+                                                <condition id="-7" name="Compare instance variable" sid="362426598051650" type="Leo">
+                                                    <param id="0" name="Instance variable">estado</param>
+                                                    <param id="1" name="Comparison">1</param>
+                                                    <param id="2" name="Value">&quot;Transform&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-13" name="Set boolean" sid="987034661149120" type="Leo">
+                                                    <param id="0" name="Instance variable">noAr</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                                <action id="-13" name="Set boolean" sid="926068084103042" type="Leo">
+                                                    <param id="0" name="Instance variable">atacando</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
                                             <sub-events>
-                                                <event-block sid="922399477559706">
+                                                <event-block sid="212183776258759">
                                                     <conditions>
-                                                        <condition id="2" inverted="1" name="Key is down" sid="501242206926238" type="Keyboard">
-                                                            <param id="0" name="Key">39</param>
-                                                        </condition>
-                                                        <condition id="2" inverted="1" name="Key is down" sid="278175384233968" type="Keyboard">
-                                                            <param id="0" name="Key">37</param>
-                                                        </condition>
+                                                        <condition behavior="8Direction" id="0" inverted="1" name="Is moving" sid="305955585999959" type="Leo" />
                                                     </conditions>
                                                     <actions>
-                                                        <action id="0" name="Call function" sid="837099762505528" type="Function">
+                                                        <action id="0" name="Call function" sid="439024804569802" type="Function">
                                                             <param id="0" name="Name">&quot;pulo_parado_atacando&quot;</param>
                                                             <param id="1" name="Parameter {n}"></param>
                                                         </action>
                                                     </actions>
                                                 </event-block>
+                                                <event-block sid="301337196854033">
+                                                    <conditions>
+                                                        <condition id="2" name="Key is down" sid="740004519984425" type="Keyboard">
+                                                            <param id="0" name="Key">39</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="426314778213822" type="Function">
+                                                            <param id="0" name="Name">&quot;pulo_movendo_atacando&quot;</param>
+                                                            <param id="1" name="Parameter {n}">&quot;D&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="414085739919716">
+                                                    <conditions>
+                                                        <condition id="2" name="Key is down" sid="107960003563768" type="Keyboard">
+                                                            <param id="0" name="Key">37</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="726019940908079" type="Function">
+                                                            <param id="0" name="Name">&quot;pulo_movendo_atacando&quot;</param>
+                                                            <param id="1" name="Parameter {n}">&quot;E&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block any="1" sid="973651910147064">
+                                                    <conditions>
+                                                        <condition id="2" name="Key is down" sid="482626815291857" type="Keyboard">
+                                                            <param id="0" name="Key">38</param>
+                                                        </condition>
+                                                        <condition id="2" name="Key is down" sid="979662976664758" type="Keyboard">
+                                                            <param id="0" name="Key">40</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="922399477559706">
+                                                            <conditions>
+                                                                <condition id="2" inverted="1" name="Key is down" sid="501242206926238" type="Keyboard">
+                                                                    <param id="0" name="Key">39</param>
+                                                                </condition>
+                                                                <condition id="2" inverted="1" name="Key is down" sid="278175384233968" type="Keyboard">
+                                                                    <param id="0" name="Key">37</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="0" name="Call function" sid="837099762505528" type="Function">
+                                                                    <param id="0" name="Name">&quot;pulo_parado_atacando&quot;</param>
+                                                                    <param id="1" name="Parameter {n}"></param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
                                             </sub-events>
                                         </event-block>
                                     </sub-events>
                                 </event-block>
+                                <event-block sid="625509653726390">
+                                    <conditions>
+                                        <condition id="0" name="On function" sid="541902402641882" type="Function">
+                                            <param id="0" name="Name">&quot;pulo_parado_atacando&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="673287100015998" type="Leo">
+                                            <param id="0" name="Instance variable">estado</param>
+                                            <param id="1" name="Value">&quot;Jump_Attack&quot;</param>
+                                        </action>
+                                        <action behavior="Platform" id="11" name="Set enabled" sid="165583627388423" type="Leo">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action behavior="Platform" id="9" name="Set vector Y" sid="863455133399595" type="Leo">
+                                            <param id="0" name="Vector Y">-200</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="571549293311951">
+                                    <conditions>
+                                        <condition id="0" name="On function" sid="359120781109249" type="Function">
+                                            <param id="0" name="Name">&quot;pulo_movendo_atacando&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="734376163156287" type="Leo">
+                                            <param id="0" name="Instance variable">noAr_dir</param>
+                                            <param id="1" name="Value">Function.Param(0)</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="806552514650350" type="Leo">
+                                            <param id="0" name="Instance variable">estado</param>
+                                            <param id="1" name="Value">&quot;Jump_Attack&quot;</param>
+                                        </action>
+                                        <action behavior="Platform" id="11" name="Set enabled" sid="308377449976081" type="Leo">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action behavior="Platform" id="9" name="Set vector Y" sid="568631836020381" type="Leo">
+                                            <param id="0" name="Vector Y">-200</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="426587299491568">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="994026217260656" type="Leo">
+                                            <param id="0" name="Instance variable">noAr_dir</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;D&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="8Direction" id="7" name="Simulate control" sid="748545454862552" type="Leo">
+                                            <param id="0" name="Control">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="164044165364547">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="384244579127446" type="Leo">
+                                            <param id="0" name="Instance variable">noAr_dir</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;E&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="8Direction" id="7" name="Simulate control" sid="761453344410399" type="Leo">
+                                            <param id="0" name="Control">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="592900484233605">
+                                    <conditions>
+                                        <condition id="-21" name="Is between values" sid="961085939064633" type="System">
+                                            <param id="0" name="Value">Leo.Y</param>
+                                            <param id="1" name="Lower bound">Leo.sombra - 2</param>
+                                            <param id="2" name="Upper bound">Leo.sombra + 2</param>
+                                        </condition>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="378731326228589" type="Leo">
+                                            <param id="0" name="Instance variable">noAr</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="11" name="Set enabled" sid="162250142193252" type="Leo">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="833737342503535" type="Leo">
+                                            <param id="0" name="Instance variable">estado</param>
+                                            <param id="1" name="Value">&quot;&quot;</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="345517473552256" type="Leo">
+                                            <param id="0" name="Instance variable">noAr</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="328202809448731" type="Leo">
+                                            <param id="0" name="Instance variable">noAr_dir</param>
+                                            <param id="1" name="Value">&quot;&quot;</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="267798126656453" type="Leo">
+                                            <param id="0" name="Instance variable">atacando</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-9" name="Destroy" sid="972927211071502" type="Personagem_Hitbox" />
+                                    </actions>
+                                </event-block>
                             </sub-events>
-                        </event-block>
-                        <event-block sid="625509653726390">
-                            <conditions>
-                                <condition id="0" name="On function" sid="541902402641882" type="Function">
-                                    <param id="0" name="Name">&quot;pulo_parado_atacando&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-10" name="Set value" sid="673287100015998" type="Leo">
-                                    <param id="0" name="Instance variable">estado</param>
-                                    <param id="1" name="Value">&quot;Jump_Attack&quot;</param>
-                                </action>
-                                <action behavior="Platform" id="11" name="Set enabled" sid="165583627388423" type="Leo">
-                                    <param id="0" name="State">1</param>
-                                </action>
-                                <action behavior="Platform" id="9" name="Set vector Y" sid="863455133399595" type="Leo">
-                                    <param id="0" name="Vector Y">-200</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="571549293311951">
-                            <conditions>
-                                <condition id="0" name="On function" sid="359120781109249" type="Function">
-                                    <param id="0" name="Name">&quot;pulo_movendo_atacando&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-10" name="Set value" sid="734376163156287" type="Leo">
-                                    <param id="0" name="Instance variable">noAr_dir</param>
-                                    <param id="1" name="Value">Function.Param(0)</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="806552514650350" type="Leo">
-                                    <param id="0" name="Instance variable">estado</param>
-                                    <param id="1" name="Value">&quot;Jump_Attack&quot;</param>
-                                </action>
-                                <action behavior="Platform" id="11" name="Set enabled" sid="308377449976081" type="Leo">
-                                    <param id="0" name="State">1</param>
-                                </action>
-                                <action behavior="Platform" id="9" name="Set vector Y" sid="568631836020381" type="Leo">
-                                    <param id="0" name="Vector Y">-200</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="426587299491568">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="994026217260656" type="Leo">
-                                    <param id="0" name="Instance variable">noAr_dir</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;D&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="8Direction" id="7" name="Simulate control" sid="748545454862552" type="Leo">
-                                    <param id="0" name="Control">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="164044165364547">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="384244579127446" type="Leo">
-                                    <param id="0" name="Instance variable">noAr_dir</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;E&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="8Direction" id="7" name="Simulate control" sid="761453344410399" type="Leo">
-                                    <param id="0" name="Control">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="592900484233605">
-                            <conditions>
-                                <condition id="-21" name="Is between values" sid="961085939064633" type="System">
-                                    <param id="0" name="Value">Leo.Y</param>
-                                    <param id="1" name="Lower bound">Leo.sombra - 2</param>
-                                    <param id="2" name="Upper bound">Leo.sombra + 2</param>
-                                </condition>
-                                <condition id="-8" name="Is boolean instance variable set" sid="378731326228589" type="Leo">
-                                    <param id="0" name="Instance variable">noAr</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Platform" id="11" name="Set enabled" sid="162250142193252" type="Leo">
-                                    <param id="0" name="State">0</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="833737342503535" type="Leo">
-                                    <param id="0" name="Instance variable">estado</param>
-                                    <param id="1" name="Value">&quot;&quot;</param>
-                                </action>
-                                <action id="-13" name="Set boolean" sid="345517473552256" type="Leo">
-                                    <param id="0" name="Instance variable">noAr</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="328202809448731" type="Leo">
-                                    <param id="0" name="Instance variable">noAr_dir</param>
-                                    <param id="1" name="Value">&quot;&quot;</param>
-                                </action>
-                                <action id="-13" name="Set boolean" sid="267798126656453" type="Leo">
-                                    <param id="0" name="Instance variable">atacando</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                                <action id="-9" name="Destroy" sid="972927211071502" type="Personagem_Hitbox" />
-                            </actions>
-                        </event-block>
+                        </event-group>
                     </sub-events>
-                </event-group>
+                </event-block>
             </sub-events>
         </event-group>
         <event-block sid="175340491270623">
