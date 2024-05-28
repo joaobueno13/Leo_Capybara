@@ -10,12 +10,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout active="1" order="0">Fase</layout>
-        <layout order="4">MenuInicial</layout>
+        <layout order="0">Fase</layout>
+        <layout order="1">MenuInicial</layout>
         <layout order="6">MenuOpcoes</layout>
-        <event-sheet order="1">ePersonagem</event-sheet>
-        <event-sheet order="2">eInimigos</event-sheet>
-        <event-sheet order="3">ePrincipal</event-sheet>
+        <event-sheet active="1" order="2">ePersonagem</event-sheet>
+        <event-sheet order="3">eInimigos</event-sheet>
+        <event-sheet order="4">ePrincipal</event-sheet>
         <event-sheet order="5">eMenuInicial</event-sheet>
         <event-sheet order="7">eMenuOpcoes</event-sheet>
     </open-tabs>
@@ -35,10 +35,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="music-folder/" />
         <folder expanded="0" path="file-folder/Icons/" />
         <folder expanded="1" path="animation-folder/Leo/" />
-        <folder expanded="1" path="animation-folder/Personagem_Hitbox/" />
-        <folder expanded="1" path="animation-folder/Tiler/" />
-        <folder expanded="1" path="animation-folder/Barra_Poder/" />
-        <folder expanded="1" path="animation-folder/Barra_Vida/" />
+        <folder expanded="1" path="animation-folder/Leo/Normal/" />
+        <folder expanded="1" path="animation-folder/Leo/Transform/" />
+        <folder expanded="1" path="animation-folder/Leo_Hitbox/" />
+        <folder expanded="1" path="animation-folder/Capangas_Tyler/" />
+        <folder expanded="1" path="animation-folder/Poder_Contorno/" />
+        <folder expanded="1" path="animation-folder/Vida_Contorno/" />
         <folder expanded="1" path="animation-folder/LeoBG/" />
         <folder expanded="1" path="animation-folder/TylerBG/" />
         <folder expanded="1" path="animation-folder/LeoMenuLogo/" />

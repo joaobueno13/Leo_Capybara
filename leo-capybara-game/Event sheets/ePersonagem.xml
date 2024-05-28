@@ -22,10 +22,6 @@
                     <param id="0" name="X">1</param>
                     <param id="1" name="Value">2</param>
                 </action>
-                <action id="-17" name="Set layer scale" sid="665672596773421" type="System">
-                    <param id="0" name="Layer">&quot;HUD&quot;</param>
-                    <param id="1" name="Scale">0.7</param>
-                </action>
                 <action id="2" name="Set at X" sid="710671629628246" type="AtaquesPersonagem">
                     <param id="0" name="X">2</param>
                     <param id="1" name="Value">2</param>
@@ -38,13 +34,25 @@
                     <param id="0" name="X">4</param>
                     <param id="1" name="Value">3</param>
                 </action>
+                <action id="2" name="Set at X" sid="796605246595023" type="AtaquesPersonagem">
+                    <param id="0" name="X">5</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="2" name="Set at X" sid="529890797723986" type="AtaquesPersonagem">
+                    <param id="0" name="X">6</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-17" name="Set layer scale" sid="665672596773421" type="System">
+                    <param id="0" name="Layer">&quot;HUD&quot;</param>
+                    <param id="1" name="Scale">0.7</param>
+                </action>
                 <action id="0" name="Call function" sid="207528997858171" type="Function">
                     <param id="0" name="Name">&quot;dano&quot;</param>
                     <param id="1" name="Parameter {n}">0</param>
                 </action>
                 <action id="0" name="Call function" sid="549327244159193" type="Function">
                     <param id="0" name="Name">&quot;poder&quot;</param>
-                    <param id="1" name="Parameter {n}">0</param>
+                    <param id="1" name="Parameter {n}">40</param>
                 </action>
             </actions>
         </event-block>
@@ -66,7 +74,7 @@
                             <param id="0" name="Instance variable">vida</param>
                             <param id="1" name="Value">Function.Param(0)</param>
                         </action>
-                        <action id="-5" name="Set width" sid="188752108165225" type="Barra_Vida_Conteudo">
+                        <action id="-5" name="Set width" sid="188752108165225" type="Vida_Barra">
                             <param id="0" name="Width">Leo.vida</param>
                         </action>
                     </actions>
@@ -87,7 +95,7 @@
                             <param id="0" name="Instance variable">poder</param>
                             <param id="1" name="Value">Function.Param(0)</param>
                         </action>
-                        <action id="-5" name="Set width" sid="333751176628626" type="Barra_Poder_Conteudo">
+                        <action id="-5" name="Set width" sid="333751176628626" type="Poder_Barra">
                             <param id="0" name="Width">Leo.poder</param>
                         </action>
                     </actions>
@@ -105,10 +113,10 @@
                             <param id="0" name="Instance variable">vida</param>
                             <param id="1" name="Value">0</param>
                         </action>
-                        <action id="-5" name="Set width" sid="942185326530786" type="Barra_Vida">
+                        <action id="-5" name="Set width" sid="942185326530786" type="Vida_Contorno">
                             <param id="0" name="Width">0</param>
                         </action>
-                        <action id="-5" name="Set width" sid="143955841198858" type="Barra_Vida_Conteudo">
+                        <action id="-5" name="Set width" sid="143955841198858" type="Vida_Barra">
                             <param id="0" name="Width">0</param>
                         </action>
                     </actions>
@@ -126,10 +134,10 @@
                             <param id="0" name="Instance variable">poder</param>
                             <param id="1" name="Value">50</param>
                         </action>
-                        <action id="-5" name="Set width" sid="943240970928813" type="Barra_Poder">
+                        <action id="-5" name="Set width" sid="943240970928813" type="Poder_Contorno">
                             <param id="0" name="Width">50</param>
                         </action>
-                        <action id="-5" name="Set width" sid="158690762126889" type="Barra_Poder_Conteudo">
+                        <action id="-5" name="Set width" sid="158690762126889" type="Poder_Barra">
                             <param id="0" name="Width">50</param>
                         </action>
                     </actions>
@@ -137,13 +145,13 @@
                 <event-block sid="608421192207972">
                     <conditions>
                         <condition id="-21" name="Is between values" sid="235822384256676" type="System">
-                            <param id="0" name="Value">Barra_Vida_Atras.Width</param>
+                            <param id="0" name="Value">Vida_Atras.Width</param>
                             <param id="1" name="Lower bound">Leo.vida - 2 </param>
                             <param id="2" name="Upper bound">Leo.vida + 2</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-5" name="Set width" sid="460136154912857" type="Barra_Vida_Atras">
+                        <action id="-5" name="Set width" sid="460136154912857" type="Vida_Atras">
                             <param id="0" name="Width">Leo.vida</param>
                         </action>
                     </actions>
@@ -153,8 +161,8 @@
                         <condition id="-22" name="Else" sid="839227847383863" type="System" />
                     </conditions>
                     <actions>
-                        <action id="-5" name="Set width" sid="698771036498876" type="Barra_Vida_Atras">
-                            <param id="0" name="Width">lerp(Barra_Vida_Atras.Width, Leo.vida, 0.2)</param>
+                        <action id="-5" name="Set width" sid="698771036498876" type="Vida_Atras">
+                            <param id="0" name="Width">lerp(Vida_Atras.Width, Leo.vida, 0.2)</param>
                         </action>
                     </actions>
                 </event-block>
@@ -170,14 +178,14 @@
                     <sub-events>
                         <event-block sid="157025675909003">
                             <conditions>
-                                <condition id="-5" name="Compare width" sid="830082182752569" type="Barra_Poder_Atras">
+                                <condition id="-5" name="Compare width" sid="830082182752569" type="Poder_Atras">
                                     <param id="0" name="Comparison">4</param>
                                     <param id="1" name="Width">0</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-5" name="Set width" sid="239427743372692" type="Barra_Poder_Atras">
-                                    <param id="0" name="Width">lerp(Barra_Poder_Atras.Width, Leo.poder, 0.01)</param>
+                                <action id="-5" name="Set width" sid="239427743372692" type="Poder_Atras">
+                                    <param id="0" name="Width">lerp(Poder_Atras.Width, Leo.poder, 0.01)</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -186,7 +194,7 @@
                                 <condition id="-22" name="Else" sid="867521383750644" type="System" />
                             </conditions>
                             <actions>
-                                <action id="-5" name="Set width" sid="189726625485718" type="Barra_Poder_Atras">
+                                <action id="-5" name="Set width" sid="189726625485718" type="Poder_Atras">
                                     <param id="0" name="Width">0</param>
                                 </action>
                             </actions>
@@ -202,13 +210,13 @@
                         <event-block sid="637477475600806">
                             <conditions>
                                 <condition id="-21" name="Is between values" sid="656412312419615" type="System">
-                                    <param id="0" name="Value">Barra_Poder_Conteudo.Width</param>
+                                    <param id="0" name="Value">Poder_Barra.Width</param>
                                     <param id="1" name="Lower bound">Leo.poder - 2 </param>
                                     <param id="2" name="Upper bound">Leo.poder + 2</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-5" name="Set width" sid="340272221174071" type="Barra_Poder_Conteudo">
+                                <action id="-5" name="Set width" sid="340272221174071" type="Poder_Barra">
                                     <param id="0" name="Width">Leo.poder</param>
                                 </action>
                             </actions>
@@ -218,8 +226,8 @@
                                 <condition id="-22" name="Else" sid="939456502912001" type="System" />
                             </conditions>
                             <actions>
-                                <action id="-5" name="Set width" sid="410980141384396" type="Barra_Poder_Conteudo">
-                                    <param id="0" name="Width">lerp(Barra_Poder_Conteudo.Width, Leo.poder, 0.2)</param>
+                                <action id="-5" name="Set width" sid="410980141384396" type="Poder_Barra">
+                                    <param id="0" name="Width">lerp(Poder_Barra.Width, Leo.poder, 0.2)</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -238,10 +246,10 @@
                             <param id="0" name="Instance variable">vida</param>
                             <param id="1" name="Value">0</param>
                         </action>
-                        <action id="-5" name="Set width" sid="405768198359365" type="Barra_Vida_Conteudo">
+                        <action id="-5" name="Set width" sid="405768198359365" type="Vida_Barra">
                             <param id="0" name="Width">0</param>
                         </action>
-                        <action id="-5" name="Set width" sid="716530033600303" type="Barra_Vida_Atras">
+                        <action id="-5" name="Set width" sid="716530033600303" type="Vida_Atras">
                             <param id="0" name="Width">0</param>
                         </action>
                     </actions>
@@ -259,10 +267,10 @@
                             <param id="0" name="Instance variable">poder</param>
                             <param id="1" name="Value">50</param>
                         </action>
-                        <action id="-5" name="Set width" sid="644508674045011" type="Barra_Poder_Conteudo">
+                        <action id="-5" name="Set width" sid="644508674045011" type="Poder_Barra">
                             <param id="0" name="Width">50</param>
                         </action>
-                        <action id="-5" name="Set width" sid="252449344794868" type="Barra_Poder_Atras">
+                        <action id="-5" name="Set width" sid="252449344794868" type="Poder_Atras">
                             <param id="0" name="Width">50</param>
                         </action>
                     </actions>
@@ -277,7 +285,7 @@
                         <condition id="-4" name="Trigger once while true" sid="349637042242686" type="System" />
                     </conditions>
                     <actions>
-                        <action id="-28" name="Set effect parameter" sid="939088243061467" type="Barra_Poder_Conteudo">
+                        <action id="-28" name="Set effect parameter" sid="939088243061467" type="Poder_Barra">
                             <param id="0" name="Effect">&quot;Brightness&quot;</param>
                             <param id="1" name="Parameter index">0</param>
                             <param id="2" name="Value">125</param>
@@ -294,7 +302,7 @@
                         <condition id="-4" name="Trigger once while true" sid="310114377234068" type="System" />
                     </conditions>
                     <actions>
-                        <action id="-28" name="Set effect parameter" sid="848480730272558" type="Barra_Poder_Conteudo">
+                        <action id="-28" name="Set effect parameter" sid="848480730272558" type="Poder_Barra">
                             <param id="0" name="Effect">&quot;Brightness&quot;</param>
                             <param id="1" name="Parameter index">0</param>
                             <param id="2" name="Value">100</param>
@@ -311,7 +319,7 @@
                     </conditions>
                     <actions>
                         <action id="4" name="Set animation" sid="476050162017045" type="Leo">
-                            <param id="0" name="Animation">Leo.estado &amp; Leo.estado_transformacao</param>
+                            <param id="0" name="Animation">Leo.estado_transformacao &amp; Leo.estado</param>
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>
@@ -388,15 +396,15 @@
                                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="123189880979851" type="Leo">
                                                     <param id="0" name="Instance variable">atacando</param>
                                                 </condition>
-                                                <condition id="-7" name="Compare instance variable" sid="863695941772891" type="Leo">
-                                                    <param id="0" name="Instance variable">estado</param>
-                                                    <param id="1" name="Comparison">1</param>
-                                                    <param id="2" name="Value">&quot;Transform&quot;</param>
-                                                </condition>
                                                 <condition id="-7" name="Compare instance variable" sid="692558294498693" type="Leo">
                                                     <param id="0" name="Instance variable">estado_transformacao</param>
                                                     <param id="1" name="Comparison">1</param>
                                                     <param id="2" name="Value">&quot;T_&quot;</param>
+                                                </condition>
+                                                <condition id="-7" name="Compare instance variable" sid="863695941772891" type="Leo">
+                                                    <param id="0" name="Instance variable">estado</param>
+                                                    <param id="1" name="Comparison">1</param>
+                                                    <param id="2" name="Value">&quot;Transform&quot;</param>
                                                 </condition>
                                             </conditions>
                                             <actions />
@@ -456,18 +464,18 @@
                                     <actions>
                                         <action id="-12" name="Subtract from" sid="922246079000256" type="Leo">
                                             <param id="0" name="Instance variable">poder</param>
-                                            <param id="1" name="Value">4 * dt</param>
+                                            <param id="1" name="Value">6 * dt</param>
                                         </action>
-                                        <action id="-5" name="Set width" sid="329647861968603" type="Barra_Poder_Conteudo">
+                                        <action id="-5" name="Set width" sid="329647861968603" type="Poder_Barra">
                                             <param id="0" name="Width">Leo.poder</param>
                                         </action>
                                     </actions>
                                     <sub-events>
                                         <event-block sid="789847848937081">
                                             <conditions>
-                                                <condition id="-10" name="Compare opacity" sid="407233938726730" type="Barra_Poder_Atras">
-                                                    <param id="0" name="Comparison">3</param>
-                                                    <param id="1" name="Opacity">0</param>
+                                                <condition id="-5" name="Compare width" sid="407233938726730" type="Poder_Atras">
+                                                    <param id="0" name="Comparison">2</param>
+                                                    <param id="1" name="Width">0</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
@@ -491,13 +499,13 @@
                                             <sub-events>
                                                 <event-block sid="959128595326435">
                                                     <conditions>
-                                                        <condition id="-5" name="Compare width" sid="669113919876886" type="Barra_Poder_Conteudo">
+                                                        <condition id="-5" name="Compare width" sid="669113919876886" type="Poder_Barra">
                                                             <param id="0" name="Comparison">5</param>
                                                             <param id="1" name="Width">0</param>
                                                         </condition>
                                                     </conditions>
                                                     <actions>
-                                                        <action id="-5" name="Set width" sid="634853470255453" type="Barra_Poder_Conteudo">
+                                                        <action id="-5" name="Set width" sid="634853470255453" type="Poder_Barra">
                                                             <param id="0" name="Width">Leo.poder</param>
                                                         </action>
                                                     </actions>
@@ -567,20 +575,20 @@
                                                     <conditions />
                                                     <actions>
                                                         <action id="-3" name="Create object" sid="266929283601558" type="System">
-                                                            <param id="0" name="Object to create">Personagem_Hitbox</param>
+                                                            <param id="0" name="Object to create">Leo_Hitbox</param>
                                                             <param id="1" name="Layer">Leo.LayerName</param>
                                                             <param id="2" name="X">Leo.X</param>
                                                             <param id="3" name="Y">Leo.Y</param>
                                                         </action>
-                                                        <action behavior="Pin" id="0" name="Pin to object" sid="947624843586491" type="Personagem_Hitbox">
+                                                        <action behavior="Pin" id="0" name="Pin to object" sid="947624843586491" type="Leo_Hitbox">
                                                             <param id="0" name="Pin to">Leo</param>
                                                             <param id="1" name="Mode">0</param>
                                                         </action>
                                                         <action id="-16" name="Wait" sid="552349808264283" type="System">
                                                             <param id="0" name="Seconds">0</param>
                                                         </action>
-                                                        <action id="4" name="Set animation" sid="999167322890878" type="Personagem_Hitbox">
-                                                            <param id="0" name="Animation">Leo.estado &amp; Leo.estado_transformacao</param>
+                                                        <action id="4" name="Set animation" sid="999167322890878" type="Leo_Hitbox">
+                                                            <param id="0" name="Animation">Leo.estado_transformacao &amp; Leo.estado</param>
                                                             <param id="1" name="From">1</param>
                                                         </action>
                                                     </actions>
@@ -590,7 +598,7 @@
                                                                 <condition id="7" name="Is mirrored" sid="905995697840696" type="Leo" />
                                                             </conditions>
                                                             <actions>
-                                                                <action id="7" name="Set mirrored" sid="325613874732854" type="Personagem_Hitbox">
+                                                                <action id="7" name="Set mirrored" sid="325613874732854" type="Leo_Hitbox">
                                                                     <param id="0" name="State">0</param>
                                                                 </action>
                                                             </actions>
@@ -619,13 +627,13 @@
                                             <sub-events>
                                                 <event-block sid="305527380664204">
                                                     <conditions>
-                                                        <condition id="3" name="Compare frame" sid="180650192421682" type="Personagem_Hitbox">
+                                                        <condition id="3" name="Compare frame" sid="180650192421682" type="Leo_Hitbox">
                                                             <param id="0" name="Comparison">0</param>
                                                             <param id="1" name="Number">2</param>
                                                         </condition>
                                                     </conditions>
                                                     <actions>
-                                                        <action id="11" name="Set collisions enabled" sid="371415175788435" type="Personagem_Hitbox">
+                                                        <action id="11" name="Set collisions enabled" sid="371415175788435" type="Leo_Hitbox">
                                                             <param id="0" name="Collisions">1</param>
                                                         </action>
                                                     </actions>
@@ -646,25 +654,63 @@
                                             </conditions>
                                             <actions />
                                             <sub-events>
-                                                <event-block sid="801239069204451">
+                                                <event-block sid="897958152086650">
                                                     <conditions>
-                                                        <condition id="3" name="Compare frame" sid="976959945349281" type="Personagem_Hitbox">
-                                                            <param id="0" name="Comparison">0</param>
-                                                            <param id="1" name="Number">AtaquesPersonagem.At(int(right(Personagem_Hitbox.AnimationName,1)))</param>
+                                                        <condition id="-7" name="Compare instance variable" sid="383662375224809" type="Leo">
+                                                            <param id="0" name="Instance variable">estado_transformacao</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;T_&quot;</param>
                                                         </condition>
-                                                        <condition id="-4" name="Trigger once while true" sid="267170870433898" type="System" />
+                                                    </conditions>
+                                                    <actions />
+                                                </event-block>
+                                                <event-block sid="895745669984867">
+                                                    <conditions>
+                                                        <condition id="3" name="Compare frame" sid="614393056624544" type="Leo_Hitbox">
+                                                            <param id="0" name="Comparison">0</param>
+                                                            <param id="1" name="Number">AtaquesPersonagem.At(int(right(Leo_Hitbox.AnimationName,1)) +4)</param>
+                                                        </condition>
+                                                        <condition id="-4" name="Trigger once while true" sid="821612146630534" type="System" />
                                                     </conditions>
                                                     <actions>
-                                                        <action id="11" name="Set collisions enabled" sid="528024417341695" type="Leo">
+                                                        <action id="11" name="Set collisions enabled" sid="346049933271933" type="Leo">
                                                             <param id="0" name="Collisions">1</param>
                                                         </action>
-                                                        <action id="-16" name="Wait" sid="214079555991661" type="System">
+                                                        <action id="-16" name="Wait" sid="731690945832220" type="System">
                                                             <param id="0" name="Seconds">0.3</param>
                                                         </action>
-                                                        <action id="11" name="Set collisions enabled" sid="619228351444569" type="Leo">
+                                                        <action id="11" name="Set collisions enabled" sid="832664689398091" type="Leo">
                                                             <param id="0" name="Collisions">0</param>
                                                         </action>
                                                     </actions>
+                                                </event-block>
+                                                <event-block sid="431815154034419">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="843556221401135" type="System" />
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="801239069204451">
+                                                            <conditions>
+                                                                <condition id="3" name="Compare frame" sid="976959945349281" type="Leo_Hitbox">
+                                                                    <param id="0" name="Comparison">0</param>
+                                                                    <param id="1" name="Number">AtaquesPersonagem.At(int(right(Leo_Hitbox.AnimationName,1)))</param>
+                                                                </condition>
+                                                                <condition id="-4" name="Trigger once while true" sid="267170870433898" type="System" />
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="11" name="Set collisions enabled" sid="528024417341695" type="Leo">
+                                                                    <param id="0" name="Collisions">1</param>
+                                                                </action>
+                                                                <action id="-16" name="Wait" sid="214079555991661" type="System">
+                                                                    <param id="0" name="Seconds">0.3</param>
+                                                                </action>
+                                                                <action id="11" name="Set collisions enabled" sid="619228351444569" type="Leo">
+                                                                    <param id="0" name="Collisions">0</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
                                                 </event-block>
                                             </sub-events>
                                         </event-block>
@@ -717,10 +763,10 @@
                                 </event-block>
                                 <event-block sid="661052166113724">
                                     <conditions>
-                                        <condition id="5" name="On any finished" sid="152513561966550" type="Personagem_Hitbox" />
+                                        <condition id="5" name="On any finished" sid="152513561966550" type="Leo_Hitbox" />
                                     </conditions>
                                     <actions>
-                                        <action id="-9" name="Destroy" sid="745362309433296" type="Personagem_Hitbox" />
+                                        <action id="-9" name="Destroy" sid="745362309433296" type="Leo_Hitbox" />
                                     </actions>
                                     <sub-events>
                                         <event-block sid="617825954121413">
@@ -1075,7 +1121,7 @@
                                             <param id="0" name="Instance variable">atacando</param>
                                             <param id="1" name="Value">0</param>
                                         </action>
-                                        <action id="-9" name="Destroy" sid="972927211071502" type="Personagem_Hitbox" />
+                                        <action id="-9" name="Destroy" sid="972927211071502" type="Leo_Hitbox" />
                                     </actions>
                                 </event-block>
                             </sub-events>
@@ -1100,20 +1146,30 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="172359210772184">
+        <event-block sid="438934335203388">
             <conditions>
-                <condition id="0" name="On collision with another object" sid="987924451103936" type="Leo">
-                    <param id="0" name="Object">Tiler</param>
+                <condition id="1" name="Is overlapping another object" sid="131587882333852" type="Capangas_Tyler">
+                    <param id="0" name="Object">Leo</param>
                 </condition>
+                <condition id="-8" name="Compare two values" sid="398720260205866" type="System">
+                    <param id="0" name="First value">left(Capangas_Tyler.AnimationName, 6)</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">&quot;Attack&quot;</param>
+                </condition>
+                <condition id="3" name="Compare frame" sid="277084102276254" type="Capangas_Tyler">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Number">Ataques_Inimigos.At(1,right(Capangas_Tyler.AnimationName,1),1)</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="803302797496638" type="System" />
             </conditions>
             <actions>
-                <action id="0" name="Call function" sid="176402041658277" type="Function">
-                    <param id="0" name="Name">&quot;poder&quot;</param>
-                    <param id="1" name="Parameter {n}">10</param>
-                </action>
-                <action id="0" name="Call function" sid="772295808607462" type="Function">
+                <action id="0" name="Call function" sid="572480708764434" type="Function">
                     <param id="0" name="Name">&quot;dano&quot;</param>
-                    <param id="1" name="Parameter {n}">12.5</param>
+                    <param id="1" name="Parameter {n}">Ataques_Inimigos.At(1,right(Capangas_Tyler.AnimationName,1),2)</param>
+                </action>
+                <action id="0" name="Call function" sid="659763058162969" type="Function">
+                    <param id="0" name="Name">&quot;poder&quot;</param>
+                    <param id="1" name="Parameter {n}">1</param>
                 </action>
             </actions>
         </event-block>

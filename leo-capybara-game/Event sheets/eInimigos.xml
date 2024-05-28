@@ -3,50 +3,143 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>eInimigos</name>
     <events>
-        <event-block sid="342505921130687">
+        <comment>X= Inimigo referido // Y= Ataque do inimigo// Z= Informação sobre o ataque</comment>
+        <event-block sid="104983560443009">
             <conditions>
-                <condition id="0" name="On collision with another object" sid="597792068042095" type="Tiler">
-                    <param id="0" name="Object">Personagem_Hitbox</param>
-                </condition>
-                <condition id="-21" name="Is between values" sid="961016965006648" type="System">
-                    <param id="0" name="Value">Tiler.Y</param>
-                    <param id="1" name="Lower bound">Leo.sombra - 3</param>
-                    <param id="2" name="Upper bound">Leo.sombra + 3</param>
-                </condition>
+                <condition id="-2" name="On start of layout" sid="290604332599319" type="System" />
             </conditions>
             <actions>
-                <action behavior="Sine" id="0" name="Set active" sid="814430446204262" type="Tiler">
-                    <param id="0" name="State">1</param>
+                <action id="4" name="Set at XYZ" sid="615239430337371" type="Ataques_Inimigos">
+                    <param id="0" name="X">1</param>
+                    <param id="1" name="Y">1</param>
+                    <param id="2" name="Z">1</param>
+                    <param id="3" name="Value">2</param>
                 </action>
-                <action id="-10" name="Set value" sid="549792832820983" type="Leo">
-                    <param id="0" name="Instance variable">combo_timer</param>
-                    <param id="1" name="Value">1</param>
+                <action id="4" name="Set at XYZ" sid="590520957240039" type="Ataques_Inimigos">
+                    <param id="0" name="X">1</param>
+                    <param id="1" name="Y">1</param>
+                    <param id="2" name="Z">2</param>
+                    <param id="3" name="Value">2</param>
                 </action>
-                <action id="-11" name="Add to" sid="365099843180658" type="Leo">
-                    <param id="0" name="Instance variable">acerto</param>
-                    <param id="1" name="Value">1</param>
+                <action id="4" name="Set at XYZ" sid="184954808248373" type="Ataques_Inimigos">
+                    <param id="0" name="X">1</param>
+                    <param id="1" name="Y">2</param>
+                    <param id="2" name="Z">1</param>
+                    <param id="3" name="Value">2</param>
+                </action>
+                <action id="4" name="Set at XYZ" sid="386952421126336" type="Ataques_Inimigos">
+                    <param id="0" name="X">1</param>
+                    <param id="1" name="Y">2</param>
+                    <param id="2" name="Z">2</param>
+                    <param id="3" name="Value">3</param>
+                </action>
+                <action id="4" name="Set at XYZ" sid="132594153610826" type="Ataques_Inimigos">
+                    <param id="0" name="X">1</param>
+                    <param id="1" name="Y">3</param>
+                    <param id="2" name="Z">1</param>
+                    <param id="3" name="Value">2</param>
+                </action>
+                <action id="4" name="Set at XYZ" sid="704983397308866" type="Ataques_Inimigos">
+                    <param id="0" name="X">1</param>
+                    <param id="1" name="Y">3</param>
+                    <param id="2" name="Z">2</param>
+                    <param id="3" name="Value">5</param>
                 </action>
             </actions>
+        </event-block>
+        <event-block sid="342505921130687">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="597792068042095" type="Capangas_Tyler">
+                    <param id="0" name="Object">Leo_Hitbox</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="755989997576414">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="150909016884274" type="Leo">
+                            <param id="0" name="Instance variable">estado_transformacao</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;T_&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="833413434237243">
+                            <conditions>
+                                <condition id="-21" name="Is between values" sid="961016965006648" type="System">
+                                    <param id="0" name="Value">Capangas_Tyler.Y</param>
+                                    <param id="1" name="Lower bound">Leo.sombra - 6</param>
+                                    <param id="2" name="Upper bound">Leo.sombra + 6</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Sine" id="0" name="Set active" sid="814430446204262" type="Capangas_Tyler">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="549792832820983" type="Leo">
+                                    <param id="0" name="Instance variable">combo_timer</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-11" name="Add to" sid="365099843180658" type="Leo">
+                                    <param id="0" name="Instance variable">acerto</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="318573123080053">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="182194500572565" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="125518370113569">
+                            <conditions>
+                                <condition id="-21" name="Is between values" sid="137583852022633" type="System">
+                                    <param id="0" name="Value">Capangas_Tyler.Y</param>
+                                    <param id="1" name="Lower bound">Leo.sombra - 3</param>
+                                    <param id="2" name="Upper bound">Leo.sombra + 3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Sine" id="0" name="Set active" sid="352744723673181" type="Capangas_Tyler">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="379632641962208" type="Leo">
+                                    <param id="0" name="Instance variable">combo_timer</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-11" name="Add to" sid="760905692372560" type="Leo">
+                                    <param id="0" name="Instance variable">acerto</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-group description="" sid="592431320356308" title="Movimentação">
             <sub-events>
                 <event-block sid="229405525836604">
                     <conditions>
                         <condition id="-11" name="For Each" sid="341955159813400" type="System">
-                            <param id="0" name="Object">Tiler</param>
+                            <param id="0" name="Object">Capangas_Tyler</param>
                         </condition>
                     </conditions>
                     <actions />
                     <sub-events>
                         <event-block sid="967174353333700">
                             <conditions>
-                                <condition id="-1" name="Compare X" sid="765143316788730" type="Tiler">
+                                <condition id="-1" name="Compare X" sid="765143316788730" type="Capangas_Tyler">
                                     <param id="0" name="Comparison">4</param>
                                     <param id="1" name="X co-ordinate">Leo.X</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="7" name="Set mirrored" sid="580007513767180" type="Tiler">
+                                <action id="7" name="Set mirrored" sid="580007513767180" type="Capangas_Tyler">
                                     <param id="0" name="State">1</param>
                                 </action>
                             </actions>
@@ -56,7 +149,7 @@
                                 <condition id="-22" name="Else" sid="937755689314621" type="System" />
                             </conditions>
                             <actions>
-                                <action id="7" name="Set mirrored" sid="891401754310912" type="Tiler">
+                                <action id="7" name="Set mirrored" sid="891401754310912" type="Capangas_Tyler">
                                     <param id="0" name="State">0</param>
                                 </action>
                             </actions>
@@ -66,30 +159,31 @@
                 <event-block sid="812227928334005">
                     <conditions>
                         <condition id="-33" name="Pick by comparison" sid="276387477847279" type="System">
-                            <param id="0" name="Object">Tiler</param>
-                            <param id="1" name="Expression">distance(Tiler.X, Tiler.Y, Leo.X, Leo.Y)</param>
+                            <param id="0" name="Object">Capangas_Tyler</param>
+                            <param id="1" name="Expression">distance(Capangas_Tyler.X, Capangas_Tyler.Y, Leo.X, Leo.Y)</param>
                             <param id="2" name="Comparison">2</param>
                             <param id="3" name="Value">320</param>
                         </condition>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="530653379737228" type="Tiler">
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="530653379737228" type="Capangas_Tyler">
                             <param id="0" name="Instance variable">ativo</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-14" name="Toggle boolean" sid="549945758486141" type="Tiler">
+                        <action id="-13" name="Set boolean" sid="130845636838153" type="Capangas_Tyler">
                             <param id="0" name="Instance variable">ativo</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="339072867878800">
                     <conditions>
                         <condition id="-33" name="Pick by comparison" sid="927270306902150" type="System">
-                            <param id="0" name="Object">Tiler</param>
-                            <param id="1" name="Expression">distance(Tiler.X, Tiler.Y, Leo.X, Leo.Y)</param>
+                            <param id="0" name="Object">Capangas_Tyler</param>
+                            <param id="1" name="Expression">distance(Capangas_Tyler.X, Capangas_Tyler.Y, Leo.X, Leo.Y)</param>
                             <param id="2" name="Comparison">4</param>
                             <param id="3" name="Value">12</param>
                         </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="255363277984116" type="Tiler">
+                        <condition id="-8" name="Is boolean instance variable set" sid="255363277984116" type="Capangas_Tyler">
                             <param id="0" name="Instance variable">ativo</param>
                         </condition>
                     </conditions>
@@ -97,185 +191,260 @@
                     <sub-events>
                         <event-block sid="240201773042845">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="620772596293766" type="Tiler">
+                                <condition id="-7" name="Compare instance variable" sid="620772596293766" type="Capangas_Tyler">
                                     <param id="0" name="Instance variable">decisao</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">1</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="4" name="Set animation" sid="154050621506256" type="Tiler">
+                                <action id="4" name="Set animation" sid="154050621506256" type="Capangas_Tyler">
                                     <param id="0" name="Animation">&quot;Walk&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="423540639423539" type="Tiler">
+                                <action id="-10" name="Set value" sid="423540639423539" type="Capangas_Tyler">
                                     <param id="0" name="Instance variable">decisao_atual</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action behavior="MoveTo" id="1" name="Set maximum speed" sid="708051033719471" type="Tiler">
+                                <action behavior="MoveTo" id="1" name="Set maximum speed" sid="708051033719471" type="Capangas_Tyler">
                                     <param id="0" name="Max speed">40</param>
                                 </action>
-                                <action id="6" name="Set speed" sid="388142001185293" type="Tiler">
+                                <action id="6" name="Set speed" sid="388142001185293" type="Capangas_Tyler">
                                     <param id="0" name="Speed">7</param>
                                 </action>
-                                <action behavior="MoveTo" id="6" name="Move to object" sid="235797563551917" type="Tiler">
+                                <action behavior="MoveTo" id="6" name="Move to object" sid="235797563551917" type="Capangas_Tyler">
                                     <param id="0" name="Target">Leo</param>
                                 </action>
                             </actions>
                         </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="351261614854740">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="226436316812782" type="Tiler">
-                            <param id="0" name="Instance variable">decisao</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="370292723712783" type="Tiler">
-                            <param id="0" name="Animation">&quot;Walk&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="652434384512489" type="Tiler">
-                            <param id="0" name="Instance variable">decisao_atual</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action behavior="MoveTo" id="1" name="Set maximum speed" sid="569283497605681" type="Tiler">
-                            <param id="0" name="Max speed">20</param>
-                        </action>
-                        <action id="6" name="Set speed" sid="662423114070715" type="Tiler">
-                            <param id="0" name="Speed">4</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="736559265455195">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="250836108631610" type="Tiler">
-                            <param id="0" name="Instance variable">decisao</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">2</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="648448350338142" type="Tiler">
-                            <param id="0" name="Animation">&quot;Walk&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="770543384788612" type="Tiler">
-                            <param id="0" name="Instance variable">decisao_atual</param>
-                            <param id="1" name="Value">2</param>
-                        </action>
-                        <action behavior="MoveTo" id="1" name="Set maximum speed" sid="514585078936468" type="Tiler">
-                            <param id="0" name="Max speed">20</param>
-                        </action>
-                        <action id="6" name="Set speed" sid="527944534703541" type="Tiler">
-                            <param id="0" name="Speed">4</param>
-                        </action>
-                        <action behavior="MoveTo" id="8" name="Move to distance-angle" sid="476118015346324" type="Tiler">
-                            <param id="0" name="Distance">100</param>
-                            <param id="1" name="Angle">random(360)</param>
-                        </action>
-                    </actions>
-                    <sub-events>
-                        <event-block sid="779176399777578">
+                        <event-block sid="736559265455195">
                             <conditions>
-                                <condition behavior="MoveTo" id="3" inverted="1" name="Is moving" sid="190012547681635" type="Tiler" />
+                                <condition id="-7" name="Compare instance variable" sid="250836108631610" type="Capangas_Tyler">
+                                    <param id="0" name="Instance variable">decisao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
                             </conditions>
                             <actions>
-                                <action behavior="MoveTo" id="8" name="Move to distance-angle" sid="390950081910625" type="Tiler">
+                                <action id="4" name="Set animation" sid="648448350338142" type="Capangas_Tyler">
+                                    <param id="0" name="Animation">&quot;Walk&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="770543384788612" type="Capangas_Tyler">
+                                    <param id="0" name="Instance variable">decisao_atual</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                                <action behavior="MoveTo" id="1" name="Set maximum speed" sid="514585078936468" type="Capangas_Tyler">
+                                    <param id="0" name="Max speed">20</param>
+                                </action>
+                                <action id="6" name="Set speed" sid="527944534703541" type="Capangas_Tyler">
+                                    <param id="0" name="Speed">4</param>
+                                </action>
+                                <action behavior="MoveTo" id="8" name="Move to distance-angle" sid="476118015346324" type="Capangas_Tyler">
                                     <param id="0" name="Distance">100</param>
                                     <param id="1" name="Angle">random(360)</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="442741873988969">
+                                    <conditions>
+                                        <condition behavior="MoveTo" id="3" inverted="1" name="Is moving" sid="680986408321585" type="Capangas_Tyler" />
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="MoveTo" id="8" name="Move to distance-angle" sid="390950081910625" type="Capangas_Tyler">
+                                            <param id="0" name="Distance">100</param>
+                                            <param id="1" name="Angle">random(360)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="618904518258986">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="606272993023559" type="Tiler">
-                            <param id="0" name="Instance variable">decisao</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">3</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="585409929828396" type="Tiler">
-                            <param id="0" name="Animation">&quot;Walk&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="950321120484416" type="Tiler">
-                            <param id="0" name="Instance variable">decisao_atual</param>
-                            <param id="1" name="Value">3</param>
-                        </action>
-                        <action behavior="MoveTo" id="1" name="Set maximum speed" sid="353595684117722" type="Tiler">
-                            <param id="0" name="Max speed">40</param>
-                        </action>
-                        <action id="6" name="Set speed" sid="111652097908451" type="Tiler">
-                            <param id="0" name="Speed">7</param>
-                        </action>
-                    </actions>
-                    <sub-events>
-                        <event-block sid="122152169229878">
+                        <event-block sid="618904518258986">
                             <conditions>
-                                <condition id="-4" name="Trigger once while true" sid="771827047195144" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="-10" name="Set value" sid="887782717297918" type="Tiler">
-                                    <param id="0" name="Instance variable">decisao_timer</param>
-                                    <param id="1" name="Value">random(0, 2)</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="984504684570379">
-                            <conditions>
-                                <condition id="-1" name="Compare X" sid="249555765580272" type="Tiler">
-                                    <param id="0" name="Comparison">4</param>
-                                    <param id="1" name="X co-ordinate">Leo.X</param>
+                                <condition id="-7" name="Compare instance variable" sid="606272993023559" type="Capangas_Tyler">
+                                    <param id="0" name="Instance variable">decisao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
                                 </condition>
-                                <condition id="-4" name="Trigger once while true" sid="757838312207576" type="System" />
                             </conditions>
                             <actions>
-                                <action behavior="MoveTo" id="4" name="Move to XY" sid="716696156077001" type="Tiler">
-                                    <param id="0" name="X">choose(Leo.X + 30, Leo.X + 40)</param>
-                                    <param id="1" name="Y">random(130, 175)</param>
+                                <action id="4" name="Set animation" sid="585409929828396" type="Capangas_Tyler">
+                                    <param id="0" name="Animation">&quot;Walk&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="950321120484416" type="Capangas_Tyler">
+                                    <param id="0" name="Instance variable">decisao_atual</param>
+                                    <param id="1" name="Value">3</param>
+                                </action>
+                                <action behavior="MoveTo" id="1" name="Set maximum speed" sid="353595684117722" type="Capangas_Tyler">
+                                    <param id="0" name="Max speed">40</param>
+                                </action>
+                                <action id="6" name="Set speed" sid="111652097908451" type="Capangas_Tyler">
+                                    <param id="0" name="Speed">7</param>
                                 </action>
                             </actions>
                             <sub-events>
-                                <event-block sid="475588653935243">
+                                <event-block sid="984504684570379">
                                     <conditions>
-                                        <condition behavior="MoveTo" id="0" name="On hit target position" sid="623039311810741" type="Tiler" />
+                                        <condition id="-1" name="Compare X" sid="249555765580272" type="Capangas_Tyler">
+                                            <param id="0" name="Comparison">4</param>
+                                            <param id="1" name="X co-ordinate">Leo.X</param>
+                                        </condition>
+                                        <condition id="-4" name="Trigger once while true" sid="757838312207576" type="System" />
                                     </conditions>
                                     <actions>
-                                        <action behavior="MoveTo" id="4" name="Move to XY" sid="375038261506940" type="Tiler">
+                                        <action behavior="MoveTo" id="4" name="Move to XY" sid="716696156077001" type="Capangas_Tyler">
                                             <param id="0" name="X">choose(Leo.X + 30, Leo.X + 40)</param>
                                             <param id="1" name="Y">random(130, 175)</param>
                                         </action>
                                     </actions>
+                                    <sub-events>
+                                        <event-block sid="475588653935243">
+                                            <conditions>
+                                                <condition behavior="MoveTo" id="0" name="On hit target position" sid="623039311810741" type="Capangas_Tyler" />
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="MoveTo" id="4" name="Move to XY" sid="375038261506940" type="Capangas_Tyler">
+                                                    <param id="0" name="X">choose(Leo.X + 30, Leo.X + 40)</param>
+                                                    <param id="1" name="Y">random(130, 175)</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="852168449353916">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="757129438466903" type="System" />
+                                        <condition id="-4" name="Trigger once while true" sid="246912280012594" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="MoveTo" id="4" name="Move to XY" sid="495848104851926" type="Capangas_Tyler">
+                                            <param id="0" name="X">choose(Leo.X - 30, Leo.X - 40)</param>
+                                            <param id="1" name="Y">random(130, 175)</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="471930832669728">
+                                            <conditions>
+                                                <condition behavior="MoveTo" id="0" name="On hit target position" sid="674524499103638" type="Capangas_Tyler" />
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="MoveTo" id="4" name="Move to XY" sid="443873233777345" type="Capangas_Tyler">
+                                                    <param id="0" name="X">choose(Leo.X - 30, Leo.X - 40)</param>
+                                                    <param id="1" name="Y">random(130, 175)</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block sid="852168449353916">
+                    </sub-events>
+                </event-block>
+                <event-block sid="356236755788517">
+                    <conditions>
+                        <condition id="-33" name="Pick by comparison" sid="226233517563213" type="System">
+                            <param id="0" name="Object">Capangas_Tyler</param>
+                            <param id="1" name="Expression">distance(Capangas_Tyler.X, Capangas_Tyler.Y, Leo.X, Leo.Y)</param>
+                            <param id="2" name="Comparison">3</param>
+                            <param id="3" name="Value">12</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="323490572312772">
                             <conditions>
-                                <condition id="-22" name="Else" sid="757129438466903" type="System" />
-                                <condition id="-4" name="Trigger once while true" sid="246912280012594" type="System" />
+                                <condition id="-11" name="For Each" sid="562244339671267" type="System">
+                                    <param id="0" name="Object">Capangas_Tyler</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="618307056850723">
+                                    <conditions>
+                                        <condition id="-21" name="Is between values" sid="343760737899481" type="System">
+                                            <param id="0" name="Value">Capangas_Tyler.Y</param>
+                                            <param id="1" name="Lower bound">Leo.sombra - 2</param>
+                                            <param id="2" name="Upper bound">Leo.sombra + 2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="224600828602330" type="Capangas_Tyler">
+                                            <param id="0" name="Animation">&quot;Attack&quot; &amp; Capangas_Tyler.Combo</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action behavior="MoveTo" id="9" name="Stop" sid="204120906270054" type="Capangas_Tyler" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="579372314675231">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="206013932004782" type="System" />
                             </conditions>
                             <actions>
-                                <action behavior="MoveTo" id="4" name="Move to XY" sid="495848104851926" type="Tiler">
-                                    <param id="0" name="X">choose(Leo.X - 30, Leo.X - 40)</param>
-                                    <param id="1" name="Y">random(130, 175)</param>
+                                <action id="4" name="Set animation" sid="305965919569624" type="Capangas_Tyler">
+                                    <param id="0" name="Animation">&quot;Walk&quot;</param>
+                                    <param id="1" name="From">1</param>
                                 </action>
                             </actions>
                             <sub-events>
-                                <event-block sid="471930832669728">
+                                <event-block sid="599920145673078">
                                     <conditions>
-                                        <condition behavior="MoveTo" id="0" name="On hit target position" sid="674524499103638" type="Tiler" />
+                                        <condition id="-1" name="Compare X" sid="672101583318325" type="Capangas_Tyler">
+                                            <param id="0" name="Comparison">4</param>
+                                            <param id="1" name="X co-ordinate">Leo.X</param>
+                                        </condition>
                                     </conditions>
                                     <actions>
-                                        <action behavior="MoveTo" id="4" name="Move to XY" sid="443873233777345" type="Tiler">
-                                            <param id="0" name="X">choose(Leo.X - 30, Leo.X - 40)</param>
-                                            <param id="1" name="Y">random(130, 175)</param>
+                                        <action behavior="MoveTo" id="4" name="Move to XY" sid="187206910811274" type="Capangas_Tyler">
+                                            <param id="0" name="X">Leo.X + 12</param>
+                                            <param id="1" name="Y">Leo.sombra</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="488627644982599">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="243630800392063" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="MoveTo" id="4" name="Move to XY" sid="368143245674840" type="Capangas_Tyler">
+                                            <param id="0" name="X">Leo.X - 12</param>
+                                            <param id="1" name="Y">Leo.sombra</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="888602126395600">
+                            <conditions>
+                                <condition id="5" name="On any finished" sid="272702796230866" type="Capangas_Tyler" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="650695702820731">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="431696511753676" type="Capangas_Tyler">
+                                            <param id="0" name="Instance variable">Combo</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">Capangas_Tyler.Combo_Maximo</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="832437723012088" type="Capangas_Tyler">
+                                            <param id="0" name="Instance variable">Combo</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="465842702773152">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="740713983622810" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-11" name="Add to" sid="134128212748987" type="Capangas_Tyler">
+                                            <param id="0" name="Instance variable">Combo</param>
+                                            <param id="1" name="Value">1</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -283,75 +452,80 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-            </sub-events>
-        </event-group>
-        <event-block sid="886705792363607">
-            <conditions>
-                <condition id="-7" name="Compare instance variable" sid="323398093620029" type="Tiler">
-                    <param id="0" name="Instance variable">decisao_timer</param>
-                    <param id="1" name="Comparison">4</param>
-                    <param id="2" name="Value">0</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-12" name="Subtract from" sid="635636003855867" type="Tiler">
-                    <param id="0" name="Instance variable">decisao_timer</param>
-                    <param id="1" name="Value">dt</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="455250442018835">
-            <conditions>
-                <condition id="-7" name="Compare instance variable" sid="553711509286717" type="Tiler">
-                    <param id="0" name="Instance variable">decisao_timer</param>
-                    <param id="1" name="Comparison">2</param>
-                    <param id="2" name="Value">0</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="529544966574479">
+                <event-block sid="886705792363607">
                     <conditions>
-                        <condition id="-23" name="While" sid="277280232369555" type="System" />
-                        <condition id="-7" name="Compare instance variable" sid="576191094470006" type="Tiler">
-                            <param id="0" name="Instance variable">decisao</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">Tiler.decisao_atual</param>
+                        <condition id="-7" name="Compare instance variable" sid="323398093620029" type="Capangas_Tyler">
+                            <param id="0" name="Instance variable">decisao_timer</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="635636003855867" type="Capangas_Tyler">
+                            <param id="0" name="Instance variable">decisao_timer</param>
+                            <param id="1" name="Value">dt</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="455250442018835">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="553711509286717" type="Capangas_Tyler">
+                            <param id="0" name="Instance variable">decisao_timer</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="186971394855377">
+                        <event-block sid="529544966574479">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="677741550655074" type="Tiler">
+                                <condition id="-23" name="While" sid="277280232369555" type="System" />
+                                <condition id="-7" name="Compare instance variable" sid="576191094470006" type="Capangas_Tyler">
                                     <param id="0" name="Instance variable">decisao</param>
-                                    <param id="1" name="Comparison">1</param>
-                                    <param id="2" name="Value">Tiler.decisao_atual</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">Capangas_Tyler.decisao_atual</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-10" name="Set value" sid="393955293139054" type="Tiler">
-                                    <param id="0" name="Instance variable">decisao_timer</param>
-                                    <param id="1" name="Value">random(0.5, 2)</param>
+                                <action id="-10" name="Set value" sid="175564939675620" type="Capangas_Tyler">
+                                    <param id="0" name="Instance variable">decisao</param>
+                                    <param id="1" name="Value">choose(1,2,3)</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="186971394855377">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="677741550655074" type="Capangas_Tyler">
+                                            <param id="0" name="Instance variable">decisao</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">Capangas_Tyler.decisao_atual</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="393955293139054" type="Capangas_Tyler">
+                                            <param id="0" name="Instance variable">decisao_timer</param>
+                                            <param id="1" name="Value">random(0.5, 2)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
+                <event-block sid="356187877919833">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="516398081371973" type="Capangas_Tyler">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Y co-ordinate">130</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="888871632953217" type="Capangas_Tyler">
+                            <param id="0" name="Y">130</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
-        </event-block>
-        <event-block sid="356187877919833">
-            <conditions>
-                <condition id="-2" name="Compare Y" sid="516398081371973" type="Tiler">
-                    <param id="0" name="Comparison">2</param>
-                    <param id="1" name="Y co-ordinate">130</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-2" name="Set Y" sid="888871632953217" type="Tiler">
-                    <param id="0" name="Y">130</param>
-                </action>
-            </actions>
-        </event-block>
+        </event-group>
     </events>
 </c2eventsheet>
