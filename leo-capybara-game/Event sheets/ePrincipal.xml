@@ -3,9 +3,49 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>ePrincipal</name>
     <events>
+        <variable comment="0 = autosave, 1 = manual save" constant="0" name="CheckSave" sid="663420745485011" static="0" type="number">0</variable>
         <variable constant="0" name="paused" sid="291308364731354" static="0" type="number">0</variable>
         <include>ePersonagem</include>
         <include>eInimigos</include>
+        <event-block sid="613785063015115">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="957912666161460" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="928731554059397" type="System">
+                    <param id="0" name="Variable">paused</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-13" name="Set time scale" sid="184264738786877" type="System">
+                    <param id="0" name="Time scale">1.0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="192896315476121">
+            <conditions>
+                <condition id="-29" name="On load complete" sid="637469238345925" type="System" />
+            </conditions>
+            <actions>
+                <action id="-13" name="Set time scale" sid="312449816905804" type="System">
+                    <param id="0" name="Time scale">1.0</param>
+                </action>
+                <action id="-9" name="Set value" sid="314933710400891" type="System">
+                    <param id="0" name="Variable">CheckSave</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="737610631077138" type="System">
+                    <param id="0" name="Variable">paused</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="334742576526422" type="PauseButton">
+                    <param id="0" name="Instance variable">estado</param>
+                    <param id="1" name="Value">&quot;Default&quot;</param>
+                </action>
+                <action id="-15" name="Set visible" sid="496047761851014" type="MenuPausa">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
         <event-block sid="610384262503455">
             <conditions>
                 <condition id="-6" name="Every X seconds" sid="845744981247238" type="System">
@@ -14,7 +54,11 @@
             </conditions>
             <actions>
                 <action id="-36" name="Save" sid="942157813170275" type="System">
-                    <param id="0" name="Slot">&quot;mysave&quot;</param>
+                    <param id="0" name="Slot">&quot;autosave&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="361710892459963" type="System">
+                    <param id="0" name="Variable">CheckSave</param>
+                    <param id="1" name="Value">0</param>
                 </action>
             </actions>
         </event-block>
@@ -84,6 +128,62 @@
                             <param id="0" name="Visibility">1</param>
                         </action>
                     </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="615338779835273">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="809960146774432" type="Mouse">
+                    <param id="0" name="Object">OpcaoMenu</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="453008579360622">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="568264769098237" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">OpcaoMenu</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="967442369872335">
+                            <conditions>
+                                <condition id="-33" name="Pick by comparison" sid="774361511784711" type="System">
+                                    <param id="0" name="Object">OpcaoMenu</param>
+                                    <param id="1" name="Expression">OpcaoMenu.opcao</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="468234643793498" type="System">
+                                    <param id="0" name="Layout">MenuInicial</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="811109094625420">
+                            <conditions>
+                                <condition id="-33" name="Pick by comparison" sid="769942360757377" type="System">
+                                    <param id="0" name="Object">OpcaoMenu</param>
+                                    <param id="1" name="Expression">OpcaoMenu.opcao</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-36" name="Save" sid="933075838852907" type="System">
+                                    <param id="0" name="Slot">&quot;mysave&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="361462132901951" type="System">
+                                    <param id="0" name="Variable">CheckSave</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-block>
