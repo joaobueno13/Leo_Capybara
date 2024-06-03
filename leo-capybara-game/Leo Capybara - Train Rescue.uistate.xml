@@ -13,11 +13,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layout order="0">Fase</layout>
         <layout order="1">MenuInicial</layout>
         <layout order="6">MenuOpcoes</layout>
-        <event-sheet order="2">ePersonagem</event-sheet>
+        <event-sheet order="4">ePersonagem</event-sheet>
         <event-sheet order="3">eInimigos</event-sheet>
-        <event-sheet order="4">ePrincipal</event-sheet>
-        <event-sheet order="5">eMenuInicial</event-sheet>
-        <event-sheet active="1" order="7">eMenuOpcoes</event-sheet>
+        <event-sheet order="5">ePrincipal</event-sheet>
+        <event-sheet active="1" order="2">eMenuInicial</event-sheet>
+        <event-sheet order="7">eMenuOpcoes</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />

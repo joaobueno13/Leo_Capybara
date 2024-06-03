@@ -513,85 +513,89 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="714702485746883">
-            <conditions>
-                <condition id="7" name="Cursor is over object" sid="773211236569068" type="Mouse">
-                    <param id="0" name="Object">OpcaoMenu</param>
-                </condition>
-            </conditions>
-            <actions />
+        <event-group description="" sid="812385089820456" title="Mecânica Mouse Hover">
             <sub-events>
-                <event-block sid="703845409031023">
+                <event-block sid="714702485746883">
                     <conditions>
-                        <condition id="-8" name="Compare two values" sid="721033234774916" type="System">
-                            <param id="0" name="First value">OpcaoMenu.opcao</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Second value">1</param>
+                        <condition id="7" name="Cursor is over object" sid="773211236569068" type="Mouse">
+                            <param id="0" name="Object">OpcaoMenu</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-2" name="Set Y" sid="467128751095702" type="Cursor">
-                            <param id="0" name="Y">OpcaoMenu.Y</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="818442545235408" type="Cursor">
-                            <param id="0" name="Instance variable">opcaoSelecionada</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="859265719623515">
-                    <conditions>
-                        <condition id="-8" name="Compare two values" sid="316499438955498" type="System">
-                            <param id="0" name="First value">OpcaoMenu.opcao</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Second value">2</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-2" name="Set Y" sid="332290761123219" type="Cursor">
-                            <param id="0" name="Y">OpcaoMenu.Y</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="206433591011101" type="Cursor">
-                            <param id="0" name="Instance variable">opcaoSelecionada</param>
-                            <param id="1" name="Value">2</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="837500303597164">
-                    <conditions>
-                        <condition id="-8" name="Compare two values" sid="325361326526094" type="System">
-                            <param id="0" name="First value">OpcaoMenu.opcao</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Second value">3</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-2" name="Set Y" sid="808734040820535" type="Cursor">
-                            <param id="0" name="Y">OpcaoMenu.Y</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="511551467195807" type="Cursor">
-                            <param id="0" name="Instance variable">opcaoSelecionada</param>
-                            <param id="1" name="Value">3</param>
-                        </action>
-                    </actions>
+                    <actions />
                     <sub-events>
-                        <event-block sid="109523160682677">
+                        <event-block sid="703845409031023">
                             <conditions>
-                                <condition id="6" name="On object clicked" sid="746312992530131" type="Mouse">
-                                    <param id="0" name="Mouse button">0</param>
-                                    <param id="1" name="Click type">0</param>
-                                    <param id="2" name="Object clicked">OpcaoMenu</param>
+                                <condition id="-8" name="Compare two values" sid="721033234774916" type="System">
+                                    <param id="0" name="First value">OpcaoMenu.opcao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">1</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-2" name="Go to layout" sid="200831795927369" type="System">
-                                    <param id="0" name="Layout">MenuInicial</param>
+                                <action id="-2" name="Set Y" sid="467128751095702" type="Cursor">
+                                    <param id="0" name="Y">OpcaoMenu.Y</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="818442545235408" type="Cursor">
+                                    <param id="0" name="Instance variable">opcaoSelecionada</param>
+                                    <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
+                        </event-block>
+                        <event-block sid="859265719623515">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="316499438955498" type="System">
+                                    <param id="0" name="First value">OpcaoMenu.opcao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="332290761123219" type="Cursor">
+                                    <param id="0" name="Y">OpcaoMenu.Y</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="206433591011101" type="Cursor">
+                                    <param id="0" name="Instance variable">opcaoSelecionada</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="837500303597164">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="325361326526094" type="System">
+                                    <param id="0" name="First value">OpcaoMenu.opcao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="808734040820535" type="Cursor">
+                                    <param id="0" name="Y">OpcaoMenu.Y</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="511551467195807" type="Cursor">
+                                    <param id="0" name="Instance variable">opcaoSelecionada</param>
+                                    <param id="1" name="Value">3</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="109523160682677">
+                                    <conditions>
+                                        <condition id="6" name="On object clicked" sid="746312992530131" type="Mouse">
+                                            <param id="0" name="Mouse button">0</param>
+                                            <param id="1" name="Click type">0</param>
+                                            <param id="2" name="Object clicked">OpcaoMenu</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Go to layout" sid="200831795927369" type="System">
+                                            <param id="0" name="Layout">MenuInicial</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
             </sub-events>
-        </event-block>
+        </event-group>
     </events>
 </c2eventsheet>
