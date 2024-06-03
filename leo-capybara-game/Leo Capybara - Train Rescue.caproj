@@ -836,23 +836,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="SoundBar" sid="990823031483993">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="153155363495113" speed="5">
-                    <frame duration="1" hotspotX="0.521277" hotspotY="0.5" original-source="C:\Users\Ruan\Downloads\TelaSom_e_Musica-1\TelaSom e Musica\barrasSom.png">
-                        <collision-poly>
-                            <point x="0.0106383" y="0.0714286" />
-                            <point x="0.521277" y="0.0714286" />
-                            <point x="0.989362" y="0.357143" />
-                            <point x="0.989362" y="0.642857" />
-                            <point x="0.521277" y="0.928571" />
-                            <point x="0.0106383" y="0.928571" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="MinusSoundButton" sid="684517152352619">
             <plugin id="Sprite" />
             <instance-variables>
@@ -948,6 +931,179 @@
         </object-type>
         <object-type global="1" name="Ataques_Inimigos" sid="975758878903014">
             <plugin id="Arr" />
+        </object-type>
+        <object-type name="MusicBarItem" sid="712316108344608">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="MusicBarCount" sid="983462961014658" type="number" />
+                <instance-variable name="MusicBarId" sid="368187097052739" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="357344581192784" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Ruan\Downloads\TelaSom_e_Musica-1\TelaSom e Musica\barrasSom.png">
+                        <collision-poly>
+                            <point x="0.166667" y="0.125" />
+                            <point x="0.833333" y="0.125" />
+                            <point x="0.833333" y="0.875" />
+                            <point x="0.166667" y="0.875" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SoundBarItem2" sid="102633478548555">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="MusicBarCount" sid="456421634852505" type="number" />
+                <instance-variable name="SoundBarCount" sid="954371155581359" type="number" />
+                <instance-variable name="MusicBarId" sid="973763628034245" type="number" />
+                <instance-variable name="SoundBarId" sid="774974194549893" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="507593905041855" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Ruan\Downloads\TelaSom_e_Musica-1\TelaSom e Musica\barrasSom.png">
+                        <collision-poly>
+                            <point x="0.166667" y="0.125" />
+                            <point x="0.833333" y="0.125" />
+                            <point x="0.833333" y="0.875" />
+                            <point x="0.166667" y="0.875" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SoundBarItem3" sid="855879420151608">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="MusicBarCount" sid="495441215073637" type="number" />
+                <instance-variable name="SoundBarCount" sid="981942336690499" type="number" />
+                <instance-variable name="MusicBarId" sid="622841895854316" type="number" />
+                <instance-variable name="SoundBarId" sid="598784496511671" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="391079876935638" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Ruan\Downloads\TelaSom_e_Musica-1\TelaSom e Musica\barrasSom.png">
+                        <collision-poly>
+                            <point x="0.166667" y="0.125" />
+                            <point x="0.833333" y="0.125" />
+                            <point x="0.833333" y="0.875" />
+                            <point x="0.166667" y="0.875" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SoundBarItem4" sid="177201509568869">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="MusicBarCount" sid="575222266951702" type="number" />
+                <instance-variable name="SoundBarCount" sid="534358485467944" type="number" />
+                <instance-variable name="MusicBarId" sid="223233716361114" type="number" />
+                <instance-variable name="SoundBarId" sid="904310526728989" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="364970590450455" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Ruan\Downloads\TelaSom_e_Musica-1\TelaSom e Musica\barrasSom.png">
+                        <collision-poly>
+                            <point x="0.166667" y="0.125" />
+                            <point x="0.833333" y="0.125" />
+                            <point x="0.833333" y="0.875" />
+                            <point x="0.166667" y="0.875" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SoundBarItem5" sid="338744711596491">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="MusicBarCount" sid="490911347932231" type="number" />
+                <instance-variable name="SoundBarCount" sid="617952867428347" type="number" />
+                <instance-variable name="MusicBarId" sid="358603346001269" type="number" />
+                <instance-variable name="SoundBarId" sid="430692760850999" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="673108544057861" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Ruan\Downloads\TelaSom_e_Musica-1\TelaSom e Musica\barrasSom.png">
+                        <collision-poly>
+                            <point x="0.166667" y="0.125" />
+                            <point x="0.833333" y="0.125" />
+                            <point x="0.833333" y="0.875" />
+                            <point x="0.166667" y="0.875" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TylerBG2" sid="744252764596614">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="492419713334916" speed="5">
+                    <frame duration="1" hotspotX="0.466667" hotspotY="0.492308" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Tiler\Tiller o tigre (1)\0.png" />
+                    <frame duration="1" hotspotX="0.47541" hotspotY="0.5" original-source="C:\Users\Win\Documents\GitHub\Leo_Train_Rescue\Artes\Tiler\Tiller o tigre (1)\1.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SoundBarItem6" sid="615746956896640">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="MusicBarCount" sid="278587873455087" type="number" />
+                <instance-variable name="SoundBarCount" sid="660078758381951" type="number" />
+                <instance-variable name="MusicBarId" sid="962372870357748" type="number" />
+                <instance-variable name="SoundBarId" sid="348796472925219" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="758769391764906" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Ruan\Downloads\TelaSom_e_Musica-1\TelaSom e Musica\barrasSom.png">
+                        <collision-poly>
+                            <point x="0.166667" y="0.125" />
+                            <point x="0.833333" y="0.125" />
+                            <point x="0.833333" y="0.875" />
+                            <point x="0.166667" y="0.875" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="MusicBarItem2" sid="354807663941004">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="MusicBarCount" sid="824957252588387" type="number" />
+                <instance-variable name="SoundBarCount" sid="773338888428211" type="number" />
+                <instance-variable name="MusicBarId" sid="718728606528097" type="number" />
+                <instance-variable name="SoundBarId" sid="926179077666350" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="350009735684051" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Ruan\Downloads\TelaSom_e_Musica-1\TelaSom e Musica\barrasSom.png">
+                        <collision-poly>
+                            <point x="0.166667" y="0.125" />
+                            <point x="0.833333" y="0.125" />
+                            <point x="0.833333" y="0.875" />
+                            <point x="0.166667" y="0.875" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SoundBarItem" sid="854443559054995">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="SoundBarId" sid="461267892010336" type="number" />
+                <instance-variable name="SoundBarCount" sid="539515327408867" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="528920175626160" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Ruan\Downloads\TelaSom_e_Musica-1\TelaSom e Musica\barrasSom.png">
+                        <collision-poly>
+                            <point x="0.166667" y="0.125" />
+                            <point x="0.833333" y="0.125" />
+                            <point x="0.833333" y="0.875" />
+                            <point x="0.166667" y="0.875" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families />

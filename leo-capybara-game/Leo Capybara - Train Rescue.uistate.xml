@@ -15,9 +15,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layout order="6">MenuOpcoes</layout>
         <event-sheet order="2">ePersonagem</event-sheet>
         <event-sheet order="3">eInimigos</event-sheet>
-        <event-sheet active="1" order="4">ePrincipal</event-sheet>
+        <event-sheet order="4">ePrincipal</event-sheet>
         <event-sheet order="5">eMenuInicial</event-sheet>
-        <event-sheet order="7">eMenuOpcoes</event-sheet>
+        <event-sheet active="1" order="7">eMenuOpcoes</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -49,9 +49,17 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/OpcaoMenu/" />
         <folder expanded="1" path="animation-folder/MenuOpcoes/" />
         <folder expanded="1" path="animation-folder/PlusSoundButton/" />
-        <folder expanded="1" path="animation-folder/SoundBar/" />
         <folder expanded="1" path="animation-folder/MinusSoundButton/" />
         <folder expanded="1" path="animation-folder/MenuPausa/" />
         <folder expanded="1" path="animation-folder/PauseButton/" />
+        <folder expanded="1" path="animation-folder/MusicBarItem/" />
+        <folder expanded="1" path="animation-folder/SoundBarItem2/" />
+        <folder expanded="1" path="animation-folder/SoundBarItem3/" />
+        <folder expanded="1" path="animation-folder/SoundBarItem4/" />
+        <folder expanded="1" path="animation-folder/SoundBarItem5/" />
+        <folder expanded="1" path="animation-folder/TylerBG2/" />
+        <folder expanded="1" path="animation-folder/SoundBarItem6/" />
+        <folder expanded="1" path="animation-folder/MusicBarItem2/" />
+        <folder expanded="1" path="animation-folder/SoundBarItem/" />
     </folders-expanded>
 </c2uistate>
