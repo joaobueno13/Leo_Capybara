@@ -312,7 +312,7 @@
                 </instance>
                 <instance type="Cursor" uid="32">
                     <properties>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
@@ -337,7 +337,7 @@
                 </instance>
                 <instance type="OpcaoMenu" uid="33">
                     <properties>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
@@ -349,11 +349,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>126.077003479</x>
-                        <y>58.138000488</y>
+                        <x>168</x>
+                        <y>56.031414032</y>
                         <z>0</z>
-                        <width>5</width>
-                        <height>5</height>
+                        <width>95</width>
+                        <height>20</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -363,7 +363,7 @@
                 </instance>
                 <instance type="OpcaoMenu" uid="34">
                     <properties>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
@@ -375,11 +375,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>126.077003479</x>
+                        <x>168</x>
                         <y>82.681999207</y>
                         <z>0</z>
-                        <width>5</width>
-                        <height>5</height>
+                        <width>95</width>
+                        <height>20</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -389,7 +389,7 @@
                 </instance>
                 <instance type="OpcaoMenu" uid="35">
                     <properties>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
@@ -401,11 +401,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>126.428001404</x>
+                        <x>168</x>
                         <y>108.222999573</y>
                         <z>0</z>
-                        <width>5</width>
-                        <height>5</height>
+                        <width>95</width>
+                        <height>20</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
