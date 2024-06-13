@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>ePrincipal</name>
+    <events>
+        <variable constant="0" name="paused" sid="291308364731354" static="0" type="number">0</variable>
+        <include>ePersonagem</include>
+        <include>eInimigos</include>
+        <event-block sid="610384262503455">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="845744981247238" type="System">
+                    <param id="0" name="Interval (seconds)">15</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-36" name="Save" sid="942157813170275" type="System">
+                    <param id="0" name="Slot">&quot;mysave&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="286881449915949">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="581922578739229" type="System" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="467489485522997" type="PauseButton">
+                    <param id="0" name="Animation">PauseButton.estado</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="349001250530319">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="367886487991450" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">PauseButton</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="723981243564063">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="934663735154137" type="System">
+                            <param id="0" name="Variable">paused</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set time scale" sid="253056754645257" type="System">
+                            <param id="0" name="Time scale">1.0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="594844282534375" type="System">
+                            <param id="0" name="Variable">paused</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="217801086297334" type="PauseButton">
+                            <param id="0" name="Instance variable">estado</param>
+                            <param id="1" name="Value">&quot;Default&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="126643969021315" type="MenuPausa">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="657760441375203">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="255126089396053" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set time scale" sid="427219564194303" type="System">
+                            <param id="0" name="Time scale">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="410138982541525" type="System">
+                            <param id="0" name="Variable">paused</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="171269211428623" type="PauseButton">
+                            <param id="0" name="Instance variable">estado</param>
+                            <param id="1" name="Value">&quot;Pausar&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="639418383095951" type="MenuPausa">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

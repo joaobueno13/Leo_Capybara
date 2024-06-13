@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2uistate>
+    <!--This is a UI state file - its content describes the user interface settings when the project was last open.
+It is entirely optional and the project will load without it.  If you are placing the project under source control,
+you probably do not want to add any .uistate.xml files to the repository.-->
+    <configurations>
+        <active>
+            <configuration name="HTML5" />
+        </active>
+        <display name="HTML5" />
+    </configurations>
+    <open-tabs>
+        <layout order="0">MenuInicial</layout>
+        <layout order="1">Fase1</layout>
+        <layout order="4">Banco</layout>
+        <layout order="6">MenuOpcoes</layout>
+        <event-sheet active="1" order="2">ePersonagem</event-sheet>
+        <event-sheet order="3">eInimigos</event-sheet>
+        <event-sheet order="5">eMenuInicial</event-sheet>
+        <event-sheet order="7">ePrincipal</event-sheet>
+        <event-sheet order="8">eMenuOpcoes</event-sheet>
+    </open-tabs>
+    <properties>
+        <property expanded="1" name="About" />
+        <property expanded="1" name="Project settings" />
+        <property expanded="0" name="Window Size" />
+        <property expanded="1" name="Configuration Settings" />
+    </properties>
+    <families-expanded root="1">
+        <family expanded="1" name="Inimigos" />
+    </families-expanded>
+    <folders-expanded>
+        <folder expanded="1" path="object-folder/" />
+        <folder expanded="1" path="layout-folder/" />
+        <folder expanded="1" path="event-folder/" />
+        <folder expanded="0" path="file-folder/" />
+        <folder expanded="1" path="sound-folder/" />
+        <folder expanded="1" path="music-folder/" />
+        <folder expanded="0" path="file-folder/Icons/" />
+        <folder expanded="1" path="animation-folder/Leo_Personagem/" />
+        <folder expanded="1" path="animation-folder/Leo_Personagem/Normal/" />
+        <folder expanded="1" path="animation-folder/Leo_Personagem/Transform/" />
+        <folder expanded="1" path="animation-folder/Leo_Hitbox/" />
+        <folder expanded="1" path="animation-folder/Poder_Contorno/" />
+        <folder expanded="1" path="animation-folder/Vida_Contorno/" />
+        <folder expanded="1" path="animation-folder/LeoBG/" />
+        <folder expanded="1" path="animation-folder/TylerBG/" />
+        <folder expanded="1" path="animation-folder/LeoMenuLogo/" />
+        <folder expanded="1" path="animation-folder/MenuInicial/" />
+        <folder expanded="1" path="animation-folder/Cursor/" />
+        <folder expanded="1" path="animation-folder/OpcaoMenu/" />
+        <folder expanded="1" path="animation-folder/MenuOpcoes/" />
+        <folder expanded="1" path="animation-folder/PlusSoundButton/" />
+        <folder expanded="1" path="animation-folder/SoundBar/" />
+        <folder expanded="1" path="animation-folder/MinusSoundButton/" />
+        <folder expanded="1" path="animation-folder/MenuPausa/" />
+        <folder expanded="1" path="animation-folder/PauseButton/" />
+        <folder expanded="1" path="animation-folder/Capanga_Soco/" />
+        <folder expanded="1" path="animation-folder/Capanga_Chute/" />
+        <folder expanded="1" path="animation-folder/Capanga_SC/" />
+        <folder expanded="1" path="animation-folder/Inimigos_Hitbox/" />
+        <folder expanded="1" path="animation-folder/Inimigos_Hitbox/Socos/" />
+        <folder expanded="1" path="animation-folder/Inimigos_Hitbox/Chutes/" />
+        <folder expanded="1" path="animation-folder/Chao_Inimigo/" />
+    </folders-expanded>
+</c2uistate>
