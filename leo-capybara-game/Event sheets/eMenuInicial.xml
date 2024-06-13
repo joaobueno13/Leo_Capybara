@@ -3,23 +3,6 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>eMenuInicial</name>
     <events>
-        <include>eSom</include>
-        <event-block sid="663323722139110">
-            <conditions>
-                <condition id="-2" name="On start of layout" sid="495115331242443" type="System" />
-            </conditions>
-            <actions>
-                <action id="-16" name="Wait" sid="653096679526694" type="System">
-                    <param id="0" name="Seconds">1.0</param>
-                </action>
-                <action id="0" name="Play" sid="341919283301740" type="Audio">
-                    <param id="0" name="Audio file">Musica menu</param>
-                    <param id="2" name="Loop">1</param>
-                    <param id="3" name="Volume">0</param>
-                    <param id="1" name="Tag (optional)">&quot;musicaMenu&quot;</param>
-                </action>
-            </actions>
-        </event-block>
         <event-block sid="691014653873353">
             <conditions>
                 <condition id="-1" name="Every tick" sid="938615977564689" type="System" />
@@ -131,15 +114,6 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Play" sid="563928761774438" type="Audio">
-                                    <param id="0" name="Audio file">Selecionar-iniciar</param>
-                                    <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">0</param>
-                                    <param id="1" name="Tag (optional)">&quot;IniciaGame&quot;</param>
-                                </action>
-                                <action id="-16" name="Wait" sid="553214838616835" type="System">
-                                    <param id="0" name="Seconds">2.5</param>
-                                </action>
                                 <action id="-2" name="Go to layout" sid="844432701158134" type="System">
                                     <param id="0" name="Layout">Fase</param>
                                 </action>
@@ -155,51 +129,33 @@
                             </conditions>
                             <actions />
                             <sub-events>
-                                <event-block sid="925103816206825">
+                                <event-block sid="481910702384596">
                                     <conditions>
-                                        <condition id="-14" name="Compare variable" sid="772107045275619" type="System">
+                                        <condition id="-14" name="Compare variable" sid="123729832094386" type="System">
                                             <param id="0" name="Variable">CheckSave</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">0</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="0" name="Play" sid="326156364103237" type="Audio">
-                                            <param id="0" name="Audio file">Selecionar-iniciar</param>
-                                            <param id="2" name="Loop">0</param>
-                                            <param id="3" name="Volume">0</param>
-                                            <param id="1" name="Tag (optional)">&quot;IniciaGame&quot;</param>
-                                        </action>
-                                        <action id="-16" name="Wait" sid="917301640261212" type="System">
-                                            <param id="0" name="Seconds">2.5</param>
-                                        </action>
-                                        <action id="-37" name="Load" sid="180074959441350" type="System">
+                                        <action id="-37" name="Load" sid="693718336127853" type="System">
                                             <param id="0" name="Slot">&quot;autosave&quot;</param>
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="882631222391842">
+                                <event-block sid="270947115674426">
                                     <conditions>
-                                        <condition id="-14" name="Compare variable" sid="622652680539795" type="System">
+                                        <condition id="-14" name="Compare variable" sid="328548965678404" type="System">
                                             <param id="0" name="Variable">CheckSave</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">1</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="0" name="Play" sid="549014777427373" type="Audio">
-                                            <param id="0" name="Audio file">Selecionar-iniciar</param>
-                                            <param id="2" name="Loop">0</param>
-                                            <param id="3" name="Volume">0</param>
-                                            <param id="1" name="Tag (optional)">&quot;IniciaGame&quot;</param>
-                                        </action>
-                                        <action id="-16" name="Wait" sid="940154991180645" type="System">
-                                            <param id="0" name="Seconds">2.5</param>
-                                        </action>
-                                        <action id="-37" name="Load" sid="503587881353167" type="System">
+                                        <action id="-37" name="Load" sid="911273463696856" type="System">
                                             <param id="0" name="Slot">&quot;mysave&quot;</param>
                                         </action>
-                                        <action id="-42" name="Signal" sid="459424295945604" type="System">
+                                        <action id="-42" name="Signal" sid="628456040819982" type="System">
                                             <param id="0" name="Tag">&quot;Load manual save&quot;</param>
                                         </action>
                                     </actions>
@@ -215,46 +171,10 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Play" sid="318905866121445" type="Audio">
-                                    <param id="0" name="Audio file">Selecionar-escolher</param>
-                                    <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">0</param>
-                                    <param id="1" name="Tag (optional)">&quot;MenuEscolha&quot;</param>
-                                </action>
-                                <action id="-16" name="Wait" sid="900850882527890" type="System">
-                                    <param id="0" name="Seconds">1.0</param>
+                                <action id="-2" name="Go to layout" sid="627537408932379" type="System">
+                                    <param id="0" name="Layout">MenuOpcoes</param>
                                 </action>
                             </actions>
-                            <sub-events>
-                                <event-block sid="427699022494754">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="168248828253211" type="System">
-                                            <param id="0" name="Variable">CheckSaveOpcoes</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">0</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-2" name="Go to layout" sid="627537408932379" type="System">
-                                            <param id="0" name="Layout">MenuOpcoes</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="173325891605651">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="948081519332727" type="System">
-                                            <param id="0" name="Variable">CheckSaveOpcoes</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">1</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-37" name="Load" sid="734428956106848" type="System">
-                                            <param id="0" name="Slot">&quot;saveOpcoes&quot;</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
                         </event-block>
                         <event-block sid="954629078474734">
                             <conditions>
@@ -265,15 +185,6 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Play" sid="667074271614172" type="Audio">
-                                    <param id="0" name="Audio file">Selecionar-escolher</param>
-                                    <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">0</param>
-                                    <param id="1" name="Tag (optional)">&quot;MenuEscolha&quot;</param>
-                                </action>
-                                <action id="-16" name="Wait" sid="186465448127530" type="System">
-                                    <param id="0" name="Seconds">1.0</param>
-                                </action>
                                 <action id="1" name="Close" sid="417066394972548" type="Browser" />
                             </actions>
                         </event-block>
@@ -359,279 +270,5 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-group description="" sid="112175059736116" title="Mecânica Mouse Hover MenuInicial">
-            <sub-events>
-                <event-block sid="945934078495080">
-                    <conditions>
-                        <condition id="7" name="Cursor is over object" sid="238727686683663" type="Mouse">
-                            <param id="0" name="Object">OpcaoMenu</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="484268333786925">
-                            <conditions>
-                                <condition id="-8" name="Compare two values" sid="698290564776673" type="System">
-                                    <param id="0" name="First value">OpcaoMenu.opcao</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Second value">1</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-2" name="Set Y" sid="524285852756812" type="Cursor">
-                                    <param id="0" name="Y">OpcaoMenu.Y</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="276208724689547" type="Cursor">
-                                    <param id="0" name="Instance variable">opcaoSelecionada</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
-                            <sub-events>
-                                <event-block sid="391618259832128">
-                                    <conditions>
-                                        <condition id="6" name="On object clicked" sid="523590782799757" type="Mouse">
-                                            <param id="0" name="Mouse button">0</param>
-                                            <param id="1" name="Click type">0</param>
-                                            <param id="2" name="Object clicked">OpcaoMenu</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="6" name="Stop" sid="828170169223334" type="Audio">
-                                            <param id="0" name="Tag">&quot;musicaMenu&quot;</param>
-                                        </action>
-                                        <action id="0" name="Play" sid="257066916001879" type="Audio">
-                                            <param id="0" name="Audio file">Selecionar-iniciar</param>
-                                            <param id="2" name="Loop">0</param>
-                                            <param id="3" name="Volume">0</param>
-                                            <param id="1" name="Tag (optional)">&quot;IniciaGame&quot;</param>
-                                        </action>
-                                        <action id="-16" name="Wait" sid="687733632017580" type="System">
-                                            <param id="0" name="Seconds">2.5</param>
-                                        </action>
-                                        <action id="-2" name="Go to layout" sid="939449527090274" type="System">
-                                            <param id="0" name="Layout">Fase</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <event-block sid="460427393536843">
-                            <conditions>
-                                <condition id="-8" name="Compare two values" sid="205364697400719" type="System">
-                                    <param id="0" name="First value">OpcaoMenu.opcao</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Second value">2</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-2" name="Set Y" sid="500973105932747" type="Cursor">
-                                    <param id="0" name="Y">OpcaoMenu.Y</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="294042188028851" type="Cursor">
-                                    <param id="0" name="Instance variable">opcaoSelecionada</param>
-                                    <param id="1" name="Value">2</param>
-                                </action>
-                            </actions>
-                            <sub-events>
-                                <event-block sid="115036805866007">
-                                    <conditions>
-                                        <condition id="6" name="On object clicked" sid="180014406889955" type="Mouse">
-                                            <param id="0" name="Mouse button">0</param>
-                                            <param id="1" name="Click type">0</param>
-                                            <param id="2" name="Object clicked">OpcaoMenu</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions />
-                                    <sub-events>
-                                        <event-block sid="961706791919560">
-                                            <conditions>
-                                                <condition id="-7" name="Compare instance variable" sid="100605432152020" type="OpcaoMenu">
-                                                    <param id="0" name="Instance variable">acao</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">&quot;Salvo&quot;</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions />
-                                            <sub-events>
-                                                <event-block sid="602089064942130">
-                                                    <conditions>
-                                                        <condition id="-14" name="Compare variable" sid="724539338501570" type="System">
-                                                            <param id="0" name="Variable">CheckSave</param>
-                                                            <param id="1" name="Comparison">0</param>
-                                                            <param id="2" name="Value">0</param>
-                                                        </condition>
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="6" name="Stop" sid="985426027209437" type="Audio">
-                                                            <param id="0" name="Tag">&quot;musicaMenu&quot;</param>
-                                                        </action>
-                                                        <action id="0" name="Play" sid="706459414426477" type="Audio">
-                                                            <param id="0" name="Audio file">Selecionar-iniciar</param>
-                                                            <param id="2" name="Loop">0</param>
-                                                            <param id="3" name="Volume">0</param>
-                                                            <param id="1" name="Tag (optional)">&quot;IniciaGame&quot;</param>
-                                                        </action>
-                                                        <action id="-16" name="Wait" sid="873346146336154" type="System">
-                                                            <param id="0" name="Seconds">2.5</param>
-                                                        </action>
-                                                        <action id="-37" name="Load" sid="790203843547401" type="System">
-                                                            <param id="0" name="Slot">&quot;autosave&quot;</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                                <event-block sid="225832845764015">
-                                                    <conditions>
-                                                        <condition id="-14" name="Compare variable" sid="494279483048071" type="System">
-                                                            <param id="0" name="Variable">CheckSave</param>
-                                                            <param id="1" name="Comparison">0</param>
-                                                            <param id="2" name="Value">1</param>
-                                                        </condition>
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="6" name="Stop" sid="415832161824676" type="Audio">
-                                                            <param id="0" name="Tag">&quot;musicaMenu&quot;</param>
-                                                        </action>
-                                                        <action id="0" name="Play" sid="469170632168368" type="Audio">
-                                                            <param id="0" name="Audio file">Selecionar-iniciar</param>
-                                                            <param id="2" name="Loop">0</param>
-                                                            <param id="3" name="Volume">0</param>
-                                                            <param id="1" name="Tag (optional)">&quot;IniciaGame&quot;</param>
-                                                        </action>
-                                                        <action id="-16" name="Wait" sid="347264843427551" type="System">
-                                                            <param id="0" name="Seconds">2.5</param>
-                                                        </action>
-                                                        <action id="-37" name="Load" sid="119271526653524" type="System">
-                                                            <param id="0" name="Slot">&quot;mysave&quot;</param>
-                                                        </action>
-                                                        <action id="-42" name="Signal" sid="501522246691129" type="System">
-                                                            <param id="0" name="Tag">&quot;Load manual save&quot;</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                            </sub-events>
-                                        </event-block>
-                                    </sub-events>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <event-block sid="370467458034069">
-                            <conditions>
-                                <condition id="-8" name="Compare two values" sid="753685826375961" type="System">
-                                    <param id="0" name="First value">OpcaoMenu.opcao</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Second value">3</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-2" name="Set Y" sid="255670815619022" type="Cursor">
-                                    <param id="0" name="Y">OpcaoMenu.Y</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="772508198077164" type="Cursor">
-                                    <param id="0" name="Instance variable">opcaoSelecionada</param>
-                                    <param id="1" name="Value">3</param>
-                                </action>
-                            </actions>
-                            <sub-events>
-                                <event-block sid="670438211382967">
-                                    <conditions>
-                                        <condition id="6" name="On object clicked" sid="163554122719296" type="Mouse">
-                                            <param id="0" name="Mouse button">0</param>
-                                            <param id="1" name="Click type">0</param>
-                                            <param id="2" name="Object clicked">OpcaoMenu</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Play" sid="373565637810167" type="Audio">
-                                            <param id="0" name="Audio file">Selecionar-escolher</param>
-                                            <param id="2" name="Loop">0</param>
-                                            <param id="3" name="Volume">0</param>
-                                            <param id="1" name="Tag (optional)">&quot;MenuEscolha&quot;</param>
-                                        </action>
-                                        <action id="-16" name="Wait" sid="694847403095110" type="System">
-                                            <param id="0" name="Seconds">1.0</param>
-                                        </action>
-                                    </actions>
-                                    <sub-events>
-                                        <event-block sid="999149839914269">
-                                            <conditions>
-                                                <condition id="-14" name="Compare variable" sid="993285117379971" type="System">
-                                                    <param id="0" name="Variable">CheckSaveOpcoes</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">0</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-2" name="Go to layout" sid="819382449231562" type="System">
-                                                    <param id="0" name="Layout">MenuOpcoes</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="856406902899702">
-                                            <conditions>
-                                                <condition id="-14" name="Compare variable" sid="888586037682535" type="System">
-                                                    <param id="0" name="Variable">CheckSaveOpcoes</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">1</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-37" name="Load" sid="696804857277942" type="System">
-                                                    <param id="0" name="Slot">&quot;saveOpcoes&quot;</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                    </sub-events>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <event-block sid="399016776080461">
-                            <conditions>
-                                <condition id="-8" name="Compare two values" sid="133304235613054" type="System">
-                                    <param id="0" name="First value">OpcaoMenu.opcao</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Second value">4</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-2" name="Set Y" sid="358415898539011" type="Cursor">
-                                    <param id="0" name="Y">OpcaoMenu.Y</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="222827283018678" type="Cursor">
-                                    <param id="0" name="Instance variable">opcaoSelecionada</param>
-                                    <param id="1" name="Value">4</param>
-                                </action>
-                            </actions>
-                            <sub-events>
-                                <event-block sid="632295196478251">
-                                    <conditions>
-                                        <condition id="6" name="On object clicked" sid="972794745511563" type="Mouse">
-                                            <param id="0" name="Mouse button">0</param>
-                                            <param id="1" name="Click type">0</param>
-                                            <param id="2" name="Object clicked">OpcaoMenu</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Play" sid="647425522380473" type="Audio">
-                                            <param id="0" name="Audio file">Selecionar-escolher</param>
-                                            <param id="2" name="Loop">0</param>
-                                            <param id="3" name="Volume">0</param>
-                                            <param id="1" name="Tag (optional)">&quot;MenuEscolha&quot;</param>
-                                        </action>
-                                        <action id="-9" name="Set value" sid="598653319548969" type="System">
-                                            <param id="0" name="Variable">CheckSaveOpcoes</param>
-                                            <param id="1" name="Value">0</param>
-                                        </action>
-                                        <action id="-16" name="Wait" sid="377500866707326" type="System">
-                                            <param id="0" name="Seconds">1.0</param>
-                                        </action>
-                                        <action id="1" name="Close" sid="136233612131336" type="Browser" />
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-            </sub-events>
-        </event-group>
     </events>
 </c2eventsheet>
