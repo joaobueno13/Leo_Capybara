@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>ePrincipal</name>
+    <events>
+        <variable comment="0 = autosave, 1 = manualsave" constant="0" name="CheckSave" sid="149331069803708" static="0" type="number">0</variable>
+        <variable constant="0" name="paused" sid="291308364731354" static="0" type="number">0</variable>
+        <include>ePersonagem</include>
+        <include>eInimigos</include>
+        <include>eSom</include>
+        <event-block sid="717465119098555">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="702004930989629" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="439259474309000" type="System">
+                    <param id="0" name="Variable">paused</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-13" name="Set time scale" sid="927795259079142" type="System">
+                    <param id="0" name="Time scale">1.0</param>
+                </action>
+                <action id="0" name="Play" sid="167072495269287" type="Audio">
+                    <param id="0" name="Audio file">Fases-lutas-1-e-2-</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;musicaFases&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="881015298592445">
+            <conditions>
+                <condition id="-29" name="On load complete" sid="303596739626477" type="System" />
+            </conditions>
+            <actions>
+                <action id="-13" name="Set time scale" sid="921263575762983" type="System">
+                    <param id="0" name="Time scale">1.0</param>
+                </action>
+                <action id="-9" name="Set value" sid="696648675077373" type="System">
+                    <param id="0" name="Variable">CheckSave</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="699804636305976" type="System">
+                    <param id="0" name="Variable">paused</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="215673052090859" type="PauseButton">
+                    <param id="0" name="Instance variable">estado</param>
+                    <param id="1" name="Value">&quot;Default&quot;</param>
+                </action>
+                <action id="-15" name="Set visible" sid="773221096890891" type="MenuPausa">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="610384262503455">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="845744981247238" type="System">
+                    <param id="0" name="Interval (seconds)">15</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-36" name="Save" sid="942157813170275" type="System">
+                    <param id="0" name="Slot">&quot;autosave&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="330220133267233" type="System">
+                    <param id="0" name="Variable">CheckSave</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="286881449915949">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="581922578739229" type="System" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="467489485522997" type="PauseButton">
+                    <param id="0" name="Animation">PauseButton.estado</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="349001250530319">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="367886487991450" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">PauseButton</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="723981243564063">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="934663735154137" type="System">
+                            <param id="0" name="Variable">paused</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set time scale" sid="253056754645257" type="System">
+                            <param id="0" name="Time scale">1.0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="594844282534375" type="System">
+                            <param id="0" name="Variable">paused</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="217801086297334" type="PauseButton">
+                            <param id="0" name="Instance variable">estado</param>
+                            <param id="1" name="Value">&quot;Default&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="126643969021315" type="MenuPausa">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="657760441375203">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="255126089396053" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set time scale" sid="427219564194303" type="System">
+                            <param id="0" name="Time scale">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="410138982541525" type="System">
+                            <param id="0" name="Variable">paused</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="171269211428623" type="PauseButton">
+                            <param id="0" name="Instance variable">estado</param>
+                            <param id="1" name="Value">&quot;Pausar&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="639418383095951" type="MenuPausa">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="302265665654767">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="836401321845878" type="Mouse">
+                    <param id="0" name="Object">OpcaoMenu</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="360082095678621">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="855260375469136" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">OpcaoMenu</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="718893728546355">
+                            <conditions>
+                                <condition id="-33" name="Pick by comparison" sid="831171947149571" type="System">
+                                    <param id="0" name="Object">OpcaoMenu</param>
+                                    <param id="1" name="Expression">OpcaoMenu.opcao</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="6" name="Stop" sid="993191809933501" type="Audio">
+                                    <param id="0" name="Tag">&quot;musicaFases&quot;</param>
+                                </action>
+                                <action id="0" name="Play" sid="278483213709466" type="Audio">
+                                    <param id="0" name="Audio file">Selecionar-outros</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;MenuPausaVoltar&quot;</param>
+                                </action>
+                                <action id="-13" name="Set time scale" sid="879484760261076" type="System">
+                                    <param id="0" name="Time scale">1.0</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="234447787280907" type="System">
+                                    <param id="0" name="Layout">MenuInicial</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="622237540010232">
+                            <conditions>
+                                <condition id="-33" name="Pick by comparison" sid="677984557477496" type="System">
+                                    <param id="0" name="Object">OpcaoMenu</param>
+                                    <param id="1" name="Expression">OpcaoMenu.opcao</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="476103375777586" type="Audio">
+                                    <param id="0" name="Audio file">Selecionar-outros</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;MenuPausaSalvar&quot;</param>
+                                </action>
+                                <action id="-36" name="Save" sid="522906026641798" type="System">
+                                    <param id="0" name="Slot">&quot;mysave&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="216725219761450" type="System">
+                                    <param id="0" name="Variable">CheckSave</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

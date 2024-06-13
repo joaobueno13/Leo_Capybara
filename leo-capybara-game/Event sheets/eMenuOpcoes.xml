@@ -3,6 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>eMenuOpcoes</name>
     <events>
+        <variable comment="0 = sem save, 1 = save existe" constant="0" name="CheckSaveOpcoes" sid="623279877805410" static="0" type="number">0</variable>
+        <include>eSom</include>
         <event-block sid="601490589767683">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="932939834649352" type="System" />
@@ -125,201 +127,19 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="0" name="Play" sid="826256133407991" type="Audio">
+                                    <param id="0" name="Audio file">Selecionar-outros</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;MenuOpcoesVoltar&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="369374663530243" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
                                 <action id="-2" name="Go to layout" sid="615696431001343" type="System">
                                     <param id="0" name="Layout">MenuInicial</param>
                                 </action>
                             </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="122027962763602">
-            <conditions>
-                <condition id="-1" name="Every tick" sid="176411251529895" type="System" />
-                <condition id="-33" name="Pick by comparison" sid="227270117982121" type="System">
-                    <param id="0" name="Object">OpcaoMenu</param>
-                    <param id="1" name="Expression">OpcaoMenu.opcao</param>
-                    <param id="2" name="Comparison">0</param>
-                    <param id="3" name="Value">Cursor.opcaoSelecionada</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-2" name="Set Y" sid="673971111291916" type="Cursor">
-                    <param id="0" name="Y">OpcaoMenu.Y</param>
-                </action>
-            </actions>
-            <sub-events>
-                <event-block sid="456569793700842">
-                    <conditions>
-                        <condition id="-8" name="Compare two values" sid="803597916403092" type="System">
-                            <param id="0" name="First value">Cursor.opcaoSelecionada</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Second value">1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-10" name="Set value" sid="831420252154150" type="MenuOpcoes">
-                            <param id="0" name="Instance variable">estado</param>
-                            <param id="1" name="Value">&quot;Default&quot;</param>
-                        </action>
-                    </actions>
-                    <sub-events>
-                        <event-block any="1" sid="407827732693124">
-                            <conditions>
-                                <condition id="6" name="On object clicked" sid="297959495090705" type="Mouse">
-                                    <param id="0" name="Mouse button">0</param>
-                                    <param id="1" name="Click type">0</param>
-                                    <param id="2" name="Object clicked">PlusSoundButton</param>
-                                </condition>
-                                <condition id="0" name="On key pressed" sid="164094414574895" type="Keyboard">
-                                    <param id="0" name="Key">39</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="778274731276344">
-                                    <conditions>
-                                        <condition id="-33" name="Pick by comparison" sid="167598892017133" type="System">
-                                            <param id="0" name="Object">PlusSoundButton</param>
-                                            <param id="1" name="Expression">PlusSoundButton.id</param>
-                                            <param id="2" name="Comparison">0</param>
-                                            <param id="3" name="Value">1</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="Sine" id="0" name="Set active" sid="838040068808730" type="PlusSoundButton">
-                                            <param id="0" name="State">1</param>
-                                        </action>
-                                        <action id="-16" name="Wait" sid="966520449650528" type="System">
-                                            <param id="0" name="Seconds">1.0</param>
-                                        </action>
-                                        <action behavior="Sine" id="0" name="Set active" sid="842566624177989" type="PlusSoundButton">
-                                            <param id="0" name="State">0</param>
-                                        </action>
-                                    </actions>
-                                    <sub-events>
-                                        <event-block sid="136132443882434">
-                                            <conditions>
-                                                <condition id="-33" name="Pick by comparison" sid="724410731399997" type="System">
-                                                    <param id="0" name="Object">MusicBarItem</param>
-                                                    <param id="1" name="Expression">MusicBarItem.MusicBarCount</param>
-                                                    <param id="2" name="Comparison">0</param>
-                                                    <param id="3" name="Value">MusicBarItem.MusicBarId</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-15" name="Set visible" sid="923304762033464" type="MusicBarItem">
-                                                    <param id="0" name="Visibility">1</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="172183664471886">
-                                            <conditions>
-                                                <condition id="-7" name="Compare instance variable" sid="107466104042593" type="MusicBarItem">
-                                                    <param id="0" name="Instance variable">MusicBarCount</param>
-                                                    <param id="1" name="Comparison">2</param>
-                                                    <param id="2" name="Value">8</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-11" name="Add to" sid="947591754203855" type="MusicBarItem">
-                                                    <param id="0" name="Instance variable">MusicBarCount</param>
-                                                    <param id="1" name="Value">1</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                    </sub-events>
-                                </event-block>
-                                <event-block sid="501376463365935">
-                                    <conditions>
-                                        <condition id="-22" name="Else" sid="527721112629422" type="System" />
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="Sine" id="0" name="Set active" sid="434642026305041" type="PlusSoundButton">
-                                            <param id="0" name="State">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <event-block any="1" sid="422796241504614">
-                            <conditions>
-                                <condition id="6" name="On object clicked" sid="866290012291899" type="Mouse">
-                                    <param id="0" name="Mouse button">0</param>
-                                    <param id="1" name="Click type">0</param>
-                                    <param id="2" name="Object clicked">MinusSoundButton</param>
-                                </condition>
-                                <condition id="0" name="On key pressed" sid="935444878154585" type="Keyboard">
-                                    <param id="0" name="Key">37</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="627582072330165">
-                                    <conditions>
-                                        <condition id="-33" name="Pick by comparison" sid="153376554621009" type="System">
-                                            <param id="0" name="Object">MinusSoundButton</param>
-                                            <param id="1" name="Expression">MinusSoundButton.id</param>
-                                            <param id="2" name="Comparison">0</param>
-                                            <param id="3" name="Value">1</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="Sine" id="0" name="Set active" sid="308014587073945" type="MinusSoundButton">
-                                            <param id="0" name="State">1</param>
-                                        </action>
-                                        <action id="-16" name="Wait" sid="209004145826723" type="System">
-                                            <param id="0" name="Seconds">1.0</param>
-                                        </action>
-                                        <action behavior="Sine" id="0" name="Set active" sid="802953808251176" type="MinusSoundButton">
-                                            <param id="0" name="State">0</param>
-                                        </action>
-                                    </actions>
-                                    <sub-events>
-                                        <event-block sid="864500086013818">
-                                            <conditions>
-                                                <condition id="-33" name="Pick by comparison" sid="906940345162316" type="System">
-                                                    <param id="0" name="Object">MusicBarItem</param>
-                                                    <param id="1" name="Expression">MusicBarItem.MusicBarCount</param>
-                                                    <param id="2" name="Comparison">0</param>
-                                                    <param id="3" name="Value">MusicBarItem.MusicBarId</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-15" name="Set visible" sid="238710458166917" type="MusicBarItem">
-                                                    <param id="0" name="Visibility">0</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="556118178422748">
-                                            <conditions>
-                                                <condition id="-7" name="Compare instance variable" sid="531750827539139" type="MusicBarItem">
-                                                    <param id="0" name="Instance variable">MusicBarCount</param>
-                                                    <param id="1" name="Comparison">4</param>
-                                                    <param id="2" name="Value">1</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-12" name="Subtract from" sid="910597757192547" type="MusicBarItem">
-                                                    <param id="0" name="Instance variable">MusicBarCount</param>
-                                                    <param id="1" name="Value">1</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                    </sub-events>
-                                </event-block>
-                                <event-block sid="130708142097776">
-                                    <conditions>
-                                        <condition id="-22" name="Else" sid="429668937874813" type="System" />
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="Sine" id="0" name="Set active" sid="208667645814642" type="MinusSoundButton">
-                                            <param id="0" name="State">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -339,164 +159,6 @@
                     <param id="1" name="Value">&quot;Default&quot;</param>
                 </action>
             </actions>
-            <sub-events>
-                <event-block any="1" sid="942414789743825">
-                    <conditions>
-                        <condition id="6" name="On object clicked" sid="544734558204846" type="Mouse">
-                            <param id="0" name="Mouse button">0</param>
-                            <param id="1" name="Click type">0</param>
-                            <param id="2" name="Object clicked">PlusSoundButton</param>
-                        </condition>
-                        <condition id="0" name="On key pressed" sid="502100365729928" type="Keyboard">
-                            <param id="0" name="Key">39</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="289510746406139">
-                            <conditions>
-                                <condition id="-33" name="Pick by comparison" sid="270797060961251" type="System">
-                                    <param id="0" name="Object">PlusSoundButton</param>
-                                    <param id="1" name="Expression">PlusSoundButton.id</param>
-                                    <param id="2" name="Comparison">0</param>
-                                    <param id="3" name="Value">2</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Sine" id="0" name="Set active" sid="615438397014328" type="PlusSoundButton">
-                                    <param id="0" name="State">1</param>
-                                </action>
-                                <action id="-16" name="Wait" sid="691753105778017" type="System">
-                                    <param id="0" name="Seconds">1.0</param>
-                                </action>
-                                <action behavior="Sine" id="0" name="Set active" sid="341516352073997" type="PlusSoundButton">
-                                    <param id="0" name="State">0</param>
-                                </action>
-                            </actions>
-                            <sub-events>
-                                <event-block sid="289061507982421">
-                                    <conditions>
-                                        <condition id="-33" name="Pick by comparison" sid="347701431245608" type="System">
-                                            <param id="0" name="Object">SoundBarItem</param>
-                                            <param id="1" name="Expression">SoundBarItem.SoundBarCount</param>
-                                            <param id="2" name="Comparison">0</param>
-                                            <param id="3" name="Value">SoundBarItem.SoundBarId</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-15" name="Set visible" sid="376723756354089" type="SoundBarItem">
-                                            <param id="0" name="Visibility">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="221550606841211">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="566495867605842" type="SoundBarItem">
-                                            <param id="0" name="Instance variable">SoundBarCount</param>
-                                            <param id="1" name="Comparison">2</param>
-                                            <param id="2" name="Value">8</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-11" name="Add to" sid="473835693859455" type="SoundBarItem">
-                                            <param id="0" name="Instance variable">SoundBarCount</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <event-block sid="734606935015914">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="995643185661296" type="System" />
-                            </conditions>
-                            <actions>
-                                <action behavior="Sine" id="0" name="Set active" sid="913698497577605" type="PlusSoundButton">
-                                    <param id="0" name="State">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block any="1" sid="789562060358561">
-                    <conditions>
-                        <condition id="6" name="On object clicked" sid="791354041209660" type="Mouse">
-                            <param id="0" name="Mouse button">0</param>
-                            <param id="1" name="Click type">0</param>
-                            <param id="2" name="Object clicked">MinusSoundButton</param>
-                        </condition>
-                        <condition id="0" name="On key pressed" sid="234270523389616" type="Keyboard">
-                            <param id="0" name="Key">37</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="524290748414737">
-                            <conditions>
-                                <condition id="-33" name="Pick by comparison" sid="377881440034181" type="System">
-                                    <param id="0" name="Object">MinusSoundButton</param>
-                                    <param id="1" name="Expression">MinusSoundButton.id</param>
-                                    <param id="2" name="Comparison">0</param>
-                                    <param id="3" name="Value">2</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Sine" id="0" name="Set active" sid="796771574265476" type="MinusSoundButton">
-                                    <param id="0" name="State">1</param>
-                                </action>
-                                <action id="-16" name="Wait" sid="451836875294207" type="System">
-                                    <param id="0" name="Seconds">1.0</param>
-                                </action>
-                                <action behavior="Sine" id="0" name="Set active" sid="300275381170966" type="MinusSoundButton">
-                                    <param id="0" name="State">0</param>
-                                </action>
-                            </actions>
-                            <sub-events>
-                                <event-block sid="966763467342550">
-                                    <conditions>
-                                        <condition id="-33" name="Pick by comparison" sid="695608461249286" type="System">
-                                            <param id="0" name="Object">SoundBarItem</param>
-                                            <param id="1" name="Expression">SoundBarItem.SoundBarCount</param>
-                                            <param id="2" name="Comparison">0</param>
-                                            <param id="3" name="Value">SoundBarItem.SoundBarId</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-15" name="Set visible" sid="577437743983557" type="SoundBarItem">
-                                            <param id="0" name="Visibility">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="707428059573286">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="556818548038102" type="SoundBarItem">
-                                            <param id="0" name="Instance variable">SoundBarCount</param>
-                                            <param id="1" name="Comparison">4</param>
-                                            <param id="2" name="Value">1</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-12" name="Subtract from" sid="264583735030674" type="SoundBarItem">
-                                            <param id="0" name="Instance variable">SoundBarCount</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <event-block sid="453827358744812">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="691412747150993" type="System" />
-                            </conditions>
-                            <actions>
-                                <action behavior="Sine" id="0" name="Set active" sid="869627535959722" type="MinusSoundButton">
-                                    <param id="0" name="State">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-            </sub-events>
         </event-block>
         <event-block sid="883950111840214">
             <conditions>
@@ -513,85 +175,106 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="714702485746883">
-            <conditions>
-                <condition id="7" name="Cursor is over object" sid="773211236569068" type="Mouse">
-                    <param id="0" name="Object">OpcaoMenu</param>
-                </condition>
-            </conditions>
-            <actions />
+        <event-group description="" sid="271320973975807" title="Mecânica Mouse Hover MenuOpções">
             <sub-events>
-                <event-block sid="703845409031023">
+                <event-block sid="746354671337568">
                     <conditions>
-                        <condition id="-8" name="Compare two values" sid="721033234774916" type="System">
-                            <param id="0" name="First value">OpcaoMenu.opcao</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Second value">1</param>
+                        <condition id="7" name="Cursor is over object" sid="275080037531929" type="Mouse">
+                            <param id="0" name="Object">OpcaoMenu</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-2" name="Set Y" sid="467128751095702" type="Cursor">
-                            <param id="0" name="Y">OpcaoMenu.Y</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="818442545235408" type="Cursor">
-                            <param id="0" name="Instance variable">opcaoSelecionada</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="859265719623515">
-                    <conditions>
-                        <condition id="-8" name="Compare two values" sid="316499438955498" type="System">
-                            <param id="0" name="First value">OpcaoMenu.opcao</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Second value">2</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-2" name="Set Y" sid="332290761123219" type="Cursor">
-                            <param id="0" name="Y">OpcaoMenu.Y</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="206433591011101" type="Cursor">
-                            <param id="0" name="Instance variable">opcaoSelecionada</param>
-                            <param id="1" name="Value">2</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="837500303597164">
-                    <conditions>
-                        <condition id="-8" name="Compare two values" sid="325361326526094" type="System">
-                            <param id="0" name="First value">OpcaoMenu.opcao</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Second value">3</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-2" name="Set Y" sid="808734040820535" type="Cursor">
-                            <param id="0" name="Y">OpcaoMenu.Y</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="511551467195807" type="Cursor">
-                            <param id="0" name="Instance variable">opcaoSelecionada</param>
-                            <param id="1" name="Value">3</param>
-                        </action>
-                    </actions>
+                    <actions />
                     <sub-events>
-                        <event-block sid="109523160682677">
+                        <event-block sid="895200813687452">
                             <conditions>
-                                <condition id="6" name="On object clicked" sid="746312992530131" type="Mouse">
-                                    <param id="0" name="Mouse button">0</param>
-                                    <param id="1" name="Click type">0</param>
-                                    <param id="2" name="Object clicked">OpcaoMenu</param>
+                                <condition id="-8" name="Compare two values" sid="381922653484994" type="System">
+                                    <param id="0" name="First value">OpcaoMenu.opcao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">1</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-2" name="Go to layout" sid="200831795927369" type="System">
-                                    <param id="0" name="Layout">MenuInicial</param>
+                                <action id="-2" name="Set Y" sid="743813989485268" type="Cursor">
+                                    <param id="0" name="Y">OpcaoMenu.Y</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="633784798832082" type="Cursor">
+                                    <param id="0" name="Instance variable">opcaoSelecionada</param>
+                                    <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
+                        </event-block>
+                        <event-block sid="843443510074362">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="807878279551107" type="System">
+                                    <param id="0" name="First value">OpcaoMenu.opcao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="305455587649842" type="Cursor">
+                                    <param id="0" name="Y">OpcaoMenu.Y</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="672997169082563" type="Cursor">
+                                    <param id="0" name="Instance variable">opcaoSelecionada</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="339059513591604">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="191233861255912" type="System">
+                                    <param id="0" name="First value">OpcaoMenu.opcao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="958618010661060" type="Cursor">
+                                    <param id="0" name="Y">OpcaoMenu.Y</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="674385372918897" type="Cursor">
+                                    <param id="0" name="Instance variable">opcaoSelecionada</param>
+                                    <param id="1" name="Value">3</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="906967172567121">
+                                    <conditions>
+                                        <condition id="6" name="On object clicked" sid="494772687915558" type="Mouse">
+                                            <param id="0" name="Mouse button">0</param>
+                                            <param id="1" name="Click type">0</param>
+                                            <param id="2" name="Object clicked">OpcaoMenu</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="314051934749669" type="Audio">
+                                            <param id="0" name="Audio file">Selecionar-outros</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;MenuOpcoesVoltar&quot;</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="923595597017088" type="System">
+                                            <param id="0" name="Seconds">1.0</param>
+                                        </action>
+                                        <action id="-2" name="Go to layout" sid="134846922791216" type="System">
+                                            <param id="0" name="Layout">MenuInicial</param>
+                                        </action>
+                                        <action id="-36" name="Save" sid="598542590487470" type="System">
+                                            <param id="0" name="Slot">&quot;saveOpcoes&quot;</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="627536995606252" type="System">
+                                            <param id="0" name="Variable">CheckSaveOpcoes</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
             </sub-events>
-        </event-block>
+        </event-group>
+        <comment></comment>
     </events>
 </c2eventsheet>

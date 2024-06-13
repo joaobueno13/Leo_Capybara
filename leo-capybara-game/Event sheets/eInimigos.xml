@@ -1,0 +1,635 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>eInimigos</name>
+    <events>
+        <event-group description="" sid="256225840601375" title="Capanga Azul">
+            <sub-events>
+                <event-block sid="497055627481990">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="705223510386236" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set at XYZ" sid="563050149152227" type="Ataques_Inimigos">
+                            <param id="0" name="X">1</param>
+                            <param id="1" name="Y">1</param>
+                            <param id="2" name="Z">1</param>
+                            <param id="3" name="Value">2</param>
+                        </action>
+                        <action id="4" name="Set at XYZ" sid="447796921905657" type="Ataques_Inimigos">
+                            <param id="0" name="X">1</param>
+                            <param id="1" name="Y">1</param>
+                            <param id="2" name="Z">2</param>
+                            <param id="3" name="Value">2</param>
+                        </action>
+                        <action id="4" name="Set at XYZ" sid="521894431015430" type="Ataques_Inimigos">
+                            <param id="0" name="X">1</param>
+                            <param id="1" name="Y">2</param>
+                            <param id="2" name="Z">1</param>
+                            <param id="3" name="Value">2</param>
+                        </action>
+                        <action id="4" name="Set at XYZ" sid="855297006095964" type="Ataques_Inimigos">
+                            <param id="0" name="X">1</param>
+                            <param id="1" name="Y">2</param>
+                            <param id="2" name="Z">2</param>
+                            <param id="3" name="Value">3</param>
+                        </action>
+                        <action id="4" name="Set at XYZ" sid="224563721737707" type="Ataques_Inimigos">
+                            <param id="0" name="X">1</param>
+                            <param id="1" name="Y">3</param>
+                            <param id="2" name="Z">1</param>
+                            <param id="3" name="Value">2</param>
+                        </action>
+                        <action id="4" name="Set at XYZ" sid="500164037138655" type="Ataques_Inimigos">
+                            <param id="0" name="X">1</param>
+                            <param id="1" name="Y">3</param>
+                            <param id="2" name="Z">2</param>
+                            <param id="3" name="Value">5</param>
+                        </action>
+                        <action id="4" name="Set at XYZ" sid="616600840273595" type="Ataques_Inimigos">
+                            <param id="0" name="X">2</param>
+                            <param id="1" name="Y">1</param>
+                            <param id="2" name="Z">1</param>
+                            <param id="3" name="Value">2</param>
+                        </action>
+                        <action id="4" name="Set at XYZ" sid="258325842074318" type="Ataques_Inimigos">
+                            <param id="0" name="X">2</param>
+                            <param id="1" name="Y">1</param>
+                            <param id="2" name="Z">2</param>
+                            <param id="3" name="Value">4</param>
+                        </action>
+                        <action id="4" name="Set at XYZ" sid="132359127339680" type="Ataques_Inimigos">
+                            <param id="0" name="X">2</param>
+                            <param id="1" name="Y">2</param>
+                            <param id="2" name="Z">1</param>
+                            <param id="3" name="Value">2</param>
+                        </action>
+                        <action id="4" name="Set at XYZ" sid="953236455678205" type="Ataques_Inimigos">
+                            <param id="0" name="X">2</param>
+                            <param id="1" name="Y">2</param>
+                            <param id="2" name="Z">2</param>
+                            <param id="3" name="Value">6</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="342505921130687">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="597792068042095" type="Inimigos">
+                            <param id="0" name="Object">Leo_Hitbox</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="755989997576414">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="150909016884274" type="Leo_Personagem">
+                                    <param id="0" name="Instance variable">estado_transformacao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;T_&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="833413434237243">
+                                    <conditions>
+                                        <condition id="-21" name="Is between values" sid="961016965006648" type="System">
+                                            <param id="0" name="Value">Inimigos.Y</param>
+                                            <param id="1" name="Lower bound">Leo_Personagem.sombra - 6</param>
+                                            <param id="2" name="Upper bound">Leo_Personagem.sombra + 6</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Sine" id="0" name="Set active" sid="814430446204262" type="Inimigos">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="549792832820983" type="Leo_Personagem">
+                                            <param id="0" name="Instance variable">combo_timer</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-11" name="Add to" sid="365099843180658" type="Leo_Personagem">
+                                            <param id="0" name="Instance variable">acerto</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="665607725463392" type="Audio">
+                                            <param id="0" name="Audio file">Leo-punch</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="318573123080053">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="182194500572565" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="125518370113569">
+                                    <conditions>
+                                        <condition id="-21" name="Is between values" sid="137583852022633" type="System">
+                                            <param id="0" name="Value">Inimigos.Y</param>
+                                            <param id="1" name="Lower bound">Leo_Personagem.sombra - 3</param>
+                                            <param id="2" name="Upper bound">Leo_Personagem.sombra + 3</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Sine" id="0" name="Set active" sid="642675599619959" type="Inimigos">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="379632641962208" type="Leo_Personagem">
+                                            <param id="0" name="Instance variable">combo_timer</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-11" name="Add to" sid="760905692372560" type="Leo_Personagem">
+                                            <param id="0" name="Instance variable">acerto</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="574400053664429" type="Audio">
+                                            <param id="0" name="Audio file">Leo-punch</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-group description="" sid="592431320356308" title="IA MOvimentação">
+                    <sub-events>
+                        <event-block sid="229405525836604">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="341955159813400" type="System">
+                                    <param id="0" name="Object">Inimigos</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="967174353333700">
+                                    <conditions>
+                                        <condition id="-1" name="Compare X" sid="765143316788730" type="Inimigos">
+                                            <param id="0" name="Comparison">4</param>
+                                            <param id="1" name="X co-ordinate">Leo_Personagem.X</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="7" name="Set mirrored" sid="580007513767180" type="Inimigos">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="244748265702437">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="937755689314621" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="7" name="Set mirrored" sid="891401754310912" type="Inimigos">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="752331707981707">
+                            <conditions>
+                                <condition id="-33" name="Pick by comparison" sid="725841158223870" type="System">
+                                    <param id="0" name="Object">Inimigos</param>
+                                    <param id="1" name="Expression">distance(Inimigos.X,Inimigos.Y, Leo_Personagem.X,Leo_Personagem.Y)</param>
+                                    <param id="2" name="Comparison">2</param>
+                                    <param id="3" name="Value">320</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="276786374410967" type="Inimigos">
+                                    <param id="0" name="Instance variable">ativo</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-14" name="Toggle boolean" sid="856468291760534" type="Inimigos">
+                                    <param id="0" name="Instance variable">ativo</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="376070003850893">
+                            <conditions>
+                                <condition id="-33" name="Pick by comparison" sid="398068536307990" type="System">
+                                    <param id="0" name="Object">Inimigos</param>
+                                    <param id="1" name="Expression">distance(Inimigos.X,Inimigos.Y, Leo_Personagem.X,Leo_Personagem.Y)</param>
+                                    <param id="2" name="Comparison">4</param>
+                                    <param id="3" name="Value">Inimigos.alcance</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="988068233875075" type="Inimigos">
+                                    <param id="0" name="Instance variable">ativo</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="718579692313951">
+                                    <conditions>
+                                        <condition id="-11" name="For Each" sid="741222654519389" type="System">
+                                            <param id="0" name="Object">Inimigos</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="319219065411873">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="342858038051724" type="System">
+                                                    <param id="0" name="First value">left (Inimigos.AnimationName, 6)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">&quot;Attack&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="368485693616335">
+                                                    <conditions>
+                                                        <condition id="3" name="Compare frame" sid="136103235609751" type="Inimigos">
+                                                            <param id="0" name="Comparison">0</param>
+                                                            <param id="1" name="Number">Inimigos.AnimationFrameCount - 1</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="4" name="Set animation" sid="812684682237720" type="Inimigos">
+                                                            <param id="0" name="Animation">&quot;Walk&quot;</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="751312263136239" type="Inimigos">
+                                                            <param id="0" name="Instance variable">combo</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="443075124926284">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="280301292123107" type="System" />
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="634539486991431">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="720499407352383" type="Inimigos">
+                                                            <param id="0" name="Instance variable">decisao</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">1</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="4" name="Set animation" sid="600884572688282" type="Inimigos">
+                                                            <param id="0" name="Animation">&quot;Walk&quot;</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="122557805379113" type="Inimigos">
+                                                            <param id="0" name="Instance variable">decisao_atual</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                        <action behavior="MoveTo" id="1" name="Set maximum speed" sid="142625185885044" type="Inimigos">
+                                                            <param id="0" name="Max speed">40</param>
+                                                        </action>
+                                                        <action id="6" name="Set speed" sid="791259573848053" type="Inimigos">
+                                                            <param id="0" name="Speed">7</param>
+                                                        </action>
+                                                        <action behavior="MoveTo" id="6" name="Move to object" sid="149807693897160" type="Inimigos">
+                                                            <param id="0" name="Target">Leo_Personagem</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="668252944580640">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="771227431101385" type="Inimigos">
+                                                            <param id="0" name="Instance variable">decisao</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">2</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="4" name="Set animation" sid="395150005499452" type="Inimigos">
+                                                            <param id="0" name="Animation">&quot;Walk&quot;</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="328313740516406" type="Inimigos">
+                                                            <param id="0" name="Instance variable">decisao_atual</param>
+                                                            <param id="1" name="Value">2</param>
+                                                        </action>
+                                                        <action behavior="MoveTo" id="1" name="Set maximum speed" sid="588899646067934" type="Inimigos">
+                                                            <param id="0" name="Max speed">20</param>
+                                                        </action>
+                                                        <action id="6" name="Set speed" sid="226374846494202" type="Inimigos">
+                                                            <param id="0" name="Speed">4</param>
+                                                        </action>
+                                                    </actions>
+                                                    <sub-events>
+                                                        <event-block sid="596660135893181">
+                                                            <conditions>
+                                                                <condition behavior="MoveTo" id="3" inverted="1" name="Is moving" sid="860744915477660" type="Inimigos" />
+                                                            </conditions>
+                                                            <actions>
+                                                                <action behavior="MoveTo" id="8" name="Move to distance-angle" sid="138775099653241" type="Inimigos">
+                                                                    <param id="0" name="Distance">100</param>
+                                                                    <param id="1" name="Angle">random(360)</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                                <event-block sid="445205854678258">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="569467711948506" type="Inimigos">
+                                                            <param id="0" name="Instance variable">decisao</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">3</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="4" name="Set animation" sid="295414154478699" type="Inimigos">
+                                                            <param id="0" name="Animation">&quot;Walk&quot;</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="460464697065139" type="Inimigos">
+                                                            <param id="0" name="Instance variable">decisao_atual</param>
+                                                            <param id="1" name="Value">3</param>
+                                                        </action>
+                                                        <action behavior="MoveTo" id="1" name="Set maximum speed" sid="468383627842513" type="Inimigos">
+                                                            <param id="0" name="Max speed">40</param>
+                                                        </action>
+                                                        <action id="6" name="Set speed" sid="441607388449399" type="Inimigos">
+                                                            <param id="0" name="Speed">7</param>
+                                                        </action>
+                                                    </actions>
+                                                    <sub-events>
+                                                        <event-block sid="209312303811904">
+                                                            <conditions>
+                                                                <condition id="-1" name="Compare X" sid="198442390979120" type="Inimigos">
+                                                                    <param id="0" name="Comparison">4</param>
+                                                                    <param id="1" name="X co-ordinate">Leo_Personagem.X</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions />
+                                                            <sub-events>
+                                                                <event-block sid="808997169452680">
+                                                                    <conditions>
+                                                                        <condition behavior="MoveTo" id="3" inverted="1" name="Is moving" sid="260354451146552" type="Inimigos" />
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action behavior="MoveTo" id="4" name="Move to XY" sid="885318597034671" type="Inimigos">
+                                                                            <param id="0" name="X">choose(Leo_Personagem.X + 30, Leo_Personagem.X +40)</param>
+                                                                            <param id="1" name="Y">random (115, 175)</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                            </sub-events>
+                                                        </event-block>
+                                                        <event-block sid="394497503675087">
+                                                            <conditions>
+                                                                <condition id="-22" name="Else" sid="652149579865966" type="System" />
+                                                            </conditions>
+                                                            <actions />
+                                                            <sub-events>
+                                                                <event-block sid="876648246778359">
+                                                                    <conditions>
+                                                                        <condition behavior="MoveTo" id="3" inverted="1" name="Is moving" sid="206359707306966" type="Inimigos" />
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action behavior="MoveTo" id="4" name="Move to XY" sid="921243755046484" type="Inimigos">
+                                                                            <param id="0" name="X">choose(Leo_Personagem.X - 30, Leo_Personagem.X - 40)</param>
+                                                                            <param id="1" name="Y">random (115, 175)</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                            </sub-events>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-block sid="362686502203089">
+                    <conditions>
+                        <condition id="-33" name="Pick by comparison" sid="724192313227094" type="System">
+                            <param id="0" name="Object">Inimigos</param>
+                            <param id="1" name="Expression">distance(Inimigos.X,Inimigos.Y, Leo_Personagem.X,Leo_Personagem.Y)</param>
+                            <param id="2" name="Comparison">3</param>
+                            <param id="3" name="Value">Inimigos.alcance</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="738700900226146">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="491473246719589" type="System">
+                                    <param id="0" name="Object">Inimigos</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="529497403048962">
+                                    <conditions>
+                                        <condition id="-21" name="Is between values" sid="334381625313047" type="System">
+                                            <param id="0" name="Value">Inimigos.Y</param>
+                                            <param id="1" name="Lower bound">Leo_Personagem.sombra - 2</param>
+                                            <param id="2" name="Upper bound">Leo_Personagem.sombra + 2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="926255133125322" type="Inimigos">
+                                            <param id="0" name="Animation">&quot;Attack&quot; &amp; Inimigos.combo</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action behavior="MoveTo" id="9" name="Stop" sid="686271604305600" type="Inimigos" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="451718006501077">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="851934502493920" type="System" />
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="646608947922158">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="452430471186036" type="System">
+                                                    <param id="0" name="First value">left (Inimigos.AnimationName, 6)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">&quot;Attack&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="772631420749941">
+                                                    <conditions>
+                                                        <condition id="3" name="Compare frame" sid="518912593673598" type="Inimigos">
+                                                            <param id="0" name="Comparison">0</param>
+                                                            <param id="1" name="Number">Inimigos.AnimationFrameCount - 1</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="4" name="Set animation" sid="468864999975451" type="Inimigos">
+                                                            <param id="0" name="Animation">&quot;Walk&quot;</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="210503510922500">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="509276186033561" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="410325570852913" type="Inimigos">
+                                                    <param id="0" name="Animation">&quot;Walk&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="696331610044348">
+                                                    <conditions>
+                                                        <condition id="-1" name="Compare X" sid="367511298108889" type="Inimigos">
+                                                            <param id="0" name="Comparison">4</param>
+                                                            <param id="1" name="X co-ordinate">Leo_Personagem.X</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action behavior="MoveTo" id="4" name="Move to XY" sid="994312114481359" type="Inimigos">
+                                                            <param id="0" name="X">Leo_Personagem.X + Inimigos.alcance</param>
+                                                            <param id="1" name="Y">Leo_Personagem.sombra</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="621795659120203">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="424484628605149" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action behavior="MoveTo" id="4" name="Move to XY" sid="889861323697697" type="Inimigos">
+                                                            <param id="0" name="X">Leo_Personagem.X - Inimigos.alcance</param>
+                                                            <param id="1" name="Y">Leo_Personagem.sombra</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="336947379733694">
+                            <conditions>
+                                <condition id="5" name="On any finished" sid="902490802749432" type="Inimigos" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="644678400660403">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="527631311606813" type="Inimigos">
+                                            <param id="0" name="Instance variable">combo</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">Inimigos.combo_maximo</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="727577177181677" type="Inimigos">
+                                            <param id="0" name="Instance variable">combo</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="444671611192006">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="413390274464009" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-11" name="Add to" sid="445167879009051" type="Inimigos">
+                                            <param id="0" name="Instance variable">combo</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="429511743374543">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="294849446466411" type="Inimigos">
+                            <param id="0" name="Instance variable">decisao_timer</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="792456839550456" type="Inimigos">
+                            <param id="0" name="Instance variable">decisao_timer</param>
+                            <param id="1" name="Value">dt</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="278399766399152">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="396998976271980" type="Inimigos">
+                            <param id="0" name="Instance variable">decisao_timer</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="160750988531253">
+                            <conditions>
+                                <condition id="-23" name="While" sid="376110978178000" type="System" />
+                                <condition id="-7" name="Compare instance variable" sid="313183637482826" type="Inimigos">
+                                    <param id="0" name="Instance variable">decisao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">Inimigos.decisao_atual</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="758053221448554" type="Inimigos">
+                                    <param id="0" name="Instance variable">decisao</param>
+                                    <param id="1" name="Value">choose (1,2,3)</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="426448398442599">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="993536869179713" type="Inimigos">
+                                            <param id="0" name="Instance variable">decisao</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">Inimigos.decisao_atual</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="638453389836810" type="Inimigos">
+                                            <param id="0" name="Instance variable">decisao_timer</param>
+                                            <param id="1" name="Value">random (0.5, 2)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="573752404528121">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="170606396594997" type="Inimigos">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Y co-ordinate">130</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="357905833379261" type="Inimigos">
+                            <param id="0" name="Y">130</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
